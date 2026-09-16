@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-16)
 
 ## Corpus Check
-- 58 files · ~1,678,255 words
+- 58 files · ~1,680,631 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 832 nodes · 1105 edges · 184 communities (49 shown, 122 thin omitted)
+- 833 nodes · 1106 edges · 184 communities (49 shown, 122 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4fa685c3`
+- Built from commit: `adb6203c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -410,8 +410,8 @@ Cohesion: 0.67
 Nodes (3): Analytics with actual event tracking, Privacy Policy, Terms of Service
 
 ### Community 180 - "Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)"
-Cohesion: 0.15
-Nodes (12): 1. Engineering Identity, 2. Current Academic & Professional Snapshot, 3. Four-Tier Status Classification & Technical Proficiencies, 4. Systems Philosophy, 5. Selected Projects, 6. Technical Toolchain, 7. Verification Philosophy, Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT) (+4 more)
+Cohesion: 0.14
+Nodes (13): 1. Engineering Identity, 2. Current Academic & Professional Snapshot, 3. Four-Tier Status Classification & Technical Proficiencies, 4. Systems Philosophy & Methodology, 5. The 6-Repository Vertical Systems Stack, 6. Selected Projects, 7. Technical Toolchain, 8. Verification Philosophy (+5 more)
 
 ### Community 181 - "evidence.js"
 Cohesion: 0.90
@@ -422,8 +422,8 @@ Cohesion: 0.16
 Nodes (19): Request, create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), Path, Exchanges refresh token for a fresh Google OAuth2 access token with retry. (+11 more)
 
 ## Knowledge Gaps
-- **264 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+259 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 416 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **265 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+260 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 417 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **122 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -434,7 +434,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `loadGA4()` connect `core.js` to `script.js`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _264 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _265 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09472606246799795 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**

@@ -148,6 +148,38 @@
             },
             {
               "@type": "Question",
+              "name": "How does Aaradhya Dev Tamrakar (ADT) approach AI systems building and orchestration?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ADT approaches AI systems not as shallow chatbot wrappers, but via a rigorous systems leverage cycle: identifying recurring engineering friction, modeling interface contracts, building reusable FastMCP microservices, composing capabilities into compound pipelines, and enforcing zero-token deterministic verification gates."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the 6-layer vertical systems stack across ADT's ecosystem?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Rather than disconnected horizontal projects, ADT's work spans an integrated vertical systems stack: (1) Physical Sensing & Control (SPARK, GCSBR), (2) Edge AI & Perception Fairness (BiasAperture), (3) Knowledge Systems & Sync (Super-NLM), (4) Engineering Workflow Automation (GitHub-Pilot), (5) OS-Level Agentic Control (Windows-Pilot), and (6) Kernel & Computing Environment (NovaOptimizer), unified under the Brainstorm systems control plane."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the E0–E5 evidence and verification framework used in ADT's projects?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "To prevent unverified claims and eliminate abstraction drift, ADT enforces explicit evidence tiers: E4 (physically measured on hardware or public benchmarks like SPARK 0.9185 SisFall AUC-ROC), E2/E3 (committed code with unit tests or discrete-event SimPy simulations like STRANGLER-IPU), and E0/E1 (formal neurosymbolic specifications like Headless Invariant Assurance). Simulation results are never conflated with physical measurements."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is ADT positioned for competitive scholarships and graduate research?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ADT is positioned as an emerging Intelligent Systems / AI Systems Engineering Researcher-in-Training. Grounded in an electronics/embedded engineering foundation (BEI), he demonstrates unusually high initiative, cross-layer systems execution (silicon sensors to OS kernels), and rapid AI-assisted development velocity, paired with a commitment to deepening underlying computer architecture and mathematical depth."
+              }
+            },
+            {
+              "@type": "Question",
               "name": "How can I contact or collaborate with ADT?",
               "acceptedAnswer": {
                 "@type": "Answer",
@@ -672,6 +704,7 @@
     @media (max-width: 1100px) {
 
       #about-intro,
+      #vertical-stack,
       #skills,
       #education,
       #tools {
@@ -692,6 +725,7 @@
     @media (max-width: 900px) {
 
       #about-intro,
+      #vertical-stack,
       #skills,
       #education,
       #tools,
@@ -723,6 +757,11 @@
         grid-template-columns: 1fr;
       }
 
+      .v-stack-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
       .edu-card {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -737,6 +776,7 @@
 
     @media (max-width: 480px) {
       #about-intro,
+      #vertical-stack,
       #skills,
       #education,
       #tools,
@@ -768,6 +808,7 @@
 
     @media (max-width: 360px) {
       #about-intro,
+      #vertical-stack,
       #skills,
       #education,
       #tools,
@@ -845,6 +886,16 @@
       color: var(--muted);
     }
 
+    #faq {
+      padding: 0 3rem 6rem;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
     .faq-card {
       border: 1px solid var(--line);
       border-radius: 4px;
@@ -869,6 +920,113 @@
     .faq-card a {
       color: var(--accent);
       text-decoration: underline;
+    }
+
+    /* ── Vertical Systems Stack & Epistemic Verification ── */
+    #vertical-stack {
+      padding: 0 3rem 6rem;
+    }
+
+    .stack-lead {
+      max-width: 820px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-dim);
+      margin-bottom: 2.5rem;
+    }
+
+    .stack-lead strong {
+      color: var(--heading);
+      font-weight: 500;
+    }
+
+    .v-stack-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .v-stack-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .v-stack-card {
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 2rem;
+      transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .v-stack-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.35);
+    }
+
+    .v-stack-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .v-stack-title {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      color: var(--heading);
+      margin-bottom: 0.5rem;
+    }
+
+    .v-stack-desc {
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .v-tier-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 1.2rem;
+    }
+
+    .v-tier-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+
+    .v-tier-tag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .v-tier-text {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: var(--text-dim);
+    }
+
+    html[data-theme="light"] .v-stack-card {
+      background: var(--bg2);
+    }
+
+    html[data-theme="light"] .v-tier-item {
+      background: rgba(0, 0, 0, 0.02);
     }
   </style>
 </head>
@@ -989,6 +1147,98 @@
             Event Manager at the Electronics Project Club, and volunteer as a
             Makerspace Ambassador running the club's web infrastructure.
           </p>
+          <p>
+            Rather than accumulating disconnected prototypes, my work follows an integrated
+            <strong>vertical systems trajectory</strong> — bridging physical IMU kinematics (SPARK)
+            and vision bias auditing (BiasAperture) to Win32 NT kernel memory optimization (NovaOptimizer)
+            and multi-account FastMCP orchestration (Super-NLM / Brainstorm). Every technical claim in my ecosystem
+            adheres to strict <strong>E0–E5 epistemic evidence tiers</strong> (separating formal specifications,
+            SimPy simulations, and physically measured hardware benchmarks). I treat AI not as an unexamined
+            shortcut, but as an aggressive engineering force multiplier while continuously deepening underlying
+            computer architecture, mathematical, and systems engineering foundations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider-wrap" aria-hidden="true">
+      <div class="divider-edge divider-edge--left"></div>
+      <div class="divider"></div>
+      <div class="divider-node"></div>
+      <div class="divider"></div>
+      <div class="divider-edge divider-edge--right"></div>
+    </div>
+
+    <section id="vertical-stack" aria-label="Vertical Systems Stack &amp; Epistemic Verification">
+      <div class="section-header reveal">
+        <div class="section-num">Architecture &amp; Methodology</div>
+        <h2 class="section-title">Vertical Stack &amp; <em>Epistemic Rigor</em></h2>
+      </div>
+      <p class="stack-lead reveal">
+        Rather than building isolated surface-level apps, ADT's ecosystem operates across an
+        <strong>integrated vertical stack</strong> — bridging physical silicon kinematics and real-time firmware up to
+        operating-system kernels, multi-agent FastMCP orchestration, and machine-checkable evidence tiers.
+      </p>
+      <div class="v-stack-grid reveal">
+        <div class="v-stack-column">
+          <div class="v-stack-card">
+            <span class="v-stack-badge">Hierarchy · Layer 1 to 6</span>
+            <h3 class="v-stack-title">The 6-Layer Systems Stack</h3>
+            <div class="v-tier-list">
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Layer 1 · Physical Sensing &amp; Control</span>
+                <span class="v-tier-text">ESP32-S3 200 Hz ISR kinematics, MPU6050 IMU calibration, and PID control in <strong>SPARK</strong> &amp; <strong>GCSBR</strong>.</span>
+              </div>
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Layer 2 · Edge AI &amp; Perception</span>
+                <span class="v-tier-text">18.5 KB INT8 CNN on-device inference and demographic fairness auditing across 126 bins in <strong>BiasAperture</strong>.</span>
+              </div>
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Layer 3 · Knowledge Infrastructure</span>
+                <span class="v-tier-text">Multi-account persistent querying, Drive synchronization, and research ingestion in <strong>Super-NLM</strong>.</span>
+              </div>
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Layer 4 · Engineering Automation</span>
+                <span class="v-tier-text">AI-assisted git synchronization, issue routing, and ergonomic tooling in <strong>GitHub-Pilot</strong> &amp; <strong>sync.ps1</strong>.</span>
+              </div>
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Layer 5 · OS Agentic Control</span>
+                <span class="v-tier-text">Native desktop automation, window orchestration, and system-level task daemons in <strong>Windows-Pilot</strong>.</span>
+              </div>
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Layer 6 · Kernel &amp; Environment</span>
+                <span class="v-tier-text">Win32 NT kernel working-set and standby list management in <strong>NovaOptimizer</strong> (reclaiming 1.2–3.4 GB RAM).</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="v-stack-column">
+          <div class="v-stack-card">
+            <span class="v-stack-badge">Epistemic Standard · E0 to E5</span>
+            <h3 class="v-stack-title">Evidence-Driven Verification</h3>
+            <p class="v-stack-desc">
+              Every technical claim in this ecosystem is strictly segregated by verification tier to ensure epistemic honesty and prevent abstraction drift:
+            </p>
+            <div class="v-tier-list">
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Tier E4 · Experimentally Verified</span>
+                <span class="v-tier-text">Physical hardware or benchmark execution with empirical metrics (SPARK on-device 0.9185 SisFall AUC-ROC; BiasAperture BCa bootstrap CIs).</span>
+              </div>
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Tier E3 · Implemented &amp; Simulation</span>
+                <span class="v-tier-text">Committed code with unit tests, or discrete-event queueing models (STRANGLER-IPU 4.12× latency reduction via SimPy). Never presented as physical silicon.</span>
+              </div>
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Tier E0/E1 · Specification &amp; Proposed</span>
+                <span class="v-tier-text">Formal interface contracts and neurosymbolic schemas awaiting empirical test (Headless Invariant Assurance via Z3 SMT).</span>
+              </div>
+              <div class="v-tier-item">
+                <span class="v-tier-tag">Operational Autonomy Metric</span>
+                <span class="v-tier-text">Evaluated against the <em>Walk-Away Benchmark</em> and <em>Autonomy Ratio</em> (Compute Time / Human Intervention Minutes) to measure true independence from human babysitting.</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1388,6 +1638,30 @@
           <h3>What fellowships and roles does ADT hold?</h3>
           <p>
             ADT is a Fuse AI Fellow (Fusemachines), NSSR DataCamp Fellow, Vice Chair at IEEE KEC KTM Student Branch, EPC Event Manager, and KEC Makerspace Ambassador.
+          </p>
+        </div>
+        <div class="faq-card">
+          <h3>How does ADT approach AI systems building and orchestration?</h3>
+          <p>
+            ADT approaches AI not as an isolated chatbot wrapper, but through an engineering <strong>systems leverage cycle</strong>: observe recurring friction $\longrightarrow$ model interface contracts $\longrightarrow$ engineer reusable FastMCP microservices $\longrightarrow$ compose capabilities into autonomous compound pipelines $\longrightarrow$ verify deterministically with zero-token gates.
+          </p>
+        </div>
+        <div class="faq-card">
+          <h3>What is the 6-layer vertical systems stack across ADT's ecosystem?</h3>
+          <p>
+            ADT's ecosystem spans an integrated vertical stack from physical silicon up to the OS: (1) Physical Sensing &amp; Control (SPARK, GCSBR) $\rightarrow$ (2) Perception &amp; Fairness (BiasAperture) $\rightarrow$ (3) Knowledge Systems &amp; Sync (Super-NLM) $\rightarrow$ (4) Workflow Automation (GitHub-Pilot) $\rightarrow$ (5) OS-Level Agentic Control (Windows-Pilot) $\rightarrow$ (6) Kernel &amp; Computing Environment (NovaOptimizer), unified under Brainstorm.
+          </p>
+        </div>
+        <div class="faq-card">
+          <h3>What is the E0–E5 evidence and verification framework?</h3>
+          <p>
+            To prevent unverified claims and eliminate abstraction drift, ADT maps every capability to explicit evidence tiers: E4 (physically measured on hardware or benchmarks), E2/E3 (committed code with unit tests or discrete-event SimPy simulations), and E0/E1 (formal specification). Simulation results are never conflated with physical measurements.
+          </p>
+        </div>
+        <div class="faq-card">
+          <h3>How is ADT positioned for competitive scholarships and graduate research?</h3>
+          <p>
+            ADT is positioned as an <strong>Intelligent Systems / AI Systems Engineering Researcher-in-Training</strong> who combines an electronics/embedded engineering foundation with proven systems-building initiative, rapid AI-assisted development velocity, and an active commitment to deepening foundational computer architecture and mathematical depth.
           </p>
         </div>
         <div class="faq-card">

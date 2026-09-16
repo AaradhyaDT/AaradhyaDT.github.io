@@ -1,15 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://accounts.google.com https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://api.emailjs.com https://www.google-analytics.com https://analytics.google.com https://accounts.google.com; frame-src 'self' https://accounts.google.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;" />
-
-  <!-- Speculative Rules API — Progressive enhancement for Chromium 121+ -->
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' https://accounts.google.com https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://api.emailjs.com https://www.google-analytics.com https://analytics.google.com https://accounts.google.com; frame-src 'self' https://accounts.google.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;" http-equiv="Content-Security-Policy"/>
+<!-- Speculative Rules API — Progressive enhancement for Chromium 121+ -->
+<script>
     if (typeof HTMLScriptElement !== 'undefined' && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
       var specScript = document.createElement('script');
       specScript.type = 'speculationrules';
@@ -25,15 +23,12 @@
       document.head.appendChild(specScript);
     }
   </script>
-
-  <title>ADT | Projects — Aaradhya Dev Tamrakar</title>
-  <meta name="description"
-    content="Selected engineering projects by ADT (Aaradhya Dev Tamrakar) — robotics, embedded ML, agentic pipelines, and the SPARK fall-detection wearable." />
-  <meta name="author" content="Aaradhya Dev Tamrakar" />
-  <meta name="keywords"
-    content="Aaradhya, ADT, Aaradhya Dev Tamrakar, Aaradhya Dev, Aaradhya Tamrakar, Aaradhya D. Tamrakar, A. D. Tamrakar, A. Dev Tamrakar, AaradhyaDT, aaradhyadevtamrakar, Aaradhya projects, engineering projects, SPARK, robotics, embedded ML, fall detection, ESP32-S3, FastAPI" />
-  <!-- theme-color is a progressive enhancement: supported by Chrome/Edge/Safari, unsupported by Firefox (gracefully ignored). -->
-  <script>
+<title>ADT | Projects — Aaradhya Dev Tamrakar</title>
+<meta content="Selected engineering projects by ADT (Aaradhya Dev Tamrakar) — robotics, embedded ML, agentic pipelines, and the SPARK fall-detection wearable." name="description"/>
+<meta content="Aaradhya Dev Tamrakar" name="author"/>
+<meta content="Aaradhya, ADT, Aaradhya Dev Tamrakar, Aaradhya Dev, Aaradhya Tamrakar, Aaradhya D. Tamrakar, A. D. Tamrakar, A. Dev Tamrakar, AaradhyaDT, aaradhyadevtamrakar, Aaradhya projects, engineering projects, SPARK, robotics, embedded ML, fall detection, ESP32-S3, FastAPI" name="keywords"/>
+<!-- theme-color is a progressive enhancement: supported by Chrome/Edge/Safari, unsupported by Firefox (gracefully ignored). -->
+<script>
     (function () {
       var metaDark = document.createElement("meta");
       metaDark.name = "theme-color";
@@ -47,27 +42,22 @@
       document.head.appendChild(metaLight);
     })();
   </script>
-
-  <link rel="canonical" href="https://aaradhyadt.github.io/projects.html" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://aaradhyadt.github.io/projects.html" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="Aaradhya Dev Tamrakar" />
-  <meta property="og:title" content="ADT | Projects — Aaradhya Dev Tamrakar" />
-  <meta property="og:description"
-    content="Selected engineering projects by ADT (Aaradhya Dev Tamrakar) — robotics, embedded ML, agentic pipelines, and the SPARK fall-detection wearable." />
-  <meta property="og:image" content="https://aaradhyadt.github.io/assets/images/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@AaradhyaDT" />
-  <meta name="twitter:creator" content="@AaradhyaDT" />
-  <meta name="twitter:title" content="ADT | Projects — Aaradhya Dev Tamrakar" />
-  <meta name="twitter:description"
-    content="Selected engineering projects by ADT (Aaradhya Dev Tamrakar) — robotics, embedded ML, agentic pipelines, and the SPARK fall-detection wearable." />
-  <meta name="twitter:image" content="https://aaradhyadt.github.io/assets/images/og-image.jpg" />
+<link href="https://aaradhyadt.github.io/projects.html" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="https://aaradhyadt.github.io/projects.html" property="og:url"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Aaradhya Dev Tamrakar" property="og:site_name"/>
+<meta content="ADT | Projects — Aaradhya Dev Tamrakar" property="og:title"/>
+<meta content="Selected engineering projects by ADT (Aaradhya Dev Tamrakar) — robotics, embedded ML, agentic pipelines, and the SPARK fall-detection wearable." property="og:description"/>
+<meta content="https://aaradhyadt.github.io/assets/images/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@AaradhyaDT" name="twitter:site"/>
+<meta content="@AaradhyaDT" name="twitter:creator"/>
+<meta content="ADT | Projects — Aaradhya Dev Tamrakar" name="twitter:title"/>
+<meta content="Selected engineering projects by ADT (Aaradhya Dev Tamrakar) — robotics, embedded ML, agentic pipelines, and the SPARK fall-detection wearable." name="twitter:description"/>
+<meta content="https://aaradhyadt.github.io/assets/images/og-image.jpg" name="twitter:image"/>
 <!-- JSON-LD: Breadcrumb & ItemList -->
 <script type="application/ld+json">
       [
@@ -129,8 +119,8 @@
         }
       ]
     </script>
-<link rel="manifest" href="site.webmanifest" />
-<link rel="apple-touch-icon" href="assets/images/photo.png" />
+<link href="site.webmanifest" rel="manifest"/>
+<link href="assets/images/photo.png" rel="apple-touch-icon"/>
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%230d0e11'/&gt;&lt;text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='400' fill='%23d4a85a'&gt;ADT&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -139,19 +129,18 @@
 <noscript>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
 </noscript>
-  <!-- Critical CSS modules — loaded in parallel (eliminates @import waterfall) -->
-  <link rel="stylesheet" href="assets/css/modules/tokens.css" />
-  <link rel="stylesheet" href="assets/css/modules/base.css" />
-  <link rel="stylesheet" href="assets/css/modules/layout.css" />
-  <link rel="stylesheet" href="assets/css/modules/components.css" />
-
-  <!-- Non-critical interactive CSS modules — deferred via print/onload swap -->
-  <link rel="stylesheet" href="assets/css/modules/cmdk.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/access.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/terminal.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/tour.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/graph-modal.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/print.css" media="print" />
+<!-- Critical CSS modules — loaded in parallel (eliminates @import waterfall) -->
+<link href="assets/css/modules/tokens.css" rel="stylesheet"/>
+<link href="assets/css/modules/base.css" rel="stylesheet"/>
+<link href="assets/css/modules/layout.css" rel="stylesheet"/>
+<link href="assets/css/modules/components.css" rel="stylesheet"/>
+<!-- Non-critical interactive CSS modules — deferred via print/onload swap -->
+<link href="assets/css/modules/cmdk.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/access.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/terminal.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/tour.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/graph-modal.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/print.css" media="print" rel="stylesheet"/>
 <!-- Page-specific: projects grid -->
 <style>
     html,
@@ -823,7 +812,7 @@
   </style>
 </head>
 <body>
-<div id="readProgressBar" aria-hidden="true"></div>
+<div aria-hidden="true" id="readProgressBar"></div>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="scroll-progress" id="scrollProgress"></div>
 <div class="cursor" id="cursor">
@@ -874,20 +863,20 @@
 </header>
 <section aria-label="Projects grid" id="projects">
 <div class="projects-header-bar">
-<div class="projects-filter-bar" id="projectsFilterBar" role="toolbar" aria-label="Filter projects by domain">
-<button type="button" class="proj-filter-btn active" data-filter="all" aria-pressed="true">
+<div aria-label="Filter projects by domain" class="projects-filter-bar" id="projectsFilterBar" role="toolbar">
+<button aria-pressed="true" class="proj-filter-btn active" data-filter="all" type="button">
 <span>All</span><span class="proj-filter-count">34</span>
 </button>
-<button type="button" class="proj-filter-btn" data-filter="aiml" aria-pressed="false">
+<button aria-pressed="false" class="proj-filter-btn" data-filter="aiml" type="button">
 <span>AI / ML &amp; Agentic</span><span class="proj-filter-count">24</span>
 </button>
-<button type="button" class="proj-filter-btn" data-filter="embedded" aria-pressed="false">
+<button aria-pressed="false" class="proj-filter-btn" data-filter="embedded" type="button">
 <span>Robotics &amp; Embedded</span><span class="proj-filter-count">6</span>
 </button>
-<button type="button" class="proj-filter-btn" data-filter="hardware" aria-pressed="false">
+<button aria-pressed="false" class="proj-filter-btn" data-filter="hardware" type="button">
 <span>Hardware &amp; Systems</span><span class="proj-filter-count">7</span>
 </button>
-<button type="button" class="proj-filter-btn" data-filter="apps" aria-pressed="false">
+<button aria-pressed="false" class="proj-filter-btn" data-filter="apps" type="button">
 <span>Web &amp; Apps</span><span class="proj-filter-count">12</span>
 </button>
 </div>
@@ -901,7 +890,7 @@
 <div class="projects-grid" id="projectsGrid">
 <h2 class="projects-section-title" id="section-projects">Projects<span class="projects-section-sub">Major,
             minor, and capstone builds + coursework and archived projects</span></h2>
-<details class="project-card reveal project-card--major" id="p-032" data-category="embedded hardware aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/brainstorm">
+<details class="project-card reveal project-card--major" data-category="embedded hardware aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/brainstorm" id="p-032">
 <summary class="project-summary">
 <div class="project-index">P — 032 <span class="project-status">Active Research</span></div>
 <h3 class="project-title">STRANGLER-IPU — Ingress Processing Unit Architecture</h3>
@@ -918,12 +907,12 @@
 <span class="tag">Discrete-Event Sim</span><span class="tag">SimPy</span>
 <span class="tag">Near-Memory Computing</span><span class="tag">LaTeX</span>
 </div>
-<a class="project-link" href="https://github.com/Aaradhya-Dev-Tamrakar/brainstorm" rel="noopener" target="_blank">View on GitHub ↗</a>
+<a class="project-link" data-payload-link-id="proj-brainstorm" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal project-card--major" id="p-025" data-category="aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/BiasAperture">
+<details class="project-card reveal project-card--major" data-category="aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/BiasAperture" id="p-025">
 <summary class="project-summary">
-<div class="project-index">TEMP_P — 026 <span class="project-status">In Progress</span></div>
+<div class="project-index">P — 025 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">BiasAperture — Vision Fairness &amp; Bias Audit</h3>
 </summary>
 <div class="project-card-body">
@@ -959,7 +948,7 @@
 <a class="project-link" data-payload-link-id="proj-biasaperture" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal project-card--gold" id="p-001" data-category="embedded hardware" data-evidence-repo="Aaradhya-Dev-Tamrakar/GCSBR">
+<details class="project-card reveal project-card--gold" data-category="embedded hardware" data-evidence-repo="Aaradhya-Dev-Tamrakar/GCSBR" id="p-001">
 <summary class="project-summary">
 <div class="project-index">P — 001 <span class="project-date">2024</span></div>
 <h3 class="project-title">Gesture-Controlled Self-Balancing Robot</h3>
@@ -995,9 +984,9 @@
 </div>
 </div>
 </details>
-<details class="project-card reveal project-card--major" id="p-018" data-category="embedded hardware aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/SPARK">
+<details class="project-card reveal project-card--major" data-category="embedded hardware aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/SPARK" id="p-018">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_P — 026 <span class="project-status">In Progress</span></div>
+<div class="project-index">P — 018 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">SPARK — Two-Layer Fall Detection Wearable</h3>
 </summary>
 <div class="project-card-body">
@@ -1030,7 +1019,7 @@
 <a class="project-link" data-payload-link-id="proj-spark" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-013" data-category="hardware">
+<details class="project-card reveal" data-category="hardware" id="p-013">
 <summary class="project-summary">
 <div class="project-index">P — 013 <span class="project-date">Jun 2026</span></div>
 <h3 class="project-title">Antenna Lab Data Analysis</h3>
@@ -1048,9 +1037,9 @@
 </div>
 </div>
 </details>
-<details class="project-card reveal" id="p-014" data-category="hardware">
+<details class="project-card reveal" data-category="hardware" id="p-014">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_TEMP_TEMP_P — 022 <span class="project-date">Jun 2026</span></div>
+<div class="project-index">P — 014 <span class="project-date">Jun 2026</span></div>
 <h3 class="project-title">Custom Processor FSM Design</h3>
 </summary>
 <div class="project-card-body">
@@ -1066,9 +1055,9 @@
 </div>
 </div>
 </details>
-<details class="project-card reveal project-card--archived" id="p-012" data-category="embedded hardware">
+<details class="project-card reveal project-card--archived" data-category="embedded hardware" id="p-012">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_TEMP_TEMP_TEMP_P — 022 <span class="project-status">Archived</span> <span class="project-date">Jun 2026</span></div>
+<div class="project-index">P — 012 <span class="project-status">Archived</span> <span class="project-date">Jun 2026</span></div>
 <h3 class="project-title">PrakopNet — Multi-Hazard Early Warning System</h3>
 </summary>
 <div class="project-card-body">
@@ -1087,7 +1076,7 @@
 </details>
 <h2 class="projects-section-title" id="section-fuseaif">Fuse AIF<span class="projects-section-sub">Fusemachines
             AI Fellowship — weekly coursework</span></h2>
-<details class="project-card reveal project-card--major" id="p-028" data-category="aiml">
+<details class="project-card reveal project-card--major" data-category="aiml" id="p-028">
 <summary class="project-summary">
 <div class="project-index">P — 028 <span class="project-date">12 Aug 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 14 — Agentic Intent Routing</h3>
@@ -1108,7 +1097,7 @@
 <a class="project-link" data-payload-link-id="proj-fuse-wk14" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-027" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-027">
 <summary class="project-summary">
 <div class="project-index">P — 027 <span class="project-date">6 Aug 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 13 — LSTM Text Classification</h3>
@@ -1128,9 +1117,9 @@
 <a class="project-link" data-payload-link-id="proj-fuse-wk13" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-024" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-024">
 <summary class="project-summary">
-<div class="project-index">TEMP_P — 029 <span class="project-date">30 Jul 2026</span></div>
+<div class="project-index">P — 024 <span class="project-date">30 Jul 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 12 — NER for Customer Support</h3>
 </summary>
 <div class="project-card-body">
@@ -1148,7 +1137,7 @@
 <a class="project-link" data-payload-link-id="proj-fuse-wk12" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-022" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-022">
 <summary class="project-summary">
 <div class="project-index">P — 022 <span class="project-date">Jul 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 11 — Vision Transformers</h3>
@@ -1170,9 +1159,9 @@
               ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-019" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-019">
 <summary class="project-summary">
-<div class="project-index">TEMP_P — 022 <span class="project-date">16 Jul 2026</span></div>
+<div class="project-index">P — 019 <span class="project-date">16 Jul 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 10 — Image Processing</h3>
 </summary>
 <div class="project-card-body">
@@ -1193,9 +1182,9 @@
               ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-017" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-017">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_P — 022 <span class="project-date">9 Jul 2026</span></div>
+<div class="project-index">P — 017 <span class="project-date">9 Jul 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 9 — NEU Steel Defect CNN</h3>
 </summary>
 <div class="project-card-body">
@@ -1214,9 +1203,9 @@
               ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-016" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-016">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_TEMP_P — 022 <span class="project-date">1 Jul 2026</span></div>
+<div class="project-index">P — 016 <span class="project-date">1 Jul 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 8 — Forecasting</h3>
 </summary>
 <div class="project-card-body">
@@ -1236,7 +1225,7 @@
               ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-011" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-011">
 <summary class="project-summary">
 <div class="project-index">P — 011 <span class="project-date">21 Jun 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 7 — Customer Segmentation</h3>
@@ -1258,9 +1247,9 @@
               ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-009" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-009">
 <summary class="project-summary">
-<div class="project-index">TEMP_P — 011 <span class="project-date">5 Jun 2026</span></div>
+<div class="project-index">P — 009 <span class="project-date">5 Jun 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 6 — Probabilistic Models</h3>
 </summary>
 <div class="project-card-body">
@@ -1279,9 +1268,9 @@
               ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-006" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-006">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_P — 030 <span class="project-date">28 May 2026</span></div>
+<div class="project-index">P — 006 <span class="project-date">28 May 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 4 — Telco Churn &amp; CLV ML Pipeline</h3>
 </summary>
 <div class="project-card-body">
@@ -1300,9 +1289,9 @@
               ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-008" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-008">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_P — 011 <span class="project-date">31 May 2026</span></div>
+<div class="project-index">P — 008 <span class="project-date">31 May 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 5 — Telco Churn Tree-Based Ensemble Pipeline</h3>
 </summary>
 <div class="project-card-body">
@@ -1322,7 +1311,7 @@
               ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-005" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-005">
 <summary class="project-summary">
 <div class="project-index">P — 005 <span class="project-date">20 May 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 3 — Text-to-SQL Agentic Pipeline</h3>
@@ -1344,9 +1333,9 @@
               ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-004" data-category="aiml apps">
+<details class="project-card reveal" data-category="aiml apps" id="p-004">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_TEMP_P — 030 <span class="project-date">12 May 2026</span></div>
+<div class="project-index">P — 004 <span class="project-date">12 May 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 2 — Customer API App</h3>
 </summary>
 <div class="project-card-body">
@@ -1364,9 +1353,9 @@
 <a class="project-link" data-payload-link-id="proj-fuse-wk2" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-003" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-003">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_TEMP_P — 011 <span class="project-date">30 Apr 2026</span></div>
+<div class="project-index">P — 003 <span class="project-date">30 Apr 2026</span></div>
 <h3 class="project-title">Fusemachines Wk 1 — Cardiac Event Data Wrangling</h3>
 </summary>
 <div class="project-card-body">
@@ -1382,7 +1371,7 @@
 <a class="project-link" data-payload-link-id="proj-fuse-wk1" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-026" data-category="aiml">
+<details class="project-card reveal" data-category="aiml" id="p-026">
 <summary class="project-summary">
 <div class="project-index">P — 026 <span class="project-date">Jul 2026</span></div>
 <h3 class="project-title">ONM Case Study — Fusemachines Inc.</h3>
@@ -1402,7 +1391,7 @@
 </div>
 </details>
 <h2 class="projects-section-title" id="section-personal">Personal Tools &amp; Apps<span class="projects-section-sub">Side projects, utilities, and shipped tools</span></h2>
-<details class="project-card reveal project-card--in-progress" id="p-031" data-category="apps aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/super-nlm">
+<details class="project-card reveal project-card--in-progress" data-category="apps aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/super-nlm" id="p-031">
 <summary class="project-summary">
 <div class="project-index">P — 031 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">Super-NLM — Multi-Account NotebookLM Hub &amp; MCP Server</h3>
@@ -1419,10 +1408,10 @@
 <span class="tag">Rate-Limit Routing</span><span class="tag">Agentic</span>
 <span class="tag">Round-Robin</span><span class="tag">FastAPI</span>
 </div>
-<a class="project-link" href="https://github.com/Aaradhya-Dev-Tamrakar/super-nlm" rel="noopener" target="_blank">View on GitHub ↗</a>
+<a class="project-link" data-payload-link-id="proj-super-nlm" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-034" data-category="apps aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/github-pilot">
+<details class="project-card reveal" data-category="apps aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/github-pilot" id="p-034">
 <summary class="project-summary">
 <div class="project-index">P — 034 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">GitHub Pilot — Autonomous Multi-Account Fleet Auditor &amp; Navigator</h3>
@@ -1439,12 +1428,12 @@
 <span class="tag">Developer Tooling</span><span class="tag">Multi-Account</span>
 <span class="tag">Fleet Auditing</span><span class="tag">Rich UI</span>
 </div>
-<a class="project-link" href="https://github.com/Aaradhya-Dev-Tamrakar/github-pilot" rel="noopener" target="_blank">View on GitHub ↗</a>
+<a class="project-link" data-payload-link-id="proj-github-pilot" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-033" data-category="apps hardware" data-evidence-repo="AaradhyaDT/windows-pilot">
+<details class="project-card reveal" data-category="apps hardware" data-evidence-repo="AaradhyaDT/windows-pilot" id="p-033">
 <summary class="project-summary">
-<div class="project-index">TEMP_P — 034 <span class="project-date">Sep 2026</span></div>
+<div class="project-index">P — 033 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">Windows Pilot — Semantic UIA &amp; MCP Desktop Automation Engine</h3>
 </summary>
 <div class="project-card-body">
@@ -1459,10 +1448,10 @@
 <span class="tag">Desktop Automation</span><span class="tag">Virtual Desktops</span>
 <span class="tag">Windows 11</span><span class="tag">ActionChain</span>
 </div>
-<a class="project-link" href="https://github.com/AaradhyaDT/windows-pilot" rel="noopener" target="_blank">View on GitHub ↗</a>
+<a class="project-link" data-payload-link-id="proj-windows-pilot" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-023" data-category="apps">
+<details class="project-card reveal" data-category="apps" id="p-023">
 <summary class="project-summary">
 <div class="project-index">P — 023 <span class="project-date">Jul–Sep 2026</span></div>
 <h3 class="project-title">Claude Desktop Multi-Profile &amp; Autonomous Fleet Utilities</h3>
@@ -1482,9 +1471,9 @@
 <a class="project-link" data-payload-link-id="proj-claude-desktop" data-payload-tier="master" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-015" data-category="apps">
+<details class="project-card reveal" data-category="apps" id="p-015">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_TEMP_P — 026 <span class="project-date">Jun 2026</span></div>
+<div class="project-index">P — 015 <span class="project-date">Jun 2026</span></div>
 <h3 class="project-title">IEEE KEC React Workshop</h3>
 </summary>
 <div class="project-card-body">
@@ -1500,9 +1489,9 @@
 <a class="project-link" data-payload-link-id="proj-react-ws" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-020" data-category="apps aiml">
+<details class="project-card reveal" data-category="apps aiml" id="p-020">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_P — 023 <span class="project-date">Jul 2026</span></div>
+<div class="project-index">P — 020 <span class="project-date">Jul 2026</span></div>
 <h3 class="project-title">Cryptarithmetic Solver &amp; API</h3>
 </summary>
 <div class="project-card-body">
@@ -1520,9 +1509,9 @@
 <a class="project-link" data-payload-link-id="proj-crypto" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-021" data-category="apps aiml">
+<details class="project-card reveal" data-category="apps aiml" id="p-021">
 <summary class="project-summary">
-<div class="project-index">TEMP_P — 023 <span class="project-date">Jul 2026</span></div>
+<div class="project-index">P — 021 <span class="project-date">Jul 2026</span></div>
 <h3 class="project-title">Pulse Live — Real-Time Interactive Polling Platform</h3>
 </summary>
 <div class="project-card-body">
@@ -1541,9 +1530,9 @@
 <a class="project-link" data-payload-link-id="proj-pulselive" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal project-card--in-progress" id="p-010" data-category="apps aiml">
+<details class="project-card reveal project-card--in-progress" data-category="apps aiml" id="p-010">
 <summary class="project-summary">
-<div class="project-index">TEMP_TEMP_TEMP_TEMP_TEMP_TEMP_P — 022 <span class="project-status">In Progress</span></div>
+<div class="project-index">P — 010 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">Nexus — Personal AI Operating System</h3>
 </summary>
 <div class="project-card-body">
@@ -1572,7 +1561,7 @@
               GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-029" data-category="apps">
+<details class="project-card reveal" data-category="apps" id="p-029">
 <summary class="project-summary">
 <div class="project-index">P — 029 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">md2pdf — Desktop Markdown to PDF Converter</h3>
@@ -1591,7 +1580,7 @@
 <a class="project-link" data-payload-link-id="proj-md2pdf" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-030" data-category="apps" data-evidence-repo="Aaradhya-Dev-Tamrakar/system-optimizer">
+<details class="project-card reveal" data-category="apps" data-evidence-repo="Aaradhya-Dev-Tamrakar/system-optimizer" id="p-030">
 <summary class="project-summary">
 <div class="project-index">P — 030 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">NovaOptimizer — Windows Task Manager &amp; System Optimizer</h3>
@@ -1611,9 +1600,9 @@
 <a class="project-link" data-payload-link-id="proj-sys-optimizer" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-007" data-category="aiml embedded">
+<details class="project-card reveal" data-category="aiml embedded" id="p-007">
 <summary class="project-summary">
-<div class="project-index">TEMP_P — 030 <span class="project-date">May 2026</span></div>
+<div class="project-index">P — 007 <span class="project-date">May 2026</span></div>
 <h3 class="project-title">Edge AI Stability Detection System</h3>
 </summary>
 <div class="project-card-body">
@@ -1634,9 +1623,9 @@
               GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal project-card--in-progress" id="p-002" data-category="apps embedded">
+<details class="project-card reveal project-card--in-progress" data-category="apps embedded" id="p-002">
 <summary class="project-summary">
-<div class="project-index">TEMP_P — 005 <span class="project-status">In Progress</span></div>
+<div class="project-index">P — 002 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">Alpha Android Super-App</h3>
 </summary>
 <div class="project-card-body">
@@ -1688,25 +1677,24 @@
 </svg>
 </button>
 <button aria-label="Toggle UI sound effects" aria-pressed="false" class="back-top audio-toggle" id="audioToggle" title="Toggle sound (Shift+A)">
-  <svg class="audio-icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
-  <svg class="audio-icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+<svg aria-hidden="true" class="audio-icon-on" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+<svg aria-hidden="true" class="audio-icon-off" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" x2="17" y1="9" y2="15"></line><line x1="17" x2="23" y1="9" y2="15"></line></svg>
 </button>
 <div aria-hidden="true" class="scroll-pct" id="scrollPct">0%</div>
 <footer role="contentinfo">
 <noscript>
-  <div class="footer-inner" style="padding: 1.5rem 2rem; border-top: 1px solid var(--line, #30363d); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-family: var(--sans, sans-serif); font-size: 0.85rem; color: var(--muted, #8b949e);">
-    <div><strong>ADT.</strong> — Aaradhya Dev Tamrakar · Electronics &amp; AI/ML Engineer</div>
-    <div>
-      <a href="privacy.html" style="color: var(--accent, #58a6ff);">Privacy Policy</a> · <a href="terms.html" style="color: var(--accent, #58a6ff);">Terms of Service</a>
-    </div>
-  </div>
+<div class="footer-inner" style="padding: 1.5rem 2rem; border-top: 1px solid var(--line, #30363d); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-family: var(--sans, sans-serif); font-size: 0.85rem; color: var(--muted, #8b949e);">
+<div><strong>ADT.</strong> — Aaradhya Dev Tamrakar · Electronics &amp; AI/ML Engineer</div>
+<div>
+<a href="privacy.html" style="color: var(--accent, #58a6ff);">Privacy Policy</a> · <a href="terms.html" style="color: var(--accent, #58a6ff);">Terms of Service</a>
+</div>
+</div>
 </noscript>
 <div id="siteFooter"></div>
 </footer>
-  <!-- Early discovery for dynamically-loaded JS modules -->
-  <link rel="preload" href="assets/js/modules/core.js" as="script" />
-  <link rel="preload" href="assets/js/modules/ui.js" as="script" />
-
+<!-- Early discovery for dynamically-loaded JS modules -->
+<link as="script" href="assets/js/modules/core.js" rel="preload"/>
+<link as="script" href="assets/js/modules/ui.js" rel="preload"/>
 <script defer="" src="assets/js/script.js"></script>
 <script>
     // Project cards dropdown expand/collapse — fluid animation + scroll sync

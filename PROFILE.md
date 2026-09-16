@@ -12,9 +12,11 @@ Evidence Tier:        E1 — SPECIFICATION
 
 ## 1. Engineering Identity
 
-**Aaradhya Dev Tamrakar (ADT)** is an undergraduate systems and embedded engineer focusing on the boundary between **hardware-software co-design, near-memory computer architecture, embedded Edge AI, and deterministic verification**.
+**Aaradhya Dev Tamrakar (ADT)** is an undergraduate systems engineer and **intelligent-systems researcher-in-training** operating at the boundary of **physical sensing, embedded Edge AI, near-memory systems architecture, OS-level execution, and deterministic verification**.
 
-Rather than treating software development as rapid application scripting, ADT approaches engineering through an **evidence-driven systems paradigm**: specifying formal interface contracts, tracking hardware-level bottlenecks (memory walls, bus contention, interrupt latencies), and deploying zero-token deterministic verification gates to eliminate abstraction drift.
+Rather than treating software development as rapid application scripting, ADT approaches engineering through an **evidence-driven systems paradigm**: identifying recurring technical friction, formalizing interface contracts, tracking physical bottlenecks (memory walls, bus contention, interrupt latencies, kernel working sets), and deploying zero-token deterministic verification gates to eliminate abstraction drift.
+
+His core differentiator is **vertical systems leverage**: bridging the complete stack from physical IMU silicon and real-time ISR firmware up to operating-system kernels, multi-agent FastMCP orchestration, and machine-checkable epistemic evidence tiers.
 
 ---
 
@@ -63,16 +65,33 @@ Every engineering capability in this dossier is mapped to an explicit status tie
 
 ---
 
-## 4. Systems Philosophy
+## 4. Systems Philosophy & Methodology
 
-1. **Deterministic Verification over Fragile Abstraction:** If code cannot be verified deterministically via unit tests, SMT solvers, or hardware scope captures, it remains an unverified hypothesis.
-2. **Physical Hardware Realism:** High-level abstractions must acknowledge physical silicon bounds—DRAM bus saturation, cache line fills, interrupt jitter, and network packet buffers.
-3. **Epistemic Honesty:** Never report simulation results as physical silicon measurements, and never report replacement labor reconstruction as liquid market valuation.
-4. **The Three-Output Rule:** Every architectural brainstorm must terminate in at least one of: (1) a reproducible experiment, (2) an executable implementation artifact, or (3) a falsifiable hypothesis card.
+1. **The Systems Leverage Cycle:** Identify recurring technical friction $\longrightarrow$ model the problem contractually $\longrightarrow$ engineer reusable tooling $\longrightarrow$ compose capabilities into autonomous pipelines $\longrightarrow$ verify deterministically.
+2. **Deterministic Verification over Fragile Abstraction:** If code cannot be verified deterministically via unit tests, SMT solvers, or hardware scope captures, it remains an unverified hypothesis.
+3. **Physical Hardware Realism:** High-level abstractions must acknowledge physical silicon bounds—DRAM bus saturation, cache line fills, interrupt jitter, and network packet buffers.
+4. **Epistemic Honesty:** Never report simulation results as physical silicon measurements, and never report replacement labor reconstruction as liquid market valuation.
+5. **The Autonomy Metric & Walk-Away Standard:** Measure system maturity via the Autonomy Ratio ($\frac{\text{Machine Compute Time}}{\text{Human Intervention Minutes}}$) rather than token counts or lines of code, targeting verifiable walk-away execution.
+6. **The Three-Output Rule:** Every architectural brainstorm must terminate in at least one of: (1) a reproducible experiment, (2) an executable implementation artifact, or (3) a falsifiable hypothesis card.
 
 ---
 
-## 5. Selected Projects
+## 5. The 6-Repository Vertical Systems Stack
+
+Rather than disconnected horizontal demos, ADT's core engineering repositories form an integrated vertical intelligent-systems stack:
+
+| Layer | Repository | Primary Role & Demonstrated Capability |
+| :--- | :--- | :--- |
+| **Digital Knowledge & Archive** | [`AaradhyaDT.github.io`](https://github.com/Aaradhya-Dev-Tamrakar/AaradhyaDT.github.io) | Living, continuously synchronized digital portfolio and engineering knowledge base with native 3D AST graphs and automated release engineering. |
+| **Control Plane & Architecture** | [`brainstorm`](https://github.com/Aaradhya-Dev-Tamrakar/brainstorm) | Systems R&D control plane: capability registries, E0–E5 evidence gates, compound workflows, and headless invariant assurance. |
+| **Knowledge Systems & Sync** | [`super-nlm`](https://github.com/Aaradhya-Dev-Tamrakar/super-nlm) | Multi-account AI knowledge infrastructure: batch/queued querying, GitHub-to-Drive sync, and automated research ingestion. |
+| **Engineering Workflow Automation** | [`github-pilot`](https://github.com/Aaradhya-Dev-Tamrakar/github-pilot) | Developer ergonomics: AI-assisted git automation, issue routing, and workflow orchestration. |
+| **OS-Level Agentic Control** | [`windows-pilot`](https://github.com/Aaradhya-Dev-Tamrakar/windows-pilot) | Operating-system-level automation and agentic runtime interfaces extending beyond the browser. |
+| **Computing Environment & Kernel** | [`system-optimizer`](https://github.com/Aaradhya-Dev-Tamrakar/system-optimizer) | Direct Win32 NT kernel memory optimization (`EmptyWorkingSet`, standby lists), process watchdogs, and hardware resource profiling. |
+
+---
+
+## 6. Selected Projects
 
 | Project | Status | Key Metric |
 | :--- | :--- | :--- |
@@ -85,7 +104,7 @@ Every engineering capability in this dossier is mapped to an explicit status tie
 
 ---
 
-## 6. Technical Toolchain
+## 7. Technical Toolchain
 
 * **Languages:** C / C++ (Embedded), Python 3.11+, C# (.NET 10), Kotlin 2.2, SQL (PostgreSQL), Bash / PowerShell 7, LaTeX.
 * **Embedded & Hardware:** ESP32-S3, Arduino, MPU-6050, Logic Analyzers, Oscilloscopes, ESP-IDF, FreeRTOS, TFLite Micro.
@@ -95,7 +114,7 @@ Every engineering capability in this dossier is mapped to an explicit status tie
 
 ---
 
-## 7. Verification Philosophy
+## 8. Verification Philosophy
 
 Every major quantitative claim in this dossier is traceable directly to:
 - A machine-readable capability manifest.

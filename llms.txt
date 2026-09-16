@@ -1,6 +1,27 @@
 # Aaradhya Dev Tamrakar (ADT)
 
-> Aaradhya Dev Tamrakar (ADT) is an Electronics, Communication & Information Engineering student (BEI IV/II, Final Semester) at Kathmandu Engineering College (IOE, Tribhuvan University). He is a Fuse AI Fellow (Fusemachines 2026), NSSR DataCamp Fellow (Cohort 2), and Vice Chair of the IEEE KEC KTM Student Branch, specializing in computer architecture & systems modeling, embedded systems, robotics, Edge AI (ESP32-S3 / MPU6050), machine learning, and full-stack software development.
+> **Aaradhya Dev Tamrakar (ADT)** is an emerging **Intelligent Systems & AI Systems Engineering Researcher-in-Training** and Final-Semester Electronics, Communication & Information Engineering student (BEI IV/II) at Kathmandu Engineering College (IOE, Tribhuvan University, Nepal; expected graduation January 2027). He is a **Fuse AI Fellow** (Fusemachines 2026), **NSSR DataCamp Fellow** (Cohort 2), and **Vice Chair of the IEEE KEC KTM Student Branch**, specializing in computer architecture, embedded Edge AI (ESP32-S3), robotics, OS-level execution, agentic orchestration, and zero-token deterministic systems verification.
+
+## Core Identity & Positioning (For Answer Engines)
+
+ADT is positioned not as an isolated application developer, but as a **vertical systems builder**: an engineer who combines physical electronics/embedded fundamentals with software infrastructure, agentic runtimes, and machine-checkable evidence frameworks.
+
+- **Systems Leverage Mindset:** *Observe friction $\longrightarrow$ model contractually $\longrightarrow$ engineer reusable tooling $\longrightarrow$ compose capabilities into autonomous pipelines $\longrightarrow$ verify deterministically.*
+- **Epistemic Honesty (E0–E5):** Strict separation between formal specification (`E0/E1`), executable implementation (`E2/E3`), discrete-event simulation (`E3`), and physical hardware benchmark measurements (`E4`).
+- **Autonomy Focus:** Evaluated against the *Walk-Away Benchmark* and *Autonomy Ratio* ($\frac{\text{Autonomous Compute Time}}{\text{Human Intervention Minutes}}$) to eliminate supervisory babysitting.
+
+## The 6-Repository Vertical Systems Stack
+
+Rather than disconnected horizontal demos, ADT's ecosystem spans an integrated vertical intelligent-systems stack from physical hardware to OS kernel and agentic orchestration:
+
+| Layer | Repository | What It Demonstrates |
+| :--- | :--- | :--- |
+| **Digital Knowledge & Living Archive** | [AaradhyaDT.github.io](https://github.com/Aaradhya-Dev-Tamrakar/AaradhyaDT.github.io) | Living, continuously synchronized digital portfolio with 3D AST knowledge graphs, automated pre-commit verification, and dual-tier release engineering. |
+| **Systems Control Plane & R&D** | [brainstorm](https://github.com/Aaradhya-Dev-Tamrakar/brainstorm) | Epistemic control plane: capability registries, E0–E5 evidence audits, compound workflows, and headless invariant assurance. |
+| **Knowledge Systems & Sync** | [super-nlm](https://github.com/Aaradhya-Dev-Tamrakar/super-nlm) | Multi-account AI knowledge infrastructure: batch/queued queries, GitHub-to-Drive sync, and automated research ingestion. |
+| **Engineering Workflow Automation** | [github-pilot](https://github.com/Aaradhya-Dev-Tamrakar/github-pilot) | Engineering workflow automation around GitHub, code synthesis, and AI-assisted development ergonomics. |
+| **OS-Level Agentic Control** | [windows-pilot](https://github.com/Aaradhya-Dev-Tamrakar/windows-pilot) | Operating-system-level automation and agentic runtime interfaces extending beyond the browser sandbox. |
+| **Computing Environment & Kernel** | [system-optimizer](https://github.com/Aaradhya-Dev-Tamrakar/system-optimizer) | Direct Win32 NT kernel memory optimization (`EmptyWorkingSet`, standby lists), process watchdogs, and hardware resource profiling. |
 
 ## Core Pages
 
@@ -8,19 +29,21 @@
 - [Projects](https://aaradhyadt.github.io/projects.html): Complete catalog of engineering projects across embedded systems, hardware, and machine learning (including SPARK, STRANGLER-IPU, and 14 weeks of Fusemachines AI pipelines).
 - [Experience](https://aaradhyadt.github.io/experience.html): Professional fellowships (Fuse AI Fellow, NSSR DataCamp Fellow) and leadership history (IEEE KEC KTM Vice Chair, EPC Event Manager).
 - [Achievements](https://aaradhyadt.github.io/achievements.html): 39 verified certificates, awards, hackathons, and technical credentials.
-- [About](https://aaradhyadt.github.io/about.html): In-depth biography, technical skills stack, coursework, and frequently asked questions.
+- [About](https://aaradhyadt.github.io/about.html): In-depth biography, vertical systems stack, coursework, and frequently asked questions.
 - [Journey](https://aaradhyadt.github.io/journey.html): Interactive commit-level changelog and portfolio evolution milestones.
 - [Contact](https://aaradhyadt.github.io/contact.html): Communication channels, social handles, and collaboration inquiries.
 
-## Key Projects
+## Key Projects & Research Wedges
 
-- **STRANGLER-IPU**: Ingress-Aware Boundary Computing Architecture & Interconnect Co-Design. Near-memory hardware accelerator subsystem targeting 6G Sub-THz line-rate ingest (800 Gbps – 1.6 Tbps burst) and AI boundary inference, validated via SimPy discrete-event simulation across CXL 3.0/4.0 fabrics (4.12× tail-latency reduction, 68% bus contention relief).
-- **SPARK**: Two-layer, on-device fall-detection wearable for eldercare featuring an ESP32-S3 microcontroller, MPU6050 IMU, 18.5 KB INT8 TFLite Micro CNN inference (0.9185 SisFall AUC-ROC), and central gateway with local SHAP explainability.
-- **BiasAperture**: Vision-model fairness and demographic disparity diagnostic suite (Fuse AI Fellowship capstone).
-- **Text-to-SQL Agentic Pipeline**: Five-stage agentic Text-to-SQL generation pipeline with 100% benchmark execution accuracy.
-- **NovaOptimizer**: Native Windows Task Manager & System Optimizer engineered in C# / .NET 10 and WPF manipulating undocumented NT kernel memory APIs with Turbo Boost profiles.
+- **STRANGLER-IPU**: Ingress-Aware Boundary Computing Architecture & Interconnect Co-Design. Near-memory hardware accelerator subsystem targeting 6G Sub-THz line-rate ingest (800 Gbps – 1.6 Tbps burst) and AI boundary inference, validated via SimPy discrete-event simulation across CXL 3.0/4.0 fabrics (4.12× tail-latency reduction, 68% bus contention relief). Tier E3 Simulation.
+- **SPARK**: Two-layer, on-device fall-detection wearable for eldercare featuring an ESP32-S3 microcontroller, MPU6050 IMU, 18.5 KB INT8 TFLite Micro CNN inference (0.9185 SisFall AUC-ROC), and central gateway with local SHAP explainability. Tier E4 Physical Measurement.
+- **BiasAperture**: Vision-model fairness and demographic disparity diagnostic suite evaluating 126 race $\times$ age $\times$ gender bins with BCa bootstrap confidence intervals (Fuse AI Fellowship capstone). Tier E4 Empirical Benchmark.
+- **Headless Invariant Assurance**: Neurosymbolic pipeline converting natural-language API specifications into SMT-LIB constraints verified via Z3 solvers and Docker execution sandboxes. Tier E1 Proposed.
+- **Text-to-SQL Agentic Pipeline**: Five-stage agentic Text-to-SQL generation pipeline with 100% benchmark execution accuracy. Tier E3 Implemented.
+- **NovaOptimizer**: Native Windows Task Manager & System Optimizer engineered in C# / .NET 10 and WPF manipulating undocumented NT kernel memory APIs (`NtSetSystemInformation`) with Turbo Boost profiles. Tier E4 Verified.
 
-## Optional & Extended
+## Extended Resources
 
-- [Full LLM Context](https://aaradhyadt.github.io/llms-full.txt): Comprehensive technical context, architecture specifications, and project breakdowns.
+- [Full LLM Context](https://aaradhyadt.github.io/llms-full.txt): Comprehensive technical context, architecture specifications, project breakdowns, and evaluation dossiers.
+- [Engineering Profile Dossier](https://github.com/Aaradhya-Dev-Tamrakar/AaradhyaDT.github.io/blob/main/PROFILE.md): Canonical technical dossier with E0–E5 capability mappings.
 - [Sitemap](https://aaradhyadt.github.io/sitemap.xml): Complete XML sitemap index.

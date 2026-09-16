@@ -1,6 +1,6 @@
-# Aaradhya Dev Tamrakar (ADT) — Full Context
+# Aaradhya Dev Tamrakar (ADT) — Full Technical Context & Systems Dossier
 
-> **Aaradhya Dev Tamrakar (ADT)** is an Electronics, Communication & Information Engineering student (BEI IV/II, Final Semester) at Kathmandu Engineering College (IOE, Tribhuvan University, Nepal), expected graduation January 2027. He is a **Fuse AI Fellow** (Fusemachines 2026), **NSSR DataCamp Fellow** (Cohort 2), and **Vice Chair of the IEEE KEC KTM Student Branch**, specializing in Computer Architecture, Edge AI, embedded systems, robotics, machine learning, and full-stack software development.
+> **Aaradhya Dev Tamrakar (ADT)** is an emerging **Intelligent Systems & AI Systems Engineering Researcher-in-Training** and Final-Semester Electronics, Communication & Information Engineering student (BEI IV/II) at Kathmandu Engineering College (IOE, Tribhuvan University, Nepal; expected graduation January 2027). He is a **Fuse AI Fellow** (Fusemachines 2026), **NSSR DataCamp Fellow** (Cohort 2), and **Vice Chair of the IEEE KEC KTM Student Branch**, specializing in computer architecture, near-memory systems, embedded Edge AI (ESP32-S3), robotics, OS-level execution, multi-agent FastMCP orchestration, and zero-token deterministic systems verification.
 
 ---
 
@@ -81,7 +81,44 @@
 
 ---
 
-## 4. Leadership & Professional Fellowships
+## 4. The 6-Repository Vertical Systems Stack
+
+Rather than disconnected horizontal project demos, ADT's ecosystem spans an integrated vertical systems stack:
+
+| Layer | Repository | What It Demonstrates |
+| :--- | :--- | :--- |
+| **Living Archive & Knowledge Engine** | [`AaradhyaDT.github.io`](https://github.com/Aaradhya-Dev-Tamrakar/AaradhyaDT.github.io) | Living, continuously synchronized digital portfolio with 3D AST knowledge graphs, automated pre-commit verification, and dual-tier release engineering. |
+| **Control Plane & Architecture** | [`brainstorm`](https://github.com/Aaradhya-Dev-Tamrakar/brainstorm) | Systems R&D control plane: capability registries, E0–E5 evidence audits, compound workflows, and headless invariant assurance. |
+| **Knowledge Systems & Sync** | [`super-nlm`](https://github.com/Aaradhya-Dev-Tamrakar/super-nlm) | Multi-account AI knowledge infrastructure: batch/queued queries, GitHub-to-Drive sync, and automated research ingestion. |
+| **Engineering Workflow Automation** | [`github-pilot`](https://github.com/Aaradhya-Dev-Tamrakar/github-pilot) | Developer ergonomics: AI-assisted git automation, issue routing, and workflow orchestration. |
+| **OS-Level Agentic Control** | [`windows-pilot`](https://github.com/Aaradhya-Dev-Tamrakar/windows-pilot) | Operating-system-level automation and agentic runtime interfaces extending beyond the browser sandbox. |
+| **Computing Environment & Kernel** | [`system-optimizer`](https://github.com/Aaradhya-Dev-Tamrakar/system-optimizer) | Direct Win32 NT kernel memory optimization (`EmptyWorkingSet`, standby lists), process watchdogs, and hardware resource profiling. |
+
+---
+
+## 5. Epistemic Evidence Framework & Systems Methodology
+
+1. **The Systems Leverage Cycle:** Identify recurring friction $\longrightarrow$ model contractually $\longrightarrow$ build reusable tooling $\longrightarrow$ compose capabilities into autonomous pipelines $\longrightarrow$ verify deterministically.
+2. **Four-Tier Evidence Classification (E0–E5):**
+   - **`[EXPERIMENTALLY_VERIFIED]` (E4):** Physical hardware / public benchmark execution with measured metrics (e.g. SPARK 18.5 KB INT8 CNN on ESP32-S3, 0.9185 SisFall AUC-ROC; BiasAperture 126 demographic bins with BCa bootstrap CIs).
+   - **`[IMPLEMENTED]` (E2/E3):** Committed, buildable code with local unit tests / FastMCP microservices (e.g. Super-NLM Hub, Text-to-SQL pipeline).
+   - **`[RESEARCH_PROTOTYPE]` (E3):** Discrete-event queueing simulation (SimPy) modeling hardware architectures (e.g. STRANGLER-IPU 4.12× tail-latency reduction across CXL fabrics).
+   - **`[PROPOSED]` (E0/E1):** Formal architectural specification or schema awaiting empirical test (e.g. Headless Invariant Assurance).
+3. **The Autonomy Metric:** Evaluated on the Walk-Away Benchmark and Autonomy Ratio ($\frac{\text{Autonomous Compute Time}}{\text{Human Intervention Minutes}}$) to measure true reduction in human oversight.
+4. **Epistemic Honesty:** Never report simulation results as physical silicon measurements, and never report replacement labor reconstruction as liquid market valuation.
+
+---
+
+## 6. Academic Evaluator & Scholarship Profile Synopsis
+
+- **Core Academic Identity:** Emerging Intelligent Systems / AI Systems Researcher-Engineer in training, grounded in a rigorous Electronics, Communication & Information Engineering (BEI) foundation.
+- **Evaluation Strengths:** Unusually high initiative, cross-layer systems thinking (silicon sensors to OS kernel and agentic orchestration), rapid AI-assisted development velocity, disciplined documentation, and deterministic verification.
+- **Research Potential:** High — demonstrated through formal capability contracts, discrete-event simulations, and neurosymbolic verification wedges (*Headless Invariant Assurance*).
+- **Trajectory Framing:** Starting from a raw single-file website $\longrightarrow$ externalizing cognitive memory into structured markdown dossiers $\longrightarrow$ semantic graph extraction with Graphify $\longrightarrow$ automated synchronization pipelines (`sync.ps1`) $\longrightarrow$ multi-account agentic runtimes $\longrightarrow$ formal systems verification. AI assistance is leveraged deliberately as an engineering amplifier while core mathematics and computer architecture fundamentals are actively deepened.
+
+---
+
+## 7. Leadership & Professional Fellowships
 - **Fuse AI Fellow (2026):** Intensive 14-week fellowship in applied machine learning, computer vision, and NLP hosted by Fusemachines.
 - **NSSR DataCamp Fellow (Cohort 2):** Data science and machine learning research fellow under Nepal Social Science Research / DataCamp initiative.
 - **Vice Chair, IEEE KEC KTM Student Branch (2025–2026):** Executive leadership of engineering workshops, hackathons, IEEEXtreme competitive programming (Team #3 nationwide), and technical seminars.
@@ -91,7 +128,7 @@
 
 ---
 
-## 5. Technical Skillset & Competencies
+## 8. Technical Skillset & Competencies
 - **Embedded & Hardware:** ESP32-S3, STM32, Arduino, Raspberry Pi, MPU6050, FreeRTOS, I2C/SPI/UART, BLE 5.0, PCB Design (EasyEDA / Proteus).
 - **Machine Learning & Edge AI:** PyTorch, TensorFlow Lite Micro, Scikit-Learn, OpenCV, NumPy, Pandas, XGBoost, LightGBM, SHAP, Hugging Face Transformers.
 - **Software & Systems:** Python, C, C++, JavaScript (ES6+), Kotlin, HTML5/CSS3, FastAPI, SQLite, Git/GitHub, Linux/Bash, Docker.
@@ -99,7 +136,7 @@
 
 ---
 
-## 6. Portfolio Website Architecture
+## 9. Portfolio Website Architecture
 - **Tech Stack:** Vanilla HTML5, CSS3 Custom Properties (Design Tokens), Modular ES6 JavaScript (Zero Build Step).
 - **PWA & Offline:** Cache-first Service Worker (`sw.js`), Web App Manifest, offline form queueing with auto-sync.
 - **Security:** Web Crypto API (AES-256-GCM zero-leak payload decryption), client-side rate limiting, subresource integrity pinning.
@@ -107,7 +144,7 @@
 
 ---
 
-## 7. Verifiable Credentials & Achievements (Summary of 39)
+## 10. Verifiable Credentials & Achievements (Summary of 39)
 - IEEEXtreme 19.0 Competitive Programming Certificate (Rank #3 in Nepal)
 - DataCamp Certifications: Supervised Learning, Deep Learning in PyTorch, Time Series Analysis, Generative AI for Data Cleaning, Go-to-Market Strategy, Product Management.
 - xTool Laser Safety Awareness Training & Printer Maintenance Certification (KEC Makerspace).

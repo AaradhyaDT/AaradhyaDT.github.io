@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: 'v54.3',
+    version: 'v54.5',
     date: '2026-09-16',
     sha: 'rel54',
     title: "Ecosystem Multi-Repo Fleet Harmonization & Baseline v1.0 Freeze",
