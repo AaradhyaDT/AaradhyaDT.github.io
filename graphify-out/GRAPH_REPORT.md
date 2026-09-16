@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-16)
 
 ## Corpus Check
-- 58 files · ~1,680,631 words
+- 59 files · ~1,682,075 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 833 nodes · 1106 edges · 184 communities (49 shown, 122 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
+- 852 nodes · 1142 edges · 184 communities (49 shown, 122 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 70 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `adb6203c`
+- Built from commit: `77db5ca3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -42,7 +42,7 @@
 - test_graph_modal.test.mjs
 - generate_cards
 - haptics.js
-- extract_index.py
+- add_project
 - test_crypto.test.mjs
 - audio.js
 - constants.js
@@ -333,9 +333,9 @@ Nodes (6): any, generate_cards(), main(), Generates OG SVG cards into the output
 Cohesion: 0.38
 Nodes (4): initScrollParallax(), initSwipeNav(), initTouchGestures(), triggerHapticFeedback()
 
-### Community 27 - "extract_index.py"
-Cohesion: 0.57
-Nodes (6): extract_achievements(), extract_projects(), main(), render_block(), render_entry(), text_of()
+### Community 27 - "add_project"
+Cohesion: 0.14
+Nodes (24): BeautifulSoup, add_project(), build_card_soup(), derive_payload_slug(), encrypt_and_register_link(), get_next_project_id(), inject_card(), interactive_mode() (+16 more)
 
 ### Community 28 - "test_crypto.test.mjs"
 Cohesion: 0.33
@@ -423,16 +423,18 @@ Nodes (19): Request, create_drive_file(), find_drive_file_by_name(), get_oauth_c
 
 ## Knowledge Gaps
 - **265 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+260 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 417 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 425 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **122 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `parse_html()` connect `verify.py` to `add_project`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `get_site_stats()` connect `site_automation.py` to `add_project`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `renderSiteFooter()` connect `ui.js` to `core.js`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `loadGA4()` connect `core.js` to `script.js`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
   _265 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
@@ -441,5 +443,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07823613086770982 - nodes in this community are weakly interconnected._
-- **Should `ui.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07957957957957958 - nodes in this community are weakly interconnected._
