@@ -1,6 +1,6 @@
 {
-  "sha": "e076784ae3a55770cd610e0ec98355d2d51dc3c5",
-  "shortSha": "e076784",
-  "date": "2026-09-25T14:49:37+05:45",
-  "message": "docs(contributing): standardize headings and add explicit anchor tags to fix TOC scrolling"
+  "sha": "06f48eaafe67f0035599efc70dff005df74e9ee1",
+  "shortSha": "06f48ea",
+  "date": "2026-09-25T14:57:08+05:45",
+  "message": "ci(deploy): add active Pages deployment status polling to eliminate HTTP 400 race conditions"
 }
