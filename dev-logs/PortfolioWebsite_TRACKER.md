@@ -1,8 +1,8 @@
-# Portfolio Website Tracker — v58.8
+# Portfolio Website Tracker — v58.9
 
 
 
-Last updated: _2026-10-29_
+Last updated: _2026-11-07_
 
 - **Theme-sensitive lotus polish (#52)**: Tighten portrait/control spacing, quiet the backdrop around the profile card, and remove card lift and animated perimeter. Adapt lotus shadows, blade recesses, and outlines to light and dark themes while retaining gold, blue, and original logo colors. Reserve three lines for affiliation captions. Both themes were inspected in localhost; all 26 verification categories passed before publication. Full mobile caption interaction verification remains unconfirmed.
 
@@ -892,7 +892,7 @@ eq$ server-side authorization*. Resolved stale reference to non-existent audit d
 
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
 
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.8`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.9`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 

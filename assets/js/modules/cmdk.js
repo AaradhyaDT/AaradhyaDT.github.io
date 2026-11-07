@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: cmdk.js — aaradhyadt.github.io (v58.8)
+   MODULE: cmdk.js — aaradhyadt.github.io (v58.9)
    Command palette (Cmd+K) search and quick navigation.
    ============================================================ */
 

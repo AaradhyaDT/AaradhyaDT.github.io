@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.8",
+    version: "v58.9",
     date: "2026-10-29",
     sha: "965eb41a45231407ac7773a27843538e0d0f7ffb",
     title: "harmonize p-047 card story and sync project summaries",
