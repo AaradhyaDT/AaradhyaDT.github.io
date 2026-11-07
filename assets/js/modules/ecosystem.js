@@ -1,4 +1,4 @@
-/* MODULE: ecosystem.js — aaradhyadt.github.io (v58.11)
+/* MODULE: ecosystem.js — aaradhyadt.github.io (v58.12)
    Progressively enhance the static, linked project tree. */
 (function initEcosystem() {
   'use strict';
@@ -31,6 +31,7 @@
     const card = cardFor(id);
     if (!node || !card) return;
     selected = id;
+    window.dispatchEvent(new CustomEvent('ecosystem-selection', { detail: { id, source: 'tree' } }));
     nodes.forEach(item => {
       const link = item.querySelector('.ecosystem-node');
       if (item === node) link.setAttribute('aria-current', 'true');
@@ -140,6 +141,16 @@
   }
 
   root.querySelector('.ecosystem-controls').hidden = false;
+  window.addEventListener('ecosystem-selection', event => {
+    if (event.detail?.source !== 'graph') return;
+    const node = nodes.find(item => item.dataset.project === event.detail.id);
+    if (!node) return;
+    search.value = '';
+    branches.forEach(branch => { branch.hidden = false; });
+    nodes.forEach(item => { item.hidden = false; });
+    node.closest('details').open = true;
+    selectProject(event.detail.id);
+  });
   root.querySelector('#ecosystem-detail-title').tabIndex = -1;
   root.classList.add('ecosystem--interactive');
   tree.addEventListener('click', event => {
