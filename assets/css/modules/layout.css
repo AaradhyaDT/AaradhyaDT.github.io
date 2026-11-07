@@ -117,7 +117,7 @@ noscript > nav.scrolled .nav-logo {
   align-items: baseline;
   gap: 0.28em;
   will-change: gap;
-  transition: gap 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: gap 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-word {
@@ -140,7 +140,7 @@ noscript > nav.scrolled .nav-logo {
   font-weight: 400;
   color: var(--muted);
   display: inline-block;
-  max-width: 140px;
+  max-width: var(--nav-rest-width, 5em);
   opacity: 0.88;
   overflow: hidden;
   white-space: nowrap;
@@ -151,9 +151,13 @@ noscript > nav.scrolled .nav-logo {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition:
-    max-width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    max-width 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-word:nth-child(2) .nav-rest {
+  --nav-rest-width: 1.4em;
 }
 
 .nav-dot {
@@ -178,7 +182,7 @@ noscript > nav.scrolled .nav-brand-text {
 
 @media (hover: hover) and (min-width: 901px) {
   #nav.scrolled .nav-logo:hover .nav-rest {
-    max-width: 140px;
+    max-width: var(--nav-rest-width, 5em);
     opacity: 0.95;
     transform: scaleX(1) translateX(0);
     pointer-events: auto;
