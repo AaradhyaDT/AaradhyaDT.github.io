@@ -136,6 +136,7 @@
 <link href="assets/css/modules/tokens.css" rel="stylesheet"/>
 <link href="assets/css/modules/base.css" rel="stylesheet"/>
 <link href="assets/css/modules/layout.css" rel="stylesheet"/>
+<link href="assets/css/constellation.css" rel="stylesheet"/>
 <link href="assets/css/modules/components.css" rel="stylesheet"/>
 <!-- Non-critical interactive CSS modules — deferred via print/onload swap -->
 <link href="assets/css/modules/cmdk.css" media="print" onload="this.media='all'" rel="stylesheet"/>
@@ -1242,6 +1243,17 @@
 </div>
 </header>
 <div id="ecosystem-browser">
+<div id="ecosystem-view-switch" class="bg-hub-nav ecosystem-view-switch" role="group" aria-label="Ecosystem views" hidden>
+  <button type="button" class="bg-hub-tab active" data-ecosystem-view="graph" aria-pressed="true" aria-controls="constellation">Graph view</button>
+  <button type="button" class="bg-hub-tab" data-ecosystem-view="tree" aria-pressed="false" aria-controls="ecosystem">Tree view</button>
+</div>
+<section class="constellation" id="constellation" aria-labelledby="constellation-title" hidden>
+  <div class="constellation-heading"><p class="constellation-eyebrow">MY WORKING ECOSYSTEM</p><h2 id="constellation-title">Conversations at the center. <em>Systems behind the work.</em></h2><p>I work through Antigravity, Claude Desktop, and Codex. From those conversations, I delegate to Fleet, use cloud compute and knowledge tools, and deliver work through GitHub. Skills and ideas live in Brainstorm.</p></div>
+  <div class="constellation-layout">
+    <div class="constellation-map"><div class="constellation-toolbar"><label for="constellation-search">Search projects</label><input id="constellation-search" type="search" placeholder="Search projects…"/><label for="constellation-filter">Category</label><select id="constellation-filter"><option value="all">All categories</option></select><button id="constellation-expand" type="button" aria-pressed="false">Show all projects</button><button id="constellation-reset" type="button">Reset view</button><div class="constellation-zoom" aria-label="Graph zoom"><button type="button" id="constellation-zoom-out" aria-label="Zoom out">−</button><output id="constellation-zoom-value">100%</output><button type="button" id="constellation-zoom-in" aria-label="Zoom in">+</button></div></div><div class="constellation-viewport" tabindex="0" aria-label="Scrollable project graph"><div id="constellation-canvas" class="constellation-canvas" aria-label="Project connection graph"></div></div><p class="constellation-note">Arrows show conversation flow or documented integrations. Unconnected projects are shown without implied links. Scroll to explore the map.</p></div>
+    <aside id="constellation-detail" class="constellation-detail" aria-live="polite"><p>Select a project to explore its connections.</p></aside>
+  </div>
+</section>
 <!-- ECOSYSTEM TREE START -->
 <section class="ecosystem" id="ecosystem" aria-labelledby="ecosystem-title" data-connections="[{&quot;from&quot;: &quot;p-040&quot;, &quot;to&quot;: &quot;p-023&quot;, &quot;label&quot;: &quot;Desktop reasoning bridge&quot;, &quot;description&quot;: &quot;Fleet documents a Claude Desktop CDP adapter for reasoning and review.&quot;, &quot;source&quot;: &quot;Aaradhya-Dev-Tamrakar/Fleet-Orchestrator/README.md: Architectural Highlights / Multi-Provider Adapter Mesh&quot;, &quot;source_commit&quot;: &quot;8e510f3219237beba4018cbb6cb8b0e1edb2b2ee&quot;, &quot;evidence&quot;: &quot;DOCUMENTED_INTEGRATION&quot;}, {&quot;from&quot;: &quot;p-023&quot;, &quot;to&quot;: &quot;p-031&quot;, &quot;label&quot;: &quot;NotebookLM MCP bridge&quot;, &quot;description&quot;: &quot;Claude Desktop includes a Super-NLM MCP launcher and shared tool configuration.&quot;, &quot;source&quot;: &quot;Aaradhya-Dev-Tamrakar/Claude-Desktop/README.md: Repository Structure / team-mcp.json and super-nlm-mcp&quot;, &quot;source_commit&quot;: &quot;49d340f558ec1144a949c9abcdb8a643077123c2&quot;, &quot;evidence&quot;: &quot;DOCUMENTED_INTEGRATION&quot;}, {&quot;from&quot;: &quot;p-023&quot;, &quot;to&quot;: &quot;p-029&quot;, &quot;label&quot;: &quot;Markdown publishing bridge&quot;, &quot;description&quot;: &quot;Claude Desktop includes the md2pdf MCP server and rendering engine.&quot;, &quot;source&quot;: &quot;Aaradhya-Dev-Tamrakar/Claude-Desktop/README.md: Repository Structure / md2pdf-mcp&quot;, &quot;source_commit&quot;: &quot;49d340f558ec1144a949c9abcdb8a643077123c2&quot;, &quot;evidence&quot;: &quot;DOCUMENTED_INTEGRATION&quot;}, {&quot;from&quot;: &quot;p-031&quot;, &quot;to&quot;: &quot;p-035&quot;, &quot;label&quot;: &quot;Artifact sharing workflow&quot;, &quot;description&quot;: &quot;Super-NLM documents LocalSend as the network sharing companion for Studio downloads.&quot;, &quot;source&quot;: &quot;Aaradhya-Dev-Tamrakar/super-nlm/README.md: Agent Skills / super-nlm-downloads&quot;, &quot;source_commit&quot;: &quot;b74f077bdd18eb33d8bcb86dd56049bc9896724b&quot;, &quot;evidence&quot;: &quot;DOCUMENTED_WORKFLOW&quot;}]">
 <header class="ecosystem-heading">
@@ -2702,6 +2714,7 @@ Your browser doesn't support embedded video.
 <link as="script" href="assets/js/modules/core.js" rel="preload"/>
 <link as="script" href="assets/js/modules/ui.js" rel="preload"/>
 <script defer="" src="assets/js/script.js"></script>
+<script defer="" src="assets/js/constellation.js"></script>
 <script>
     // Project cards dropdown expand/collapse — fluid animation + scroll sync
     function syncProjectToggleAllLabel() {

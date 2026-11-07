@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.11",
+    version: "v58.12",
     date: "2026-11-07",
     sha: "78e7e9cde6f36db25a9d2231cef00dc18531bc70",
     title: "revoice master cv and presets to match authentic portfolio voice",
