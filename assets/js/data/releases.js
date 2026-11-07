@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v58.11",
     date: "2026-11-07",
-    sha: "838300afbd74234f35fac0421d73bd6d6fa99d29",
-    title: "remove unverified referee entry from master cv and recompile all presets",
+    sha: "78e7e9cde6f36db25a9d2231cef00dc18531bc70",
+    title: "revoice master cv and presets to match authentic portfolio voice",
     highlights: []
   },
   {
