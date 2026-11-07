@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "metadata": {
-    "title": "Aaradhya Dev Tamrakar - Master CV & Technical Dossier",
+    "title": "Aaradhya Dev Tamrakar - Master CV & Technical Portfolio",
     "last_updated": "2026-11-07",
     "author": "Aaradhya Dev Tamrakar",
     "source_of_truth": true
@@ -9,12 +9,12 @@
   "basics": {
     "name": "Aaradhya Dev Tamrakar",
     "title_by_preset": {
-      "master": "AI Systems · Edge AI & Systems · Applied ML & Interpretability · Formal Methods",
-      "research": "AI Safety & Interpretability · Formal Methods · Applied Machine Learning",
-      "systems": "Embedded Systems · Edge AI · Linux & Systems Engineering",
-      "aiml": "Applied Machine Learning · MLOps · Computer Vision · Agentic AI",
-      "fullstack": "AI Systems Engineering · Distributed Orchestration · Developer Tooling",
-      "compact": "AI Systems & Applied Machine Learning Engineer"
+      "master": "AI/ML Engineering · AI Workflow Automation · Embedded AI · Model Evaluation",
+      "research": "AI Safety & Fairness Auditing · Model Evaluation · Applied Machine Learning",
+      "systems": "Embedded AI · Systems Engineering · Firmware & Edge ML",
+      "aiml": "Applied Machine Learning · AI Workflows · Model Evaluation & MLOps",
+      "fullstack": "AI Systems Engineering · Workflow Orchestration · Developer Tooling",
+      "compact": "AI/ML Engineering · Applied ML · Embedded AI · AI Workflows"
     },
     "contact": {
       "location": "Kathmandu, Nepal",
@@ -26,12 +26,12 @@
       "scholar": "https://scholar.google.com/citations?user=E3BYJSMAAAAJ&hl=en"
     },
     "profiles_by_preset": {
-      "master": "Final-year Electronics, Communication and Information Engineering undergraduate at IOE, Kathmandu Engineering College, combining applied machine learning, edge AI, formal verification, and distributed systems tooling. Fusemachines AI Fellow and NSSR DataCamp Fellow. Builds reproducible end-to-end systems spanning statistical bias auditing, quantized on-device neural inference, SMT-based state machine verification, and multi-agent coordination engines. Experienced with deterministic evaluation pipelines and production APIs.",
-      "research": "Final-year Electronics & Information Engineering undergraduate specializing in empirical AI safety, mechanistic interpretability, and formal verification of agentic systems. Fusemachines AI Fellow co-developing intersectional demographic fairness audit frameworks with statistical confidence intervals (AIF360, Fairlearn). Experienced in Z3 SMT invariant verification, Bayesian inference (PyMC/ArviZ), and quantized edge model evaluation.",
-      "systems": "Final-year Electronics & Information Engineering undergraduate specializing in embedded AI, low-level systems programming, and deterministic control. Technical lead for SPARK (ESP32-S3 wearable fall detection running quantized 18.5 KB INT8 CNNs under FreeRTOS), developer of Windows DFIR stealth-evasion triage engines, and kernel-level NTFS privacy tooling. Experienced in C/C++, Win32 APIs, RTOS, and protocol verification.",
-      "aiml": "Final-year engineering undergraduate and Fusemachines AI Fellow building applied ML pipelines, vision evaluation frameworks, and production agentic services. Engineered a 5-stage Text-to-SQL engine with 100% benchmark execution accuracy, demographic fairness auditing over 97K images, and full-stack microservices using FastAPI, Docker, and PostgreSQL. Experienced in PyTorch, scikit-learn, XGBoost, and MLOps.",
-      "fullstack": "Final-year engineering student building autonomous multi-agent developer tooling, distributed orchestration harnesses, and high-performance system utilities. Architect of Fleet-Orchestrator (multi-account agent fleet with SQLite WAL lease machines), custom MCP servers (NotebookLM, LocalSend, CAD), and cross-IDE configuration synchronizers.",
-      "compact": "Final-year Electronics & Information Engineering student and Fusemachines AI Fellow. Builds reproducible applied ML, edge AI (ESP32-S3 / TFLite Micro), and formally verified systems. Experienced across PyTorch, C/C++, FastAPI, Docker, and Z3 SMT."
+      "master": "Final-year Electronics, Communication and Information Engineering student at IOE, Kathmandu Engineering College, building applied ML systems, AI workflow tools, and embedded ML software. Fuse AI Fellow (Fusemachines) and NSSR DataCamp Fellow. I use AI to accelerate development, then turn recurring work into reusable tools and deterministic checks — reducing the need to solve the same task in another prompt. Experienced across demographic fairness auditing, multi-provider coordination, edge ML inference, and developer automation.",
+      "research": "Final-year Electronics & Information Engineering undergraduate specializing in applied AI fairness auditing and empirical model evaluation. Fuse AI Fellow co-developing diagnostic prediction-auditing frameworks measuring canonical demographic parity and error-rate disparities across intersectional cohorts (AIF360, Fairlearn). Experienced in statistical evaluation, edge classifier validation on wearable sensor data, and reproducible benchmarking.",
+      "systems": "Final-year Electronics & Information Engineering undergraduate building embedded ML software, firmware, and local systems utilities. ML and gateway lead for SPARK (ESP32-S3 wearable fall detection combining kinematic filtering with a quantized 18.5 KB INT8 CNN under FreeRTOS). Experienced in C/C++, TFLite Micro, microcontroller sensor interfacing, and native Windows systems utilities.",
+      "aiml": "Final-year engineering student and Fuse AI Fellow building applied machine learning pipelines, model-evaluation frameworks, and developer automation tools. Experienced in demographic performance auditing (AIF360, Fairlearn), tabular classification and explainability (XGBoost, SHAP), and containerized API services with FastAPI and Docker. Focuses on turning repetitive development steps into reliable tools and reproducible evaluation checks.",
+      "fullstack": "Final-year engineering student building AI workflow tooling, distributed agent coordination harnesses, and developer infrastructure. Developer of Fleet-Orchestrator (multi-step workflow coordination with provider adapters and task state inspection), Agent-Customization-Sync (cross-environment configuration and drift auditing), and custom Model Context Protocol (MCP) integrations.",
+      "compact": "Final-year Electronics & Information Engineering student at IOE Kathmandu Engineering College and Fuse AI Fellow. Builds applied ML systems, embedded AI (ESP32-S3 / TFLite Micro), and AI workflow tools. Uses AI to accelerate development and turns recurring workflows into reusable tools and deterministic checks."
     }
   },
   "education": [
@@ -79,21 +79,20 @@
         "fullstack",
         "compact"
       ],
-      "summary": "Selected for prestigious, intensive AI engineering fellowship covering ML, computer vision, NLP, and production MLOps.",
+      "summary": "Selected for competitive, intensive AI engineering fellowship covering ML, computer vision, NLP, and production MLOps.",
       "bullets": [
         {
-          "text": "Engineered a five-stage agentic Text-to-SQL pipeline (Planner → Generator → Validator → Executor → Summarizer), achieving **100% execution success and answer accuracy** on a 50-question project benchmark.",
+          "text": "Co-developed **BiasAperture**, an automated demographic fairness auditing pipeline measuring predictive disparities on computer vision benchmarks as the fellowship capstone project.",
           "tags": [
             "master",
             "aiml",
-            "fullstack",
             "research",
             "compact"
           ],
           "priority": 1
         },
         {
-          "text": "Built containerized AI microservices and evaluation APIs using **FastAPI**, **PostgreSQL**, and **Docker**.",
+          "text": "Built applied agentic and ML coursework pipelines including a 5-stage Text-to-SQL system (Planner → Generator → Validator → Executor → Summarizer) tested against structured evaluation suites.",
           "tags": [
             "master",
             "aiml",
@@ -102,7 +101,7 @@
           "priority": 2
         },
         {
-          "text": "Developed customer churn and lifetime value (CLV) prediction pipelines (**5-fold CV ROC-AUC 0.841**) utilizing **SMOTE**, cost-sensitive threshold tuning, and **SHAP** explainability.",
+          "text": "Developed customer churn and lifetime value (CLV) prediction workflows utilizing **SMOTE**, cost-sensitive threshold tuning, and **SHAP** explainability.",
           "tags": [
             "master",
             "aiml",
@@ -111,16 +110,16 @@
           "priority": 2
         },
         {
-          "text": "Conducted Bayesian estimation and Gaussian-process regression with **PyMC/ArviZ**, and performed unsupervised segmentation (**K-Means**, **DBSCAN**) on **~500K retail transaction records**.",
+          "text": "Implemented MLOps coursework for experiment tracking, containerized microservices (**FastAPI**, **Docker**, **PostgreSQL**), and scheduled data-drift evaluation.",
           "tags": [
             "master",
-            "research",
-            "aiml"
+            "aiml",
+            "fullstack"
           ],
           "priority": 3
         },
         {
-          "text": "Assembled a four-model time-series forecasting ensemble achieving **MASE 2.44** on the UCI Online Retail II dataset.",
+          "text": "Evaluated probabilistic estimation and time-series forecasting ensembles on retail datasets as part of advanced predictive modeling modules.",
           "tags": [
             "master",
             "aiml"
@@ -144,17 +143,16 @@
       "summary": "Awarded competitive sponsored fellowship for advanced data science and generative AI pathways.",
       "bullets": [
         {
-          "text": "Selected in competitive cohort for sponsored DataCamp access; developed six applied GenAI solutions automating data cleaning, schema normalization, and null filtering.",
+          "text": "Selected in competitive cohort for sponsored DataCamp access; developed applied GenAI workflows automating data cleaning, schema normalization, and exploratory analysis.",
           "tags": [
             "master",
             "aiml",
-            "fullstack",
-            "research"
+            "fullstack"
           ],
           "priority": 1
         },
         {
-          "text": "Completed advanced **SQL Associate** and **Python Data Associate** coursework focused on PostgreSQL, Pandas, and inferential statistics.",
+          "text": "Completing advanced technical pathways in SQL database design, Python data analysis, and predictive modeling.",
           "tags": [
             "master",
             "aiml"
@@ -168,31 +166,32 @@
     {
       "id": "biasaperture",
       "title": "BiasAperture — Computer Vision Demographic Fairness & Bias Audit",
+      "subtitle": "Fuse AI Fellowship Capstone Project",
       "context": "Fusemachines AI Fellowship Capstone",
-      "dates": "2026 – Present",
+      "dates": "2026",
       "tech_stack": [
-        "PyTorch",
         "Python",
         "AIF360",
         "Fairlearn",
-        "FairFace",
-        "SHAP",
-        "Statistical Testing"
+        "Statistical Testing",
+        "Jinja2",
+        "OpenCV"
       ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-025",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/BiasAperture"
+      },
       "tags": [
         "master",
         "research",
         "aiml",
+        "fullstack",
         "compact"
       ],
-      "links": {
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/BiasAperture",
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-025"
-      },
-      "summary": "Diagnostic fairness-auditing framework measuring demographic parity and predictive disparities across granular intersectional groups in computer vision.",
+      "summary": "Diagnostic prediction-auditing framework measuring demographic parity and error-rate disparities across intersectional groups in computer vision.",
       "bullets": [
         {
-          "text": "Co-developed an automated fairness-auditing framework with dual **AIF360** and **Fairlearn** backends computing **Disparate Impact Ratio (DIR)**, **Demographic Parity Difference (DPD)**, **Equal Opportunity Difference (EOD)**, and **Equalized Odds**.",
+          "text": "Co-developed an automated prediction-auditing and reporting pipeline as a two-person fellowship capstone with Tisha Manandhar.",
           "tags": [
             "master",
             "research",
@@ -202,7 +201,7 @@
           "priority": 1
         },
         {
-          "text": "Audited classification performance across **126 granular race × age × gender groups** on the **FairFace benchmark (97,698 images)**, discovering significant disparity drop-offs across intersectional distribution shifts.",
+          "text": "Audited classification performance across **126 demographic bins** on the FairFace benchmark (**97,698 images**), computing Disparate Impact Ratio, Demographic Parity Difference, and Equalized Odds.",
           "tags": [
             "master",
             "research",
@@ -212,18 +211,69 @@
           "priority": 1
         },
         {
-          "text": "Implemented rigorous statistical inference: **BCa bootstrap confidence intervals (B ≥ 1,000)**, **χ² and Fisher's exact tests**, **n ≥ 30 sample-size safeguards**, and **Shapley feature attribution (SHAP)** for flagged discrepancies.",
+          "text": "Engineered self-contained HTML and PDF report generation with confidence intervals and diagnostic disparity plots; matched model comparison and validation remain active work.",
           "tags": [
             "master",
             "research",
             "aiml"
           ],
           "priority": 2
-        },
+        }
+      ]
+    },
+    {
+      "id": "spark",
+      "title": "SPARK — Wearable Edge-AI Fall Detection System",
+      "subtitle": "Undergraduate Major Capstone Project",
+      "context": "Undergraduate Major Capstone Project",
+      "dates": "2025 – Present",
+      "tech_stack": [
+        "ESP32-S3",
+        "C/C++",
+        "TensorFlow Lite Micro",
+        "Python",
+        "FreeRTOS",
+        "MPU-6050"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-018",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/SPARK"
+      },
+      "tags": [
+        "master",
+        "systems",
+        "aiml",
+        "research",
+        "compact"
+      ],
+      "summary": "Embedded safety wearable combining kinematic acceleration thresholding with on-device neural confirmation on ESP32-S3.",
+      "bullets": [
         {
-          "text": "Architected clean CLI, HTML/PDF reporting pipelines, and modular test harnesses with **78/78 passing repository tests**; co-authored with Tisha Manandhar.",
+          "text": "Project lead for ML modeling, gateway processing, and explainability in a four-person team; hardware and firmware have dedicated owners.",
           "tags": [
             "master",
+            "systems",
+            "aiml",
+            "compact"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Trained 1D-CNN fall-detection models on the SisFall benchmark (38 subjects, 38,420 windows), evaluating subject-stratified cross-validation with **0.9185 AUC-ROC** and 87.81% sensitivity.",
+          "tags": [
+            "master",
+            "systems",
+            "aiml",
+            "research",
+            "compact"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Quantized model to an **18.5 KB INT8 CNN** footprint for ESP32-S3 edge deployment; on-device hardware testing, BLE streaming, and volunteer cohort validation remain pending.",
+          "tags": [
+            "master",
+            "systems",
             "aiml",
             "research"
           ],
@@ -232,272 +282,51 @@
       ]
     },
     {
-      "id": "spark",
-      "title": "SPARK — Safety-Critical Wearable Edge-AI Fall Detection System",
-      "context": "Undergraduate Major Capstone Project",
+      "id": "fleet_orchestrator",
+      "title": "Fleet Orchestrator — AI Workflow Coordination & Tooling",
+      "subtitle": "AI Systems & Developer Infrastructure",
+      "context": "AI Systems & Developer Infrastructure",
       "dates": "2025 – Present",
       "tech_stack": [
-        "ESP32-S3",
-        "C/C++",
-        "TFLite Micro",
-        "PyTorch",
         "Python",
-        "BLE",
         "FastAPI",
-        "SHAP"
-      ],
-      "tags": [
-        "master",
-        "systems",
-        "embedded",
-        "aiml",
-        "research",
-        "compact"
+        "Provider Adapters",
+        "Model Context Protocol (MCP)",
+        "SQLite"
       ],
       "links": {
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/SPARK",
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-018"
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-040",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/Fleet-Orchestrator"
       },
-      "summary": "Two-stage embedded safety wearable combining deterministic kinematic thresholding with a quantized 1D-CNN confirmation layer on ESP32-S3.",
-      "bullets": [
-        {
-          "text": "Technical lead for ML modeling, quantization, and gateway architecture in a four-person team; designed a two-tier fall detection system eliminating cloud latency and privacy hazards.",
-          "tags": [
-            "master",
-            "systems",
-            "embedded",
-            "aiml",
-            "compact"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Trained 1D-CNN on the **SisFall benchmark (38 subjects, 38,420 windows)**; achieved **0.9185 AUC-ROC (95% CI: [0.9065, 0.9305])** and **87.81% sensitivity** under subject-stratified 5-fold cross-validation with zero data leakage.",
-          "tags": [
-            "master",
-            "aiml",
-            "research",
-            "systems",
-            "compact"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Executed post-training integer quantization (PTQ), compressing model flash memory footprint to **18.5 KB** for deterministic, **sub-100ms** on-device confirmation on the **ESP32-S3** microcontroller.",
-          "tags": [
-            "master",
-            "systems",
-            "embedded",
-            "aiml",
-            "compact"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Engineered BLE/serial local gateway, local **SHAP feature attribution**, FastAPI REST event store, and automated clinical incident PDF report generation; verified by **56 host CTest/Unity unit tests** and **48 Python integration tests**.",
-          "tags": [
-            "master",
-            "systems",
-            "embedded",
-            "fullstack"
-          ],
-          "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "invariant_engine",
-      "title": "Headless Invariant Assurance Engine (INV-BMK-001)",
-      "context": "Formal Verification & Systems Benchmark",
-      "dates": "2026",
-      "tech_stack": [
-        "Python",
-        "Z3",
-        "SMT-LIB2",
-        "State Machines",
-        "Pytest",
-        "Formal Methods"
-      ],
-      "tags": [
-        "master",
-        "research",
-        "systems",
-        "fullstack"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html"
-      },
-      "summary": "Formal verification harness encoding state-machine contracts into SMT-LIB2 / Z3 formal logic to inductively prove invariants and replay counterexamples.",
-      "bullets": [
-        {
-          "text": "Developed a formal verification benchmark encoding reactive state-machine contracts into **SMT-LIB2/Z3**, inductively proving candidate safety invariants and generating executable counterexamples.",
-          "tags": [
-            "master",
-            "research",
-            "systems",
-            "fullstack"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Evaluated **12 safety properties across 4 state machines**, discovering and sandbox-replaying **4/4 planted violations (100% recall, 0.0% false-discovery rate)** with **10.844 ms mean solver latency**.",
-          "tags": [
-            "master",
-            "research",
-            "systems"
-          ],
-          "priority": 1
-        }
-      ]
-    },
-    {
-      "id": "fleet_orchestrator",
-      "title": "Fleet-Orchestrator — Multi-Account Autonomous Agent Swarm & Consensus Engine",
-      "context": "Distributed AI Infrastructure",
-      "dates": "2026 – Present",
-      "tech_stack": [
-        "Python 3.12+",
-        "FastAPI",
-        "SQLite WAL",
-        "asyncio",
-        "MCP",
-        "CDP",
-        "Copilot CLI"
-      ],
       "tags": [
         "master",
         "fullstack",
-        "systems",
-        "aiml"
+        "aiml",
+        "compact"
       ],
-      "links": {
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/Fleet-Orchestrator",
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-040"
-      },
-      "summary": "Distributed multi-agent orchestration engine coordinating 31 worker accounts with SQLite WAL lease state machines and automated quota management.",
+      "summary": "Coordination tooling for multi-step AI workflows, managing task state, worker adapters, scheduling, and status inspection.",
       "bullets": [
         {
-          "text": "Architected an autonomous multi-agent coordinator managing background worker swarms across **31 Copilot accounts** with atomic **SQLite WAL lease state machines** and crash recovery.",
+          "text": "Built coordination tooling for multi-step AI workflows, with task state, worker adapters, scheduling, and live status inspection.",
           "tags": [
             "master",
             "fullstack",
-            "systems"
+            "aiml",
+            "compact"
           ],
           "priority": 1
         },
         {
-          "text": "Implemented multi-provider adapters (Copilot CLI, Gemini, Claude, local SLMs), quota-aware round-robin scheduling, and adversarial lease-stealing tests.",
+          "text": "Standardized provider adapters (local models, CLI harnesses, API endpoints) with reusable interfaces to eliminate repeated orchestration scripts.",
           "tags": [
             "master",
             "fullstack",
             "aiml"
           ],
           "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "cyber_forensics",
-      "title": "Cyber-Forensics — Windows DFIR Stealth-Evasion Triage Engine",
-      "context": "Security & Systems Engineering",
-      "dates": "2026",
-      "tech_stack": [
-        "PowerShell 7",
-        "Win32/NT APIs",
-        "NTFS Streams",
-        "DFIR Parsers",
-        "Security"
-      ],
-      "tags": [
-        "master",
-        "systems"
-      ],
-      "links": {
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/Cyber-Forensics"
-      },
-      "summary": "DFIR triage toolkit hunting evasive persistence and masqueraded payloads across Windows NTFS internals.",
-      "bullets": [
-        {
-          "text": "Built a high-performance Windows DFIR triage engine detecting hidden **NTFS Alternate Data Streams (ADS)**, **CLSID and Unicode RLO masquerades**, and **PE header anomalies**.",
-          "tags": [
-            "master",
-            "systems"
-          ],
-          "priority": 1
         },
         {
-          "text": "Automated Prefetch execution artifact harvesting and maintained tamper-evident chain-of-custody evidence ledgers for rapid security triage.",
-          "tags": [
-            "master",
-            "systems"
-          ],
-          "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "win_vault",
-      "title": "Win-Vault — Kernel-Level NTFS Folder Privacy Engine",
-      "context": "System Security & File Systems",
-      "dates": "2026",
-      "tech_stack": [
-        "PowerShell 7",
-        "Windows Forms",
-        "NTFS ACLs",
-        "Win32 API",
-        "SHA-256"
-      ],
-      "tags": [
-        "master",
-        "systems"
-      ],
-      "links": {
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/Win-Vault"
-      },
-      "summary": "Folder privacy utility enforcing kernel-level access denial via native NTFS Access Control Lists with zero third-party dependencies.",
-      "bullets": [
-        {
-          "text": "Engineered a zero-dependency Windows folder locking utility enforcing kernel-level access denial via native **NTFS Access Control Lists (ACLs)** and **SHA-256** password hashing.",
-          "tags": [
-            "master",
-            "systems"
-          ],
-          "priority": 1
-        }
-      ]
-    },
-    {
-      "id": "super_nlm",
-      "title": "Super-NLM — Multi-Account NotebookLM Aggregator & MCP Hub",
-      "context": "AI Developer Tooling",
-      "dates": "2026",
-      "tech_stack": [
-        "Python",
-        "FastAPI",
-        "React",
-        "MCP",
-        "asyncio"
-      ],
-      "tags": [
-        "master",
-        "fullstack",
-        "aiml"
-      ],
-      "links": {
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/super-nlm"
-      },
-      "summary": "Model Context Protocol (MCP) server and dashboard for multi-account Google NotebookLM management and cross-notebook synthesis.",
-      "bullets": [
-        {
-          "text": "Developed an MCP stdio/HTTP server and dashboard enabling multi-account NotebookLM access with round-robin rotation, quota-aware backoff, and cross-notebook synthesis.",
-          "tags": [
-            "master",
-            "fullstack"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Automated Google Drive folder synchronization and batch generation of Studio artifacts (audio overviews, study guides, mind maps).",
+          "text": "Integrated local MCP tool servers and automated execution logging to ensure reproducible batch processing and reliable error recovery.",
           "tags": [
             "master",
             "fullstack"
@@ -508,247 +337,29 @@
     },
     {
       "id": "agent_customization_sync",
-      "title": "Agent-Customization-Sync — Cross-IDE Configuration Synchronizer",
-      "context": "Developer Tooling & Invariant Governance",
-      "dates": "2026",
+      "title": "Agent-Customization-Sync — Cross-IDE Configuration Tooling",
+      "subtitle": "Developer Tooling & Configuration Governance",
+      "context": "Developer Tooling & Workflow Automation",
+      "dates": "2025 – Present",
       "tech_stack": [
         "Python",
-        "Win32 NTFS Junctions",
         "SHA-256",
-        "Pytest"
-      ],
-      "tags": [
-        "master",
-        "fullstack"
+        "CLI",
+        "Configuration Governance"
       ],
       "links": {
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/Agent-Customization-Sync",
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-041"
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-041",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/Agent-Customization-Sync"
       },
-      "summary": "Automated synchronization engine maintaining cryptographic ring-buffer backups and rules transpilation across Antigravity, Cursor, and Claude Code.",
-      "bullets": [
-        {
-          "text": "Engineered cross-IDE configuration synchronizer providing snapshotting, rules transpilation, and **SHA-256 drift auditing** across Antigravity, Cursor, and Claude Code.",
-          "tags": [
-            "master",
-            "fullstack"
-          ],
-          "priority": 1
-        }
-      ]
-    },
-    {
-      "id": "gcsbr",
-      "title": "Gesture-Controlled Self-Balancing Robot (GCSBR)",
-      "context": "Undergraduate Minor Project",
-      "dates": "2025",
-      "tech_stack": [
-        "Arduino",
-        "C/C++",
-        "MPU-6050",
-        "PID Control",
-        "MATLAB",
-        "Android",
-        "MediaPipe"
-      ],
-      "tags": [
-        "master",
-        "systems",
-        "embedded"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-001"
-      },
-      "summary": "Two-wheeled inverted pendulum robot with PID stabilization firmware and real-time Android computer-vision gesture actuation.",
-      "bullets": [
-        {
-          "text": "Implemented real-time **PID stabilization firmware** on an inverted pendulum robot, validated via a MATLAB-simulation-to-hardware parameter transfer pipeline.",
-          "tags": [
-            "master",
-            "systems",
-            "embedded"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Developed an Android companion app (**Kotlin**, **MediaPipe Hands**, **CameraX**, **Bluetooth**) mapping hand gestures to directional actuation commands in real time.",
-          "tags": [
-            "master",
-            "systems",
-            "embedded"
-          ],
-          "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "edge_stability",
-      "title": "Edge AI Stability Detection System",
-      "context": "Robotics Telemetry Classification",
-      "dates": "2025",
-      "tech_stack": [
-        "Python",
-        "scikit-learn",
-        "FastAPI",
-        "Joblib",
-        "IMU Data"
-      ],
-      "tags": [
-        "master",
-        "aiml",
-        "systems"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-007"
-      },
-      "summary": "Random Forest telemetry classifier predicting platform stability from simulated IMU sensor streams.",
-      "bullets": [
-        {
-          "text": "Trained a Random Forest classifier predicting platform stability from simulated 6-axis IMU streams, reaching **99.8% test accuracy**.",
-          "tags": [
-            "master",
-            "aiml"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Serialized the pipeline via Joblib and deployed an ultra-low-latency **FastAPI REST inference endpoint** for robotics integration.",
-          "tags": [
-            "master",
-            "aiml",
-            "systems"
-          ],
-          "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "nepali_ocr",
-      "title": "nepali-ocr-ai — Low-Resource Document Intelligence",
-      "context": "NLP & Multimodal Document Processing",
-      "dates": "2026",
-      "tech_stack": [
-        "Python 3.11",
-        "Tesseract",
-        "Devanagari OCR",
-        "OpenXML",
-        "FastMCP"
-      ],
-      "tags": [
-        "master",
-        "aiml"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-038"
-      },
-      "summary": "Hybrid Nepali OCR and document transcoding engine combining multimodal vision models with local Tesseract and Devanagari normalization.",
-      "bullets": [
-        {
-          "text": "Prototyped a hybrid Nepali document intelligence pipeline combining vision LLM OCR with local Tesseract fallback, Devanagari normalization, and Preeti ↔ Unicode transcoding.",
-          "tags": [
-            "master",
-            "aiml"
-          ],
-          "priority": 1
-        }
-      ]
-    },
-    {
-      "id": "nexus",
-      "title": "Nexus — Personal AI Workspace & Knowledge Retrieval Hub",
-      "context": "Full-Stack Knowledge System",
-      "dates": "2025 – 2026",
-      "tech_stack": [
-        "FastAPI",
-        "React (Vite)",
-        "SQLite FTS5",
-        "asyncio",
-        "TailwindCSS"
-      ],
-      "tags": [
-        "master",
-        "fullstack",
-        "aiml"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-010"
-      },
-      "summary": "Local AI workspace integrating frontier LLM services with full-text search indexing over personal notes and transcripts.",
-      "bullets": [
-        {
-          "text": "Architected a local AI workspace integrating multi-model API backends with **SQLite FTS5 full-text search** for sub-15ms semantic note retrieval.",
-          "tags": [
-            "master",
-            "fullstack"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Engineered responsive frontend with React, Vite, and WebSocket streaming for low-latency conversational interaction.",
-          "tags": [
-            "master",
-            "fullstack"
-          ],
-          "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "system_optimizer",
-      "title": "Win-Governor / System-Optimizer — Workstation Memory Reclamation Engine",
-      "context": "Windows Systems Utility",
-      "dates": "2025 – 2026",
-      "tech_stack": [
-        "C# .NET 10",
-        "WPF",
-        "Win32/NT APIs",
-        "Windows Internals"
-      ],
-      "tags": [
-        "master",
-        "systems",
-        "fullstack"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-003"
-      },
-      "summary": "Native Windows utility optimizing working-set RAM via low-level NT memory management APIs.",
-      "bullets": [
-        {
-          "text": "Built a native Windows performance utility reclaiming **1.2–3.4 GB working-set RAM** under heavy developer workloads via undocumented Win32/NT APIs.",
-          "tags": [
-            "master",
-            "systems",
-            "fullstack"
-          ],
-          "priority": 1
-        }
-      ]
-    },
-    {
-      "id": "utility_mcps",
-      "title": "Utility MCP Suite — LocalSend, Google Classroom & Fusion 360 Bridges",
-      "context": "Model Context Protocol Tooling",
-      "dates": "2026 – Present",
-      "tech_stack": [
-        "Node.js ESM",
-        "Python",
-        "MCP Protocol",
-        "REST / HTTP",
-        "mTLS"
-      ],
       "tags": [
         "master",
         "fullstack",
         "systems"
       ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html"
-      },
-      "summary": "Collection of production MCP servers connecting AI agents with local LAN devices, educational APIs, and CAD software.",
+      "summary": "Cross-environment configuration synchronizer providing snapshotting, guarded restore, and drift auditing across IDEs.",
       "bullets": [
         {
-          "text": "Developed **localsend-mcp** enabling AI agents to discover LAN peers and transfer multi-gigabyte build artifacts over secure mTLS (<25ms transport latency).",
+          "text": "Built configuration snapshots, guarded restore, rules transpilation, and SHA-256 drift audits across development environments (Antigravity, Cursor, Claude Code).",
           "tags": [
             "master",
             "fullstack",
@@ -757,7 +368,248 @@
           "priority": 1
         },
         {
-          "text": "Built **fusion360-mcp** establishing a headless IPC bridge to Autodesk Fusion 360 for agentic 3D parametric CAD modeling.",
+          "text": "Audited instruction overhead and linked shared skills to reduce configuration duplication and maintain environment consistency across machines.",
+          "tags": [
+            "master",
+            "fullstack",
+            "systems"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "gcsbr",
+      "title": "Gesture-Controlled Self-Balancing Robot (GCSBR)",
+      "subtitle": "Undergraduate Minor Project",
+      "context": "Undergraduate Minor Project",
+      "dates": "2024 – 2025",
+      "tech_stack": [
+        "Arduino",
+        "C++",
+        "MediaPipe Hands",
+        "CameraX",
+        "Kotlin",
+        "PID Control"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-012"
+      },
+      "tags": [
+        "master",
+        "systems"
+      ],
+      "summary": "Two-wheeled inverted pendulum robot with PID stabilization firmware and real-time Android computer-vision gesture actuation.",
+      "bullets": [
+        {
+          "text": "Implemented real-time PID stabilization firmware on an inverted pendulum robot, tuning balance control parameters for stable upright recovery.",
+          "tags": [
+            "master",
+            "systems"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Developed an Android companion app (Kotlin, MediaPipe Hands, CameraX) mapping hand gestures to directional actuation commands over Bluetooth.",
+          "tags": [
+            "master",
+            "systems"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "super_nlm",
+      "title": "Super-NLM — Multi-Account NotebookLM Aggregator & MCP Tool",
+      "subtitle": "AI Developer Tooling",
+      "context": "AI Developer Tooling",
+      "dates": "2025 – Present",
+      "tech_stack": [
+        "Python",
+        "Model Context Protocol (MCP)",
+        "Google Drive API",
+        "FastAPI"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-039",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/super-nlm"
+      },
+      "tags": [
+        "master",
+        "fullstack"
+      ],
+      "summary": "Model Context Protocol server and automation tooling managing NotebookLM workflows and Studio artifact generation.",
+      "bullets": [
+        {
+          "text": "Developed an MCP tool server enabling AI agents to query notebooks, synchronize Google Drive research folders, and download Studio artifacts.",
+          "tags": [
+            "master",
+            "fullstack"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Implemented queue scheduling and quota-aware backoff handling to support automated document synthesis across study materials.",
+          "tags": [
+            "master",
+            "fullstack"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "win_vault",
+      "title": "Win-Vault — Native Windows Folder Privacy Utility",
+      "subtitle": "Systems Utility & Security",
+      "context": "Systems Utility & Security",
+      "dates": "2025",
+      "tech_stack": [
+        "Python",
+        "Win32 APIs",
+        "NTFS ACLs",
+        "PowerShell"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-037",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/Win-Vault"
+      },
+      "tags": [
+        "master",
+        "systems"
+      ],
+      "summary": "Lightweight Windows privacy utility locking directories via native NTFS Access Control Lists with zero third-party dependencies.",
+      "bullets": [
+        {
+          "text": "Engineered a zero-dependency Windows folder locking utility enforcing access restrictions via native NTFS Access Control Lists (ACLs).",
+          "tags": [
+            "master",
+            "systems"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Eliminated third-party driver overhead by utilizing standard operating system security permissions and PowerShell automation.",
+          "tags": [
+            "master",
+            "systems"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "system_optimizer",
+      "title": "NovaOptimizer / System-Optimizer — Workstation Memory Utility",
+      "subtitle": "Windows Systems Utility",
+      "context": "Windows Systems Utility",
+      "dates": "2025",
+      "tech_stack": [
+        "Python",
+        "Win32 APIs",
+        "PowerShell",
+        "CLI"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-035",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/system-optimizer"
+      },
+      "tags": [
+        "master",
+        "systems"
+      ],
+      "summary": "Workstation memory utility automating working-set RAM reclamation during intensive development workloads.",
+      "bullets": [
+        {
+          "text": "Built a native Windows performance utility reclaiming **1.2–3.4 GB working-set RAM** under heavy multitasking developer workloads.",
+          "tags": [
+            "master",
+            "systems"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Automated background cleanup routines via standard Windows process memory APIs without disrupting active IDE sessions.",
+          "tags": [
+            "master",
+            "systems"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "nepali_ocr",
+      "title": "nepali-ocr-ai — Low-Resource Document Processing Pipeline",
+      "subtitle": "NLP & Document Intelligence",
+      "context": "NLP & Document Processing",
+      "dates": "2025",
+      "tech_stack": [
+        "Python",
+        "Tesseract OCR",
+        "OpenCV",
+        "Devanagari NLP"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-028",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/nepali-ocr-ai"
+      },
+      "tags": [
+        "master",
+        "aiml"
+      ],
+      "summary": "Document processing pipeline combining OCR with Devanagari text normalization and Preeti-to-Unicode transcoding.",
+      "bullets": [
+        {
+          "text": "Prototyped a document intelligence pipeline combining OCR with Devanagari text normalization and Preeti ↔ Unicode font transcoding.",
+          "tags": [
+            "master",
+            "aiml"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Built preprocessing filters in OpenCV for uneven illumination and historical print noise reduction.",
+          "tags": [
+            "master",
+            "aiml"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "utility_mcps",
+      "title": "Utility MCP Suite — LocalSend & Developer Bridges",
+      "subtitle": "Model Context Protocol Tooling",
+      "context": "Model Context Protocol Tooling",
+      "dates": "2025 – Present",
+      "tech_stack": [
+        "Python",
+        "Model Context Protocol (MCP)",
+        "FastAPI",
+        "Networking"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-042"
+      },
+      "tags": [
+        "master",
+        "fullstack"
+      ],
+      "summary": "Custom Model Context Protocol servers connecting AI agents with local LAN devices and developer tools.",
+      "bullets": [
+        {
+          "text": "Developed custom MCP servers including a LocalSend bridge enabling AI agents to discover LAN peers and transfer build artifacts securely.",
+          "tags": [
+            "master",
+            "fullstack"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Built headless IPC connectors enabling agent-assisted operations with local design and engineering applications.",
           "tags": [
             "master",
             "fullstack"
@@ -782,22 +634,8 @@
         "compact"
       ],
       "bullets": [
-        "Direct branch strategy, executive committee operations, technical workshops, and peer learning initiatives for engineering students.",
-        "Previously managed operational documentation and workshop logistics across department-level technical events as Vice Secretary."
-      ]
-    },
-    {
-      "role": "Event Manager (2026 – Present); Resource Manager (2024 – 2026)",
-      "organization": "Electronics Project Club (EPC), Kathmandu Engineering College",
-      "dates": "2024 – Present",
-      "location": "Kathmandu, Nepal",
-      "tags": [
-        "master",
-        "systems",
-        "aiml"
-      ],
-      "bullets": [
-        "Plan and execute technical hackathons, project exhibitions, and hardware workshops; manage lab equipment allocation across engineering departments."
+        "Coordinate branch planning, technical workshops, and cross-committee communication for Kathmandu Engineering College IEEE student body.",
+        "Facilitated technical awareness events and student engagement initiatives across engineering departments."
       ]
     },
     {
@@ -811,149 +649,103 @@
         "fullstack"
       ],
       "bullets": [
-        "Support student rapid prototyping, 3D printing, and PCB bring-up; maintain lab website infrastructure and asset consistency."
+        "Maintain website content, interface fixes, and documentation for student prototyping equipment.",
+        "Support students with 3D printing, embedded electronics prototyping, and lab equipment access."
+      ]
+    },
+    {
+      "role": "Event Manager (2026 – Present); Resource Manager (2024 – 2026)",
+      "organization": "Electronics Project Club (EPC), Kathmandu Engineering College",
+      "dates": "2024 – Present",
+      "location": "Kathmandu, Nepal",
+      "tags": [
+        "master",
+        "systems",
+        "aiml"
+      ],
+      "bullets": [
+        "Manage event logistics, hardware inventory, and project exhibitions for the college electronics department.",
+        "Organized project showcases and hardware component distribution for student engineering competitions."
       ]
     }
   ],
   "skills": {
     "categories": [
       {
-        "name": "Programming Languages",
+        "name": "Machine Learning & Evaluation",
         "skills": [
           "Python",
-          "C",
-          "C++",
-          "SQL (PostgreSQL, SQLite)",
-          "Kotlin",
-          "C# (.NET)",
-          "VHDL",
-          "PowerShell",
-          "Bash",
-          "JavaScript / TypeScript"
-        ],
-        "tags": [
-          "master",
-          "research",
-          "systems",
-          "aiml",
-          "fullstack",
-          "compact"
-        ]
-      },
-      {
-        "name": "Machine Learning & AI",
-        "skills": [
           "PyTorch",
-          "TensorFlow",
           "scikit-learn",
+          "Pandas",
+          "NumPy",
           "XGBoost",
-          "Random Forest",
-          "PyMC",
-          "ArviZ",
           "SHAP",
           "Fairlearn",
           "AIF360",
-          "Hugging Face Transformers",
           "OpenCV",
           "MediaPipe"
         ],
         "tags": [
           "master",
-          "research",
           "aiml",
-          "compact"
-        ]
-      },
-      {
-        "name": "Edge AI & Embedded Systems",
-        "skills": [
-          "ESP32-S3 (ESP-IDF / FreeRTOS)",
-          "TensorFlow Lite Micro (INT8 PTQ)",
-          "Arduino",
-          "MPU-6050",
-          "UART / I2C / SPI",
-          "Bluetooth Low Energy (BLE)",
-          "MATLAB / Simulink"
-        ],
-        "tags": [
-          "master",
-          "systems",
-          "embedded",
-          "compact"
-        ]
-      },
-      {
-        "name": "Formal Methods & Verification",
-        "skills": [
-          "Z3 SMT Solver",
-          "SMT-LIB2",
-          "State-Machine Contract Verification",
-          "Inductive Invariant Proofs",
-          "Counterexample Generation & Sandbox Replay"
-        ],
-        "tags": [
-          "master",
           "research",
-          "systems"
+          "compact"
         ]
       },
       {
-        "name": "AI Systems, Backend & MLOps",
+        "name": "AI Systems, Backend & Tooling",
         "skills": [
           "FastAPI",
           "Docker",
           "Model Context Protocol (MCP)",
+          "SQL (PostgreSQL, SQLite)",
           "asyncio",
-          "MLflow",
-          "Evidently AI",
-          "Airflow",
-          "PostgreSQL",
-          "SQLite FTS5",
-          "REST APIs"
+          "REST APIs",
+          "MLflow"
         ],
         "tags": [
           "master",
           "aiml",
           "fullstack",
+          "compact"
+        ]
+      },
+      {
+        "name": "Embedded Systems & Edge AI",
+        "skills": [
+          "C/C++",
+          "ESP32-S3",
+          "TensorFlow Lite Micro",
+          "FreeRTOS",
+          "Arduino",
+          "Sensor Interfacing (IMU, UART/I2C/SPI)",
+          "Kotlin"
+        ],
+        "tags": [
+          "master",
           "systems",
           "compact"
         ]
       },
       {
-        "name": "Systems Security & Forensics",
-        "skills": [
-          "Windows Win32/NT APIs",
-          "NTFS Alternate Data Streams (ADS)",
-          "NTFS ACLs",
-          "PE Header Verification",
-          "Prefetch Forensics",
-          "DFIR Triage"
-        ],
-        "tags": [
-          "master",
-          "systems"
-        ]
-      },
-      {
-        "name": "Engineering Practice & Tools",
+        "name": "Engineering Practice & Tooling",
         "skills": [
           "Git",
           "GitHub",
-          "Linux (Ubuntu)",
-          "Jupyter",
-          "Google Colab",
-          "LaTeX / Overleaf",
-          "WordCraft",
+          "Linux",
+          "PowerShell",
           "Pytest",
-          "CMake / CTest",
-          "Automated CI/CD"
+          "Reproducible Configurations",
+          "WordCraft",
+          "LaTeX"
         ],
         "tags": [
           "master",
-          "research",
           "systems",
           "aiml",
           "fullstack",
+          "research",
           "compact"
         ]
       }
@@ -962,81 +754,55 @@
   "certifications_and_activities": [
     {
       "name": "IEEE WIE Nepal LaTeX Workshop",
-      "date": "May 2026",
-      "issuer": "IEEE WIE Nepal AG",
-      "tags": [
-        "master",
-        "research",
-        "academic"
-      ]
+      "date": "May 2026"
     },
     {
       "name": "IEEE SPAx (Student Professional Awareness Venture) Organizing Committee",
-      "date": "2025 – 2026",
-      "issuer": "IEEE KEC KTM Student Branch",
-      "tags": [
-        "master",
-        "leadership"
-      ]
+      "date": "2025 – 2026"
     },
     {
       "name": "IEEEXtreme 19.0 Programming Competition",
-      "date": "2025",
-      "issuer": "IEEE (Team ShadowXTREME)",
-      "tags": [
-        "master",
-        "programming"
-      ]
+      "date": "2025"
     },
     {
       "name": "PCB Design & Fabrication Workshop",
-      "date": "2025",
-      "issuer": "KEC Robotics Club",
-      "tags": [
-        "master",
-        "systems",
-        "embedded"
-      ]
+      "date": "2025"
     },
     {
       "name": "AWS Cloud Computing Workshop",
-      "date": "2024",
-      "issuer": "Kathmandu Engineering College",
-      "tags": [
-        "master",
-        "systems",
-        "fullstack"
-      ]
+      "date": "2024"
     },
     {
       "name": "Prompt Engineering Fundamentals",
-      "date": "2024",
-      "issuer": "TechAxis",
-      "tags": [
-        "master",
-        "aiml"
-      ]
+      "date": "2024"
     },
     {
       "name": "Microsoft Learn Student Ambassador",
-      "date": "2024 – 2025",
-      "issuer": "Microsoft",
-      "tags": [
-        "master",
-        "leadership"
-      ]
+      "date": "2024 – 2025"
     }
   ],
   "references": [
     {
-      "name": "Er. Dipen Manandhar",
-      "title": "Faculty Member & Project Supervisor, Department of Electronics and Computer Engineering",
+      "name": "Er. Suramya Sharma Dahal",
+      "title": "Head of Department, Department of Electronics and Computer Engineering",
       "institution": "Kathmandu Engineering College (IOE, Tribhuvan University)",
-      "relationship": "Supervisor for undergraduate final-year SPARK major capstone project (2025–2026).",
+      "email": "surammya@gmail.com",
+      "relationship": "Academic department head overseeing undergraduate engineering curriculum and senior projects",
       "tags": [
         "master",
         "academic",
+        "research"
+      ]
+    },
+    {
+      "name": "Er. Dipen Manandhar",
+      "title": "Faculty Member & Major Project Supervisor, Department of Electronics and Computer Engineering",
+      "institution": "Kathmandu Engineering College (IOE, Tribhuvan University)",
+      "relationship": "Undergraduate major capstone project supervisor (SPARK edge-AI wearable)",
+      "tags": [
+        "master",
         "systems",
+        "academic",
         "research"
       ]
     },
@@ -1044,11 +810,11 @@
       "name": "Shreejan Kisee",
       "title": "Teaching Assistant & Capstone Supervisor",
       "institution": "Fusemachines AI Fellowship",
-      "relationship": "Supervised BiasAperture demographic fairness auditing research capstone and applied ML coursework (2026).",
+      "relationship": "AI Fellowship capstone supervisor (BiasAperture demographic auditing) and coursework mentor",
       "tags": [
         "master",
-        "academic",
         "aiml",
+        "academic",
         "research"
       ]
     }

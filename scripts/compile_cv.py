@@ -382,6 +382,8 @@ def build_docx(data: dict, preset: str, output_path: Path):
     if preset in ["master", "academic", "research"]:
         add_section_header("ACADEMIC & PROFESSIONAL REFERENCES")
         for ref in data.get("references", []):
+            if preset != "master" and preset not in ref.get("tags", []):
+                continue
             p_ref = doc.add_paragraph()
             p_ref.paragraph_format.space_before = Pt(2)
             p_ref.paragraph_format.space_after = Pt(1)
@@ -396,7 +398,8 @@ def build_docx(data: dict, preset: str, output_path: Path):
             p_ri = doc.add_paragraph()
             p_ri.paragraph_format.space_before = Pt(0)
             p_ri.paragraph_format.space_after = Pt(2)
-            r_inst = p_ri.add_run(f"{ref['institution']}. Context: {ref['relationship']}")
+            email_str = f"  •  Email: {ref['email']}" if ref.get("email") else ""
+            r_inst = p_ri.add_run(f"{ref['institution']}{email_str}. Context: {ref['relationship']}")
             r_inst.font.name = "Calibri"
             r_inst.font.size = Pt(8.4)
             r_inst.font.color.rgb = COLOR_MUTED
@@ -437,9 +440,6 @@ def check_claims(data: dict):
         ("0.9185", "SPARK SisFall AUC-ROC"),
         ("18.5 KB", "SPARK quantized INT8 CNN model footprint"),
         ("126", "BiasAperture demographic bins"),
-        ("100%", "Text-to-SQL 5-stage benchmark execution accuracy"),
-        ("12", "Invariant Assurance Engine properties"),
-        ("4/4", "Invariant Assurance Engine planted violations recall")
     ]
 
     for val, desc in required_claims:

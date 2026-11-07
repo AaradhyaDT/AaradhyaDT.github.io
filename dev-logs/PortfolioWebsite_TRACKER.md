@@ -1,8 +1,8 @@
-# Portfolio Website Tracker — v58.10
-
-
+# Portfolio Website Tracker — v58.11
 
 Last updated: _2026-11-07_
+
+- **Authentic Portfolio Identity & CV Revoicing**: Realigned `data/master_cv.json` and all compiled CV presets (`master`, `research`, `systems`, `aiml`, `fullstack`, `compact`) to match the authentic portfolio voice and identity ("I build model-evaluation pipelines, AI workflow tools, and embedded ML software; I use AI to accelerate development, then turn recurring work into reusable tools and deterministic checks"). Replaced artificial formal-methods claims with verified engineering scopes and honest team collaboration boundaries (BiasAperture 2-person fellowship capstone with Tisha Manandhar, SPARK 4-person hardware/firmware ownership). Formally integrated verified referees: Er. Suramya Sharma Dahal (Head of Department, Electronics & Computer Engineering, KEC), Er. Dipen Manandhar (Faculty Member & Major Project Supervisor, KEC), and Shreejan Kisee (Teaching Assistant & Capstone Supervisor, Fusemachines AI Fellowship). Compiled all ATS-optimized DOCX and vector PDFs via WordCraft CLI; passed all 26 verification gate checks.
 
 - **Theme-sensitive lotus polish (#52)**: Tighten portrait/control spacing, quiet the backdrop around the profile card, and remove card lift and animated perimeter. Adapt lotus shadows, blade recesses, and outlines to light and dark themes while retaining gold, blue, and original logo colors. Reserve three lines for affiliation captions. Both themes were inspected in localhost; all 26 verification categories passed before publication. Full mobile caption interaction verification remains unconfirmed.
 
@@ -892,7 +892,7 @@ eq$ server-side authorization*. Resolved stale reference to non-existent audit d
 
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
 
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.10`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.11`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 
