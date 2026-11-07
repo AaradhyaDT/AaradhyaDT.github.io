@@ -8,9 +8,9 @@
 const SITE_RELEASES = [
   {
     version: "v58.9",
-    date: "2026-10-29",
-    sha: "965eb41a45231407ac7773a27843538e0d0f7ffb",
-    title: "harmonize p-047 card story and sync project summaries",
+    date: "2026-11-07",
+    sha: "f4c418f58be632208cf4dc7f9d3d690ec5433015",
+    title: "integrate scholar profile, statement of purpose, and compiled presets",
     highlights: []
   },
   {

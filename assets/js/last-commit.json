@@ -1,6 +1,6 @@
 {
-  "sha": "965eb41a45231407ac7773a27843538e0d0f7ffb",
-  "shortSha": "965eb41",
-  "date": "2026-10-29T10:26:47+05:45",
-  "message": "fix(ci): harmonize p-047 card story and sync project summaries"
+  "sha": "f4c418f58be632208cf4dc7f9d3d690ec5433015",
+  "shortSha": "f4c418f",
+  "date": "2026-11-07T14:55:13+05:45",
+  "message": "feat(cv): integrate scholar profile, statement of purpose, and compiled presets"
 }
