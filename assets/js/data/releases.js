@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v58.10",
     date: "2026-11-07",
-    sha: "f4c418f58be632208cf4dc7f9d3d690ec5433015",
-    title: "integrate scholar profile, statement of purpose, and compiled presets",
+    sha: "838300afbd74234f35fac0421d73bd6d6fa99d29",
+    title: "remove unverified referee entry from master cv and recompile all presets",
     highlights: []
   },
   {
