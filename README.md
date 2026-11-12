@@ -3,7 +3,7 @@
 [![Deploy Pages](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml)
 [![Verification Suite](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml)
 [![Lighthouse Audit](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml)
-[![Version](https://img.shields.io/badge/version-v58.11-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
+[![Version](https://img.shields.io/badge/version-v58.12-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
 [![Zero-Framework](https://img.shields.io/badge/framework-vanilla%20HTML%2FCSS%2FJS-orange.svg)](https://aaradhyadt.github.io)
 
@@ -46,7 +46,7 @@ agent entrypoints.
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v58.11 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v58.12 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── Assets (`assets/`)
