@@ -8,9 +8,9 @@
 const SITE_RELEASES = [
   {
     version: "v58.12",
-    date: "2026-11-07",
-    sha: "78e7e9cde6f36db25a9d2231cef00dc18531bc70",
-    title: "revoice master cv and presets to match authentic portfolio voice",
+    date: "2026-11-12",
+    sha: "fa5a1742d48b61465eebba53b7231b3031e2a6e6",
+    title: "synchronize Cycle 4 milestone and onboard Headless LocalSend (#56) (#57)",
     highlights: []
   },
   {
