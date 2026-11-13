@@ -8,9 +8,9 @@
 const SITE_RELEASES = [
   {
     version: "v58.13",
-    date: "2026-11-12",
-    sha: "fa5a1742d48b61465eebba53b7231b3031e2a6e6",
-    title: "synchronize Cycle 4 milestone and onboard Headless LocalSend (#56) (#57)",
+    date: "2026-11-13",
+    sha: "f299fb3109846b49bc2437e55deadd8d043ffd4f",
+    title: "add Merge IV (Capability & Topology Merge) to Systems Merging Cadence (#58) (#59)",
     highlights: []
   },
   {
