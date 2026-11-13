@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.12",
+    version: "v58.13",
     date: "2026-11-12",
     sha: "fa5a1742d48b61465eebba53b7231b3031e2a6e6",
     title: "synchronize Cycle 4 milestone and onboard Headless LocalSend (#56) (#57)",
