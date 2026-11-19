@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.14",
+    version: "v58.15",
     date: "2026-11-19",
     sha: "487ad704dabb1bb74c1cc68dc4b6b29c5525cfa9",
     title: "overhaul general CV and reconcile all presets to 2026-11-19 (#61) (#62)",

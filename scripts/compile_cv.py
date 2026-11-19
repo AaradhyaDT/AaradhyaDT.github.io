@@ -11,38 +11,51 @@ Usage:
   python scripts/compile_cv.py --preset aiml
   python scripts/compile_cv.py --preset fullstack
   python scripts/compile_cv.py --preset compact
+  python scripts/compile_cv.py --all-presets
+  python scripts/compile_cv.py --sync-web
+  python scripts/compile_cv.py --check-ssot
   python scripts/compile_cv.py --check-claims
 """
 
 import argparse
+import hashlib
 import json
 from pathlib import Path
 import re
 import subprocess
 import sys
 
-import docx
-from docx.oxml import OxmlElement
-from docx.oxml.ns import qn
-from docx.opc.constants import RELATIONSHIP_TYPE
-from docx.shared import Inches, Pt, RGBColor
-
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data" / "master_cv.json"
+RESUME_JS_FILE = ROOT / "assets" / "js" / "data" / "resume-data.js"
+PROJECTS_HTML = ROOT / "projects.html"
 OUTPUT_DIR = ROOT / "assets" / "docs"
 WORDCRAFT_CLI = Path(r"F:\wordcraft-0.10.0-windows-x64-portable\wordcraft-cli.exe")
+ALL_PRESETS = ["master", "research", "systems", "aiml", "fullstack", "compact"]
 
-# Typographic Palette
-COLOR_INK = RGBColor(0x17, 0x21, 0x2B)        # Deep Charcoal
-COLOR_ACCENT = RGBColor(0x27, 0x4C, 0x5E)     # Slate Teal / Navy
-COLOR_MUTED = RGBColor(0x4B, 0x55, 0x63)      # Muted Gray
-COLOR_BODY = RGBColor(0x1F, 0x29, 0x37)       # Body text
 HEX_ACCENT = "274C5E"
 HEX_INK = "17212B"
 HEX_LINK = "1E3A8A"
+
+
+def _load_docx_modules():
+    """Lazy-import python-docx so pure-Python SSOT checks run in minimal CI."""
+    import docx
+    from docx.oxml import OxmlElement
+    from docx.oxml.ns import qn
+    from docx.opc.constants import RELATIONSHIP_TYPE
+    from docx.shared import Inches, Pt, RGBColor
+
+    palette = {
+        "ink": RGBColor(0x17, 0x21, 0x2B),      # Deep Charcoal
+        "accent": RGBColor(0x27, 0x4C, 0x5E),   # Slate Teal / Navy
+        "muted": RGBColor(0x4B, 0x55, 0x63),    # Muted Gray
+        "body": RGBColor(0x1F, 0x29, 0x37),     # Body text
+    }
+    return docx, OxmlElement, qn, RELATIONSHIP_TYPE, Inches, Pt, palette
 
 
 def add_hyperlink(
@@ -56,6 +69,7 @@ def add_hyperlink(
     bold: bool = False,
 ):
     """Add a native Word hyperlink XML element to a paragraph with explicit typography."""
+    _, OxmlElement, qn, RELATIONSHIP_TYPE, _, _, _ = _load_docx_modules()
     part = paragraph.part
     r_id = part.relate_to(url, RELATIONSHIP_TYPE.HYPERLINK, is_external=True)
     hyperlink = OxmlElement("w:hyperlink")
@@ -100,6 +114,7 @@ def add_hyperlink(
 
 def add_bottom_border(paragraph, color_hex: str = HEX_ACCENT, size_eighth_pts: int = 8):
     """Add a subtle hairline border below a heading paragraph."""
+    _, OxmlElement, qn, _, _, _, _ = _load_docx_modules()
     pPr = paragraph._p.get_or_add_pPr()
     pBdr = OxmlElement("w:pBdr")
     bottom = OxmlElement("w:bottom")
@@ -111,8 +126,13 @@ def add_bottom_border(paragraph, color_hex: str = HEX_ACCENT, size_eighth_pts: i
     pPr.append(pBdr)
 
 
-def add_formatted_runs(paragraph, text: str, font_size=Pt(8.8), default_color=COLOR_BODY, font_name="Calibri"):
+def add_formatted_runs(paragraph, text: str, font_size=None, default_color=None, font_name="Calibri"):
     """Parse inline **bold** syntax and add runs to paragraph."""
+    _, _, _, _, _, Pt, palette = _load_docx_modules()
+    if font_size is None:
+        font_size = Pt(8.8)
+    if default_color is None:
+        default_color = palette["body"]
     parts = text.split("**")
     for i, part in enumerate(parts):
         if not part:
@@ -127,6 +147,11 @@ def add_formatted_runs(paragraph, text: str, font_size=Pt(8.8), default_color=CO
 
 def build_docx(data: dict, preset: str, output_path: Path):
     """Generate ATS-optimized DOCX from master CV data using python-docx."""
+    docx, _, _, _, Inches, Pt, palette = _load_docx_modules()
+    COLOR_INK = palette["ink"]
+    COLOR_ACCENT = palette["accent"]
+    COLOR_MUTED = palette["muted"]
+    COLOR_BODY = palette["body"]
     doc = docx.Document()
 
     # Set page margins
@@ -483,28 +508,231 @@ def check_claims(data: dict):
     print("All quantitative claims formally verified.")
 
 
+def _strip_md(text: str) -> str:
+    """Remove inline **bold** markers for plain-text web resume entries."""
+    return text.replace("**", "")
+
+
+def _source_sha256(raw_text: str) -> str:
+    """Compute cross-platform LF-normalized SHA-256 digest of master_cv.json."""
+    normalized = raw_text.replace("\r\n", "\n").encode("utf-8")
+    return hashlib.sha256(normalized).hexdigest()
+
+
+def _build_web_role(data: dict, preset: str, title: str, project_section_title: str) -> dict:
+    """Project a single web role view deterministically from master_cv.json."""
+    sections = []
+
+    # Education
+    edu_items = []
+    for edu in data.get("education", []):
+        if preset != "master" and preset not in edu.get("tags", []):
+            continue
+        cw = ", ".join(edu.get("coursework", []))
+        status = edu.get("status", "Final Year")
+        gpa = edu.get("gpa", "")
+        bullet = f"{status}{f'; {gpa}' if gpa else ''}. Coursework: {cw}."
+        edu_items.append({
+            "header": edu["degree"],
+            "sub": f"{edu['institution']} | {edu['dates']}",
+            "bullets": [bullet],
+        })
+    if edu_items:
+        sections.append({"title": "Education", "items": edu_items})
+
+    # Projects
+    proj_items = []
+    for proj in data.get("projects", []):
+        if preset != "master" and preset not in proj.get("tags", []):
+            continue
+        bullets = [
+            _strip_md(b["text"])
+            for b in proj.get("bullets", [])
+            if preset == "master" or preset in b.get("tags", [])
+        ]
+        proj_items.append({
+            "header": proj["title"],
+            "sub": " · ".join(proj.get("tech_stack", [])),
+            "bullets": bullets,
+        })
+    if proj_items:
+        sections.append({"title": project_section_title, "items": proj_items})
+
+    # Fellowships
+    fel_items = []
+    for fel in data.get("fellowships", []):
+        if preset != "master" and preset not in fel.get("tags", []):
+            continue
+        bullets = [
+            _strip_md(b["text"])
+            for b in fel.get("bullets", [])
+            if preset == "master" or preset in b.get("tags", [])
+        ]
+        fel_items.append({
+            "header": f"{fel['title']} | {fel['organization']}",
+            "sub": fel["dates"],
+            "bullets": bullets,
+        })
+    if fel_items:
+        sections.append({"title": "Fellowships", "items": fel_items})
+
+    # Technical Skills
+    skill_items = []
+    for cat in data.get("skills", {}).get("categories", []):
+        if preset != "master" and preset not in cat.get("tags", []):
+            continue
+        skill_items.append({
+            "header": cat["name"],
+            "sub": ", ".join(cat.get("skills", [])),
+        })
+    if skill_items:
+        sections.append({"title": "Technical Skills", "items": skill_items})
+
+    # Leadership & Engineering Service
+    lead_items = []
+    for lead in data.get("leadership_and_service", []):
+        if preset != "master" and preset not in lead.get("tags", []):
+            continue
+        lead_items.append({
+            "header": f"{lead['organization']} | {lead['role']}",
+            "sub": lead["dates"],
+            "bullets": [_strip_md(b) for b in lead.get("bullets", [])],
+        })
+    if lead_items:
+        sections.append({"title": "Leadership and Engineering Service", "items": lead_items})
+
+    return {"title": title, "sections": sections}
+
+
+def generate_resume_js(data: dict, raw_text: str) -> str:
+    """Deterministically compile assets/js/data/resume-data.js from data/master_cv.json."""
+    basics = data["basics"]
+    contact = basics["contact"]
+    contact_line = " · ".join([
+        contact["location"],
+        contact["email"],
+        contact["phone"],
+        contact["linkedin"].replace("https://", ""),
+        contact["github"].replace("https://", ""),
+        contact["website"].replace("https://", ""),
+    ])
+    payload = {
+        "name": basics["name"],
+        "subtitle": basics["title_by_preset"]["master"],
+        "contact": contact_line,
+        "summary": _strip_md(basics["profiles_by_preset"]["master"]),
+        "roles": {
+            "all": _build_web_role(data, "master", "Engineering CV", "Selected Engineering Projects"),
+            "aiml": _build_web_role(data, "aiml", "AI/ML Engineering CV", "Selected Engineering Projects"),
+            "hardware": _build_web_role(data, "systems", "Embedded AI and Systems CV", "Embedded, Systems and Robotics Projects"),
+            "fullstack": _build_web_role(data, "fullstack", "AI Systems and Developer Tools CV", "AI and Developer Infrastructure"),
+        },
+    }
+    digest = _source_sha256(raw_text)[:16]
+    last_updated = data.get("metadata", {}).get("last_updated", "unknown")
+    header = (
+        f"/* AUTO-GENERATED from data/master_cv.json (SSOT, updated {last_updated}, sha256:{digest}).\n"
+        f" * Do not hand-edit. Regenerate with: python scripts/compile_cv.py --sync-web */\n"
+    )
+    return header + "const RESUME_DATA = " + json.dumps(payload, indent=2, ensure_ascii=False) + ";\n"
+
+
+def sync_web_resume_data(data: dict, raw_text: str, out_path: Path = RESUME_JS_FILE) -> Path:
+    """Write deterministically compiled resume-data.js from master_cv.json."""
+    content = generate_resume_js(data, raw_text)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(content, encoding="utf-8", newline="\n")
+    print(f"Synced SSOT web resume data: {out_path} ({len(content):,} chars)")
+    return out_path
+
+
+def check_ssot(data: dict, raw_text: str, resume_js_path: Path = RESUME_JS_FILE) -> list[str]:
+    """Verify Single Source of Truth invariants across master_cv.json, resume-data.js, projects.html, and docs."""
+    errors: list[str] = []
+
+    try:
+        check_claims(data)
+    except AssertionError as exc:
+        errors.append(str(exc))
+
+    # 1. Verify projects.html anchor links referenced in master_cv.json
+    if PROJECTS_HTML.exists():
+        projects_html = PROJECTS_HTML.read_text(encoding="utf-8", errors="ignore")
+        valid_ids = set(re.findall(r'id="(p-\d+)"', projects_html))
+        for proj in data.get("projects", []):
+            url = proj.get("links", {}).get("portfolio", "")
+            m = re.search(r"#(p-\d+)$", url)
+            if m and m.group(1) not in valid_ids:
+                errors.append(f"Broken portfolio anchor in master_cv.json: {proj['id']} -> {url}")
+
+    # 2. Verify resume-data.js is in exact sync with master_cv.json
+    expected_js = generate_resume_js(data, raw_text).replace("\r\n", "\n")
+    if not resume_js_path.exists():
+        errors.append(f"Missing derived web resume file: {resume_js_path}")
+    else:
+        actual_js = resume_js_path.read_text(encoding="utf-8").replace("\r\n", "\n")
+        if actual_js != expected_js:
+            errors.append(
+                "SSOT drift detected: assets/js/data/resume-data.js does not match data/master_cv.json. "
+                "Run: python scripts/compile_cv.py --sync-web"
+            )
+
+    # 3. Verify all 6 compiled DOCX & PDF presets exist
+    for preset in ALL_PRESETS:
+        suffix = "" if preset == "master" else f"_{preset.upper()}"
+        for ext in (".docx", ".pdf"):
+            artifact = OUTPUT_DIR / f"AARADHYA_DEV_TAMRAKAR_CV{suffix}{ext}"
+            if not artifact.exists() or artifact.stat().st_size == 0:
+                errors.append(f"Missing or empty compiled CV artifact: {artifact.relative_to(ROOT)}")
+
+    return errors
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--preset", default="master",
-                        choices=["master", "research", "systems", "aiml", "fullstack", "compact"],
+                        choices=ALL_PRESETS,
                         help="Target role preset (default: master)")
     parser.add_argument("--data", type=Path, default=DATA_FILE, help="Path to master CV JSON")
     parser.add_argument("--output-docx", type=Path, default=None, help="Custom output DOCX path")
     parser.add_argument("--output-pdf", type=Path, default=None, help="Custom output PDF path")
     parser.add_argument("--format", default="both", choices=["docx", "pdf", "both"], help="Output format")
     parser.add_argument("--check-claims", action="store_true", help="Audit quantitative claims before compiling")
-    parser.add_argument("--all-presets", action="store_true", help="Compile all presets in batch")
+    parser.add_argument("--all-presets", action="store_true", help="Compile all presets in batch and sync web resume data")
+    parser.add_argument("--sync-web", action="store_true", help="Regenerate assets/js/data/resume-data.js from master_cv.json")
+    parser.add_argument("--check-ssot", action="store_true", help="Verify SSOT parity across master_cv.json, resume-data.js, anchors, and docs without compiling")
     args = parser.parse_args()
 
     if not args.data.exists():
         sys.exit(f"Data file not found: {args.data}")
 
-    data = json.loads(args.data.read_text(encoding="utf-8"))
+    raw_text = args.data.read_text(encoding="utf-8")
+    data = json.loads(raw_text)
 
-    if args.check_claims or True:
+    if args.check_ssot and not (args.sync_web or args.all_presets):
+        errors = check_ssot(data, raw_text)
+        if errors:
+            for err in errors:
+                print(f"  [FAIL] {err}")
+            sys.exit(1)
+        print("SSOT check passed: master_cv.json, resume-data.js, project anchors, and all 6 DOCX/PDF presets are synchronized.")
+        return
+
+    if args.sync_web and not args.all_presets:
         check_claims(data)
+        sync_web_resume_data(data, raw_text)
+        if args.check_ssot:
+            errors = check_ssot(data, raw_text)
+            if errors:
+                for err in errors:
+                    print(f"  [FAIL] {err}")
+                sys.exit(1)
+            print("SSOT check passed.")
+        return
 
-    presets = ["master", "research", "systems", "aiml", "fullstack", "compact"] if args.all_presets else [args.preset]
+    check_claims(data)
+
+    presets = ALL_PRESETS if args.all_presets else [args.preset]
 
     for p in presets:
         print(f"\n--- Compiling preset: {p.upper()} ---")
@@ -528,6 +756,16 @@ def main():
         if args.format in ["pdf", "both"]:
             convert_docx_to_pdf(docx_out, pdf_out)
             verify_pdf(pdf_out)
+
+    if args.all_presets or args.sync_web:
+        sync_web_resume_data(data, raw_text)
+
+    if args.check_ssot:
+        errors = check_ssot(data, raw_text)
+        if errors:
+            for err in errors:
+                print(f"  [FAIL] {err}")
+            sys.exit(1)
 
     print("\nCompilation pipeline completed successfully.")
 
