@@ -1,20 +1,20 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "metadata": {
     "title": "Aaradhya Dev Tamrakar - Master CV & Technical Portfolio",
-    "last_updated": "2026-11-07",
+    "last_updated": "2026-11-19",
     "author": "Aaradhya Dev Tamrakar",
     "source_of_truth": true
   },
   "basics": {
     "name": "Aaradhya Dev Tamrakar",
     "title_by_preset": {
-      "master": "AI/ML Engineering · AI Workflow Automation · Embedded AI · Model Evaluation",
-      "research": "AI Safety & Fairness Auditing · Model Evaluation · Applied Machine Learning",
-      "systems": "Embedded AI · Systems Engineering · Firmware & Edge ML",
-      "aiml": "Applied Machine Learning · AI Workflows · Model Evaluation & MLOps",
-      "fullstack": "AI Systems Engineering · Workflow Orchestration · Developer Tooling",
-      "compact": "AI/ML Engineering · Applied ML · Embedded AI · AI Workflows"
+      "master": "AI/ML Engineering · AI Systems & Workflow Tooling · Embedded AI · Model Evaluation",
+      "research": "AI Safety & Fairness Auditing · Model Evaluation · Systems Architecture Research",
+      "systems": "Embedded AI · Systems Engineering · Firmware, Edge ML & Native Utilities",
+      "aiml": "Applied Machine Learning · Model Evaluation & Guardrails · AI Workflows & MLOps",
+      "fullstack": "AI Systems Engineering · Multi-Agent Workflow Orchestration · Developer Tooling",
+      "compact": "AI/ML Engineering · Applied ML · Embedded AI · AI Workflow Tooling"
     },
     "contact": {
       "location": "Kathmandu, Nepal",
@@ -26,12 +26,12 @@
       "scholar": "https://scholar.google.com/citations?user=E3BYJSMAAAAJ&hl=en"
     },
     "profiles_by_preset": {
-      "master": "Final-year Electronics, Communication and Information Engineering student at IOE, Kathmandu Engineering College, building applied ML systems, AI workflow tools, and embedded ML software. Fuse AI Fellow (Fusemachines) and NSSR DataCamp Fellow. I use AI to accelerate development, then turn recurring work into reusable tools and deterministic checks — reducing the need to solve the same task in another prompt. Experienced across demographic fairness auditing, multi-provider coordination, edge ML inference, and developer automation.",
-      "research": "Final-year Electronics & Information Engineering undergraduate specializing in applied AI fairness auditing and empirical model evaluation. Fuse AI Fellow co-developing diagnostic prediction-auditing frameworks measuring canonical demographic parity and error-rate disparities across intersectional cohorts (AIF360, Fairlearn). Experienced in statistical evaluation, edge classifier validation on wearable sensor data, and reproducible benchmarking.",
-      "systems": "Final-year Electronics & Information Engineering undergraduate building embedded ML software, firmware, and local systems utilities. ML and gateway lead for SPARK (ESP32-S3 wearable fall detection combining kinematic filtering with a quantized 18.5 KB INT8 CNN under FreeRTOS). Experienced in C/C++, TFLite Micro, microcontroller sensor interfacing, and native Windows systems utilities.",
-      "aiml": "Final-year engineering student and Fuse AI Fellow building applied machine learning pipelines, model-evaluation frameworks, and developer automation tools. Experienced in demographic performance auditing (AIF360, Fairlearn), tabular classification and explainability (XGBoost, SHAP), and containerized API services with FastAPI and Docker. Focuses on turning repetitive development steps into reliable tools and reproducible evaluation checks.",
-      "fullstack": "Final-year engineering student building AI workflow tooling, distributed agent coordination harnesses, and developer infrastructure. Developer of Fleet-Orchestrator (multi-step workflow coordination with provider adapters and task state inspection), Agent-Customization-Sync (cross-environment configuration and drift auditing), and custom Model Context Protocol (MCP) integrations.",
-      "compact": "Final-year Electronics & Information Engineering student at IOE Kathmandu Engineering College and Fuse AI Fellow. Builds applied ML systems, embedded AI (ESP32-S3 / TFLite Micro), and AI workflow tools. Uses AI to accelerate development and turns recurring workflows into reusable tools and deterministic checks."
+      "master": "Final-year (8th Semester) Electronics, Communication and Information Engineering student at IOE, Kathmandu Engineering College, building applied ML systems, AI workflow tooling, and embedded ML software. Fuse AI Fellow (Fusemachines) and NSSR DataCamp Fellow. I use AI where it adds value, turn repeatable work into reusable tools, and verify results with tests and explicit evaluation. Work spans demographic fairness auditing, multi-provider agent coordination, Model Context Protocol (MCP) infrastructure, edge ML inference on ESP32-S3, near-memory ingress simulation, and native Windows systems utilities.",
+      "research": "Final-year Electronics, Communication and Information Engineering undergraduate focusing on applied AI fairness auditing, empirical model evaluation, and near-memory systems research. Fuse AI Fellow co-developing diagnostic prediction-auditing frameworks measuring canonical demographic parity and error-rate disparities across intersectional cohorts (AIF360, Fairlearn), alongside SimPy discrete-event modeling of ingress processing architectures and edge classifier validation on wearable IMU benchmarks.",
+      "systems": "Final-year Electronics, Communication and Information Engineering undergraduate building embedded ML software, control firmware, desktop systems utilities, and zero-cloud transport tools. ML and gateway lead for SPARK (ESP32-S3 wearable fall detection combining kinematic gating with an 18.5 KB INT8 CNN under FreeRTOS), developer of Win-Governor, Win-Vault, and Headless LocalSend Substrate. Experienced in C/C++, TFLite Micro, Win32/NTFS APIs, and deterministic verification.",
+      "aiml": "Final-year engineering student and Fuse AI Fellow building applied machine learning pipelines, model-evaluation frameworks, and trustworthy AI guardrails. Experienced in demographic fairness auditing (AIF360, Fairlearn), RAG and citation-verified agentic pipelines, tabular classification with explainability (XGBoost, LightGBM, SHAP), and MLOps workflows (FastAPI, Docker, MLflow, Evidently, Airflow).",
+      "fullstack": "Final-year engineering student building AI workflow tooling, multi-provider coordination harnesses, and developer infrastructure. Developer of Fleet Orchestrator (task state, provider adapters, scheduling, and live inspection), Agent-Customization-Sync (cross-IDE configuration snapshots and SHA-256 drift audits), Super-NLM, Windows Pilot, GitHub Pilot, and custom Model Context Protocol (MCP) bridges.",
+      "compact": "Final-year Electronics & Information Engineering student at IOE Kathmandu Engineering College and Fuse AI Fellow. Builds applied ML systems, embedded Edge AI (ESP32-S3 / TFLite Micro), and AI workflow tooling. Uses AI where it adds value, turns repeatable work into reusable tools, and checks results with tests and explicit evaluation."
     }
   },
   "education": [
@@ -40,19 +40,21 @@
       "degree": "Bachelor of Engineering (B.E.) in Electronics, Communication and Information Engineering",
       "location": "Kathmandu, Nepal",
       "dates": "December 2022 – Expected January 2027",
-      "status": "Final Year (Year IV, Part I; seventh-semester examinations ongoing)",
+      "status": "Final Year (Year IV, Part II — 8th / Final Semester)",
       "gpa": "Cumulative Average: ~75% across completed semesters",
       "coursework": [
+        "Artificial Intelligence",
         "Machine Learning",
+        "Digital Signal Analysis & Processing",
         "Signals and Systems",
-        "Digital Electronics",
+        "Embedded Systems",
+        "Microprocessors",
         "Control Systems",
-        "Communication Systems",
+        "Telecommunications & Wireless Communication",
+        "Computer Networks",
         "Engineering Mathematics",
         "Probability and Statistics",
-        "Object-Oriented Programming (C++)",
-        "Computer Networks",
-        "Microprocessors"
+        "Object-Oriented Programming (C++)"
       ],
       "tags": [
         "master",
@@ -79,10 +81,10 @@
         "fullstack",
         "compact"
       ],
-      "summary": "Selected for competitive, intensive AI engineering fellowship covering ML, computer vision, NLP, and production MLOps.",
+      "summary": "Selected through the Fusemachines AI Fellowship entrance process; completed applied ML, CV, NLP, agentic AI, and MLOps coursework alongside the BiasAperture capstone.",
       "bullets": [
         {
-          "text": "Co-developed **BiasAperture**, an automated demographic fairness auditing pipeline measuring predictive disparities on computer vision benchmarks as the fellowship capstone project.",
+          "text": "Co-developed **BiasAperture**, an automated demographic fairness auditing pipeline measuring predictive disparities on computer vision benchmarks as the two-person fellowship capstone.",
           "tags": [
             "master",
             "aiml",
@@ -92,7 +94,17 @@
           "priority": 1
         },
         {
-          "text": "Built applied agentic and ML coursework pipelines including a 5-stage Text-to-SQL system (Planner → Generator → Validator → Executor → Summarizer) tested against structured evaluation suites.",
+          "text": "Built agentic AI and retrieval coursework including a **5-stage Text-to-SQL** pipeline (Planner -> Generator -> Validator -> Executor -> Summarizer), a FastAPI **RAG AI Assistant** (Qdrant, bounded tool calls), a **Verified Agentic Assistant** checking retrieved context and citations, and **Trustworthy AI Guardrails** (Pydantic schema, prompt-injection, PII, and groundedness checks against a golden evaluation set).",
+          "tags": [
+            "master",
+            "aiml",
+            "fullstack",
+            "research"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Implemented dual-track **MLOps** coursework for experiment tracking, model serving, data-drift monitoring, and scheduled regression evaluation using **MLflow**, **FastAPI**, **Docker**, **PostgreSQL**, **Evidently**, and **Airflow**.",
           "tags": [
             "master",
             "aiml",
@@ -101,30 +113,13 @@
           "priority": 2
         },
         {
-          "text": "Developed customer churn and lifetime value (CLV) prediction workflows utilizing **SMOTE**, cost-sensitive threshold tuning, and **SHAP** explainability.",
+          "text": "Developed tabular, vision, and NLP coursework pipelines spanning **Telco Churn & CLV** (**XGBoost**, **LightGBM**, **SMOTE**, **SHAP**), multi-horizon time-series forecasting ensembles, **NEU Steel Defect CNN** and Vision Transformers, and customer-support **NER** and **LSTM** classifiers.",
           "tags": [
             "master",
             "aiml",
             "research"
           ],
           "priority": 2
-        },
-        {
-          "text": "Implemented MLOps coursework for experiment tracking, containerized microservices (**FastAPI**, **Docker**, **PostgreSQL**), and scheduled data-drift evaluation.",
-          "tags": [
-            "master",
-            "aiml",
-            "fullstack"
-          ],
-          "priority": 3
-        },
-        {
-          "text": "Evaluated probabilistic estimation and time-series forecasting ensembles on retail datasets as part of advanced predictive modeling modules.",
-          "tags": [
-            "master",
-            "aiml"
-          ],
-          "priority": 3
         }
       ]
     },
@@ -140,10 +135,10 @@
         "research",
         "fullstack"
       ],
-      "summary": "Awarded competitive sponsored fellowship for advanced data science and generative AI pathways.",
+      "summary": "Selected for competitive Cohort 2 fellowship with sponsored DataCamp access for applied data science and generative AI workflows.",
       "bullets": [
         {
-          "text": "Selected in competitive cohort for sponsored DataCamp access; developed applied GenAI workflows automating data cleaning, schema normalization, and exploratory analysis.",
+          "text": "Completed applied GenAI projects automating data cleaning, schema normalization, text analysis, and structured exploratory workflows; earned DataCamp CPE credit certificates.",
           "tags": [
             "master",
             "aiml",
@@ -152,7 +147,7 @@
           "priority": 1
         },
         {
-          "text": "Completing advanced technical pathways in SQL database design, Python data analysis, and predictive modeling.",
+          "text": "Continuing structured technical pathways in SQL database design, Python data analysis, and predictive modeling.",
           "tags": [
             "master",
             "aiml"
@@ -201,7 +196,7 @@
           "priority": 1
         },
         {
-          "text": "Audited classification performance across **126 demographic bins** on the FairFace benchmark (**97,698 images**), computing Disparate Impact Ratio, Demographic Parity Difference, and Equalized Odds.",
+          "text": "Audited classification performance across **126 demographic bins** on the FairFace benchmark (**97,698 images**), computing Disparate Impact Ratio, Demographic Parity Difference, and Equalized Odds with cohort-support diagnostics.",
           "tags": [
             "master",
             "research",
@@ -211,7 +206,7 @@
           "priority": 1
         },
         {
-          "text": "Engineered self-contained HTML and PDF report generation with confidence intervals and diagnostic disparity plots; matched model comparison and validation remain active work.",
+          "text": "Engineered self-contained HTML and PDF report generation with confidence intervals and diagnostic disparity plots; matched model comparisons and statistical validation remain active work.",
           "tags": [
             "master",
             "research",
@@ -223,7 +218,7 @@
     },
     {
       "id": "spark",
-      "title": "SPARK — Wearable Edge-AI Fall Detection System",
+      "title": "SPARK — Two-Layer Edge-AI Fall Detection Wearable",
       "subtitle": "Undergraduate Major Capstone Project",
       "context": "Undergraduate Major Capstone Project",
       "dates": "2025 – Present",
@@ -233,7 +228,8 @@
         "TensorFlow Lite Micro",
         "Python",
         "FreeRTOS",
-        "MPU-6050"
+        "MPU-6050",
+        "SHAP"
       ],
       "links": {
         "portfolio": "https://aaradhyadt.github.io/projects.html#p-018",
@@ -246,7 +242,7 @@
         "research",
         "compact"
       ],
-      "summary": "Embedded safety wearable combining kinematic acceleration thresholding with on-device neural confirmation on ESP32-S3.",
+      "summary": "Embedded safety wearable combining kinematic acceleration gating with on-device neural confirmation and gateway explainability.",
       "bullets": [
         {
           "text": "Project lead for ML modeling, gateway processing, and explainability in a four-person team; hardware and firmware have dedicated owners.",
@@ -259,7 +255,7 @@
           "priority": 1
         },
         {
-          "text": "Trained 1D-CNN fall-detection models on the SisFall benchmark (38 subjects, 38,420 windows), evaluating subject-stratified cross-validation with **0.9185 AUC-ROC** and 87.81% sensitivity.",
+          "text": "Trained leakage-free subject-stratified 1D-CNN fall-detection models on the SisFall benchmark (38 subjects, 38,420 windows), achieving **0.9185 AUC-ROC** and 87.81% sensitivity.",
           "tags": [
             "master",
             "systems",
@@ -270,12 +266,55 @@
           "priority": 1
         },
         {
-          "text": "Quantized model to an **18.5 KB INT8 CNN** footprint for ESP32-S3 edge deployment; on-device hardware testing, BLE streaming, and volunteer cohort validation remain pending.",
+          "text": "Quantized the model to an **18.5 KB INT8 CNN** footprint for ESP32-S3 deployment and built edge-gateway SHAP attribution; on-device hardware testing, BLE streaming, and volunteer cohort validation remain pending.",
           "tags": [
             "master",
             "systems",
             "aiml",
             "research"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "strangler_ipu",
+      "title": "STRANGLER-IPU — Ingress Processing Unit Architecture Research",
+      "subtitle": "Near-Memory Systems & Queueing Simulation",
+      "context": "Active Systems Architecture Research",
+      "dates": "2026 – Present",
+      "tech_stack": [
+        "Python",
+        "SimPy",
+        "CXL Memory Modeling",
+        "Discrete-Event Simulation",
+        "LaTeX"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-032"
+      },
+      "tags": [
+        "master",
+        "research",
+        "systems"
+      ],
+      "summary": "Architecture research investigating near-ingress data reduction to relieve host DRAM bandwidth contention under high-volume ingest.",
+      "bullets": [
+        {
+          "text": "Modeled decoupled front-end ingress offload over asymmetric CXL pooled-memory fabrics via SimPy discrete-event simulation (sweep_ipu_breakeven.py), observing **4.12x tail-latency reduction** and **68% host memory bus contention relief** in simulation (research prototype; no physical silicon).",
+          "tags": [
+            "master",
+            "research",
+            "systems"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Documented architectural assumptions, failure modes, and invariant boundaries in versioned RFCs and reproducible LaTeX technical reports.",
+          "tags": [
+            "master",
+            "research",
+            "systems"
           ],
           "priority": 2
         }
@@ -307,7 +346,7 @@
       "summary": "Coordination tooling for multi-step AI workflows, managing task state, worker adapters, scheduling, and status inspection.",
       "bullets": [
         {
-          "text": "Built coordination tooling for multi-step AI workflows, with task state, worker adapters, scheduling, and live status inspection.",
+          "text": "Built coordination tooling for multi-step AI workflows with explicit task state, worker adapters, scheduling, failure handling, and live status inspection.",
           "tags": [
             "master",
             "fullstack",
@@ -317,19 +356,11 @@
           "priority": 1
         },
         {
-          "text": "Standardized provider adapters (local models, CLI harnesses, API endpoints) with reusable interfaces to eliminate repeated orchestration scripts.",
+          "text": "Standardized provider adapters (local models, CLI harnesses, API endpoints) and local MCP integrations to turn repeated orchestration scripts into inspectable, reusable interfaces.",
           "tags": [
             "master",
             "fullstack",
             "aiml"
-          ],
-          "priority": 2
-        },
-        {
-          "text": "Integrated local MCP tool servers and automated execution logging to ensure reproducible batch processing and reliable error recovery.",
-          "tags": [
-            "master",
-            "fullstack"
           ],
           "priority": 2
         }
@@ -345,7 +376,7 @@
         "Python",
         "SHA-256",
         "CLI",
-        "Configuration Governance"
+        "MCP Configuration"
       ],
       "links": {
         "portfolio": "https://aaradhyadt.github.io/projects.html#p-041",
@@ -356,10 +387,10 @@
         "fullstack",
         "systems"
       ],
-      "summary": "Cross-environment configuration synchronizer providing snapshotting, guarded restore, and drift auditing across IDEs.",
+      "summary": "Cross-environment configuration synchronizer providing snapshotting, guarded restore, rules transpilation, and drift auditing across IDEs.",
       "bullets": [
         {
-          "text": "Built configuration snapshots, guarded restore, rules transpilation, and SHA-256 drift audits across development environments (Antigravity, Cursor, Claude Code).",
+          "text": "Built configuration snapshots, guarded restore, rules transpilation, and **SHA-256 drift audits** across development environments (Antigravity, Cursor, Claude Code).",
           "tags": [
             "master",
             "fullstack",
@@ -368,13 +399,246 @@
           "priority": 1
         },
         {
-          "text": "Audited instruction overhead and linked shared skills to reduce configuration duplication and maintain environment consistency across machines.",
+          "text": "Audits instruction overhead and links shared skills to reduce configuration duplication across machines.",
           "tags": [
             "master",
             "fullstack",
             "systems"
           ],
           "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "super_nlm",
+      "title": "Super-NLM — Multi-Account NotebookLM Hub & MCP Server",
+      "subtitle": "AI Knowledge Infrastructure & MCP Tooling",
+      "context": "AI Developer Tooling",
+      "dates": "2025 – Present",
+      "tech_stack": [
+        "Python",
+        "Model Context Protocol (MCP)",
+        "Google Drive API",
+        "FastAPI"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-031",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/super-nlm"
+      },
+      "tags": [
+        "master",
+        "fullstack",
+        "aiml"
+      ],
+      "summary": "Model Context Protocol server and automation hub managing NotebookLM queries, Drive folder sync, and Studio artifact generation across accounts.",
+      "bullets": [
+        {
+          "text": "Developed an MCP server enabling agents to search and query notebooks across accounts, synchronize Google Drive folders, and batch-download Studio artifacts.",
+          "tags": [
+            "master",
+            "fullstack",
+            "aiml"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Implemented scheduled job queues and quota-aware backoff to support reproducible document synthesis across research and coursework materials.",
+          "tags": [
+            "master",
+            "fullstack"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "headless_localsend_mcp_suite",
+      "title": "Headless LocalSend Substrate & Utility MCP Suite",
+      "subtitle": "Zero-Cloud LAN/ADB Transport & Model Context Protocol Bridges",
+      "context": "Systems Networking & MCP Tooling",
+      "dates": "2025 – Nov 2026",
+      "tech_stack": [
+        "Python",
+        "Model Context Protocol (MCP)",
+        "LAN P2P",
+        "ADB",
+        "FastAPI"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-048"
+      },
+      "tags": [
+        "master",
+        "fullstack",
+        "systems"
+      ],
+      "summary": "Zero-GUI LocalSend daemon and ADB transfer substrate alongside custom MCP bridges for LocalSend, Google Classroom, and Typora.",
+      "bullets": [
+        {
+          "text": "Built **Headless LocalSend Substrate** (#p-048) for silent background LAN P2P and direct hardware-speed ADB file transfers without GUI interruption or cloud storage.",
+          "tags": [
+            "master",
+            "fullstack",
+            "systems"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Developed companion MCP servers (**LocalSend MCP** #p-035, **Google Classroom MCP** #p-036, **Typora MCP** #p-037) connecting assistants to nearby devices, coursework deadlines, and Markdown export workflows.",
+          "tags": [
+            "master",
+            "fullstack"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "windows_github_pilot",
+      "title": "Windows Pilot & GitHub Pilot — Semantic UIA & Multi-Account Fleet Automation",
+      "subtitle": "OS-Level Automation & Repository Governance",
+      "context": "Developer & OS Tooling",
+      "dates": "2026",
+      "tech_stack": [
+        "Python",
+        "Windows UI Automation (UIA)",
+        "Model Context Protocol (MCP)",
+        "GitHub API",
+        "PowerShell"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-033"
+      },
+      "tags": [
+        "master",
+        "fullstack",
+        "systems"
+      ],
+      "summary": "Semantic Windows UIA desktop automation engine and multi-account GitHub repository health auditor.",
+      "bullets": [
+        {
+          "text": "Built **Windows Pilot** (#p-033), an MCP desktop automation engine operating on semantic UI Automation trees rather than brittle pixel coordinates.",
+          "tags": [
+            "master",
+            "fullstack",
+            "systems"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Built **GitHub Pilot** (#p-034) to inspect repository health, CI status, and commit history across multiple GitHub accounts without manual polling.",
+          "tags": [
+            "master",
+            "fullstack"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "win_governor_vault",
+      "title": "Win-Governor (NovaOptimizer) & Win-Vault — Windows Systems & Privacy Utilities",
+      "subtitle": "Native OS Kernel Memory & NTFS Security Tooling",
+      "context": "Windows Systems Utilities",
+      "dates": "2025 – 2026",
+      "tech_stack": [
+        "C# / .NET",
+        "WPF",
+        "Python",
+        "Win32 / NT Kernel APIs",
+        "NTFS ACLs",
+        "PowerShell"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-030",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/system-optimizer"
+      },
+      "tags": [
+        "master",
+        "systems"
+      ],
+      "summary": "Native Windows memory-management controls and zero-dependency NTFS Access Control List folder locking.",
+      "bullets": [
+        {
+          "text": "Built **Win-Governor / NovaOptimizer** (#p-030) using Win32 memory APIs to reclaim **1.2–3.4 GB working-set RAM** under heavy multitasking with explicit user control over when operations run.",
+          "tags": [
+            "master",
+            "systems"
+          ],
+          "priority": 1
+        },
+        {
+          "text": "Built **Win-Vault**, a lightweight directory privacy utility enforcing kernel-level NTFS ACL access restrictions without third-party drivers.",
+          "tags": [
+            "master",
+            "systems"
+          ],
+          "priority": 2
+        }
+      ]
+    },
+    {
+      "id": "nepali_ocr",
+      "title": "Nepali OCR AI — Vision OCR, Varnavinyas Grammar & Bi-Directional Transcoder",
+      "subtitle": "Low-Resource Document Intelligence",
+      "context": "NLP & Document Processing",
+      "dates": "2025 – 2026",
+      "tech_stack": [
+        "Python",
+        "Tesseract OCR",
+        "OpenCV",
+        "Devanagari NLP"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-038",
+        "github": "https://github.com/Aaradhya-Dev-Tamrakar/nepali-ocr-ai"
+      },
+      "tags": [
+        "master",
+        "aiml"
+      ],
+      "summary": "Document processing pipeline combining OCR with Devanagari normalization and Preeti-to-Unicode transcoding.",
+      "bullets": [
+        {
+          "text": "Built a low-resource Nepali document pipeline combining OpenCV illumination preprocessing, OCR extraction, Devanagari normalization, and bi-directional **Preeti <-> Unicode** transcoding.",
+          "tags": [
+            "master",
+            "aiml"
+          ],
+          "priority": 1
+        }
+      ]
+    },
+    {
+      "id": "cp_archive_codon",
+      "title": "IEEE-Xtreme Algorithmic Archive & Codon Stream — Competitive Programming Corpus",
+      "subtitle": "662-Task Problem Corpus & 500-Gene Algorithmic Library",
+      "context": "Algorithms & Benchmarking",
+      "dates": "2025 – Oct 2026",
+      "tech_stack": [
+        "C++",
+        "Python",
+        "Algorithms & Data Structures",
+        "Chrome DevTools Protocol"
+      ],
+      "links": {
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-039"
+      },
+      "tags": [
+        "master",
+        "research",
+        "systems"
+      ],
+      "summary": "Searchable 662-task competitive programming archive and hardened 500-gene algorithmic template library.",
+      "bullets": [
+        {
+          "text": "Built an indexed **662-task IEEE-Xtreme archive** (#p-039) with structured statements, constraints, and reference solutions alongside **Codon Stream** (#p-047), a pre-verified **500-gene** algorithmic library for strict time/memory limits.",
+          "tags": [
+            "master",
+            "research",
+            "systems"
+          ],
+          "priority": 1
         }
       ]
     },
@@ -387,221 +651,56 @@
       "tech_stack": [
         "Arduino",
         "C++",
-        "MediaPipe Hands",
-        "CameraX",
+        "MPU-6050",
+        "PID Control",
         "Kotlin",
-        "PID Control"
+        "MediaPipe Hands",
+        "CameraX"
       ],
       "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-012"
+        "portfolio": "https://aaradhyadt.github.io/projects.html#p-001"
       },
       "tags": [
         "master",
         "systems"
       ],
-      "summary": "Two-wheeled inverted pendulum robot with PID stabilization firmware and real-time Android computer-vision gesture actuation.",
+      "summary": "Two-wheeled inverted pendulum robot with PID stabilization firmware and Android computer-vision gesture actuation.",
       "bullets": [
         {
-          "text": "Implemented real-time PID stabilization firmware on an inverted pendulum robot, tuning balance control parameters for stable upright recovery.",
+          "text": "Implemented closed-loop PID stabilization firmware for a two-wheeled inverted pendulum robot and built an Android companion app (**Kotlin**, **MediaPipe Hands**, **CameraX**) mapping hand gestures to directional commands over Bluetooth.",
           "tags": [
             "master",
             "systems"
           ],
           "priority": 1
-        },
-        {
-          "text": "Developed an Android companion app (Kotlin, MediaPipe Hands, CameraX) mapping hand gestures to directional actuation commands over Bluetooth.",
-          "tags": [
-            "master",
-            "systems"
-          ],
-          "priority": 2
         }
       ]
     },
     {
-      "id": "super_nlm",
-      "title": "Super-NLM — Multi-Account NotebookLM Aggregator & MCP Tool",
-      "subtitle": "AI Developer Tooling",
-      "context": "AI Developer Tooling",
-      "dates": "2025 – Present",
+      "id": "personal_systems_portfolio",
+      "title": "Living Portfolio & Personal Systems — AaradhyaDT.github.io, Claude DSP & Alpha",
+      "subtitle": "Verified Web Platform, Multi-Profile Isolation & Android Engineering",
+      "context": "Full-Stack & Developer Ergonomics",
+      "dates": "2024 – Present",
       "tech_stack": [
-        "Python",
-        "Model Context Protocol (MCP)",
-        "Google Drive API",
-        "FastAPI"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-039",
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/super-nlm"
-      },
-      "tags": [
-        "master",
-        "fullstack"
-      ],
-      "summary": "Model Context Protocol server and automation tooling managing NotebookLM workflows and Studio artifact generation.",
-      "bullets": [
-        {
-          "text": "Developed an MCP tool server enabling AI agents to query notebooks, synchronize Google Drive research folders, and download Studio artifacts.",
-          "tags": [
-            "master",
-            "fullstack"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Implemented queue scheduling and quota-aware backoff handling to support automated document synthesis across study materials.",
-          "tags": [
-            "master",
-            "fullstack"
-          ],
-          "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "win_vault",
-      "title": "Win-Vault — Native Windows Folder Privacy Utility",
-      "subtitle": "Systems Utility & Security",
-      "context": "Systems Utility & Security",
-      "dates": "2025",
-      "tech_stack": [
-        "Python",
-        "Win32 APIs",
-        "NTFS ACLs",
+        "Vanilla HTML/CSS/ES6",
+        "Web Crypto (AES-256-GCM)",
+        "Python Verification",
+        "Kotlin / Jetpack Compose",
         "PowerShell"
       ],
       "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-037",
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/Win-Vault"
-      },
-      "tags": [
-        "master",
-        "systems"
-      ],
-      "summary": "Lightweight Windows privacy utility locking directories via native NTFS Access Control Lists with zero third-party dependencies.",
-      "bullets": [
-        {
-          "text": "Engineered a zero-dependency Windows folder locking utility enforcing access restrictions via native NTFS Access Control Lists (ACLs).",
-          "tags": [
-            "master",
-            "systems"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Eliminated third-party driver overhead by utilizing standard operating system security permissions and PowerShell automation.",
-          "tags": [
-            "master",
-            "systems"
-          ],
-          "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "system_optimizer",
-      "title": "NovaOptimizer / System-Optimizer — Workstation Memory Utility",
-      "subtitle": "Windows Systems Utility",
-      "context": "Windows Systems Utility",
-      "dates": "2025",
-      "tech_stack": [
-        "Python",
-        "Win32 APIs",
-        "PowerShell",
-        "CLI"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-035",
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/system-optimizer"
-      },
-      "tags": [
-        "master",
-        "systems"
-      ],
-      "summary": "Workstation memory utility automating working-set RAM reclamation during intensive development workloads.",
-      "bullets": [
-        {
-          "text": "Built a native Windows performance utility reclaiming **1.2–3.4 GB working-set RAM** under heavy multitasking developer workloads.",
-          "tags": [
-            "master",
-            "systems"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Automated background cleanup routines via standard Windows process memory APIs without disrupting active IDE sessions.",
-          "tags": [
-            "master",
-            "systems"
-          ],
-          "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "nepali_ocr",
-      "title": "nepali-ocr-ai — Low-Resource Document Processing Pipeline",
-      "subtitle": "NLP & Document Intelligence",
-      "context": "NLP & Document Processing",
-      "dates": "2025",
-      "tech_stack": [
-        "Python",
-        "Tesseract OCR",
-        "OpenCV",
-        "Devanagari NLP"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-028",
-        "github": "https://github.com/Aaradhya-Dev-Tamrakar/nepali-ocr-ai"
-      },
-      "tags": [
-        "master",
-        "aiml"
-      ],
-      "summary": "Document processing pipeline combining OCR with Devanagari text normalization and Preeti-to-Unicode transcoding.",
-      "bullets": [
-        {
-          "text": "Prototyped a document intelligence pipeline combining OCR with Devanagari text normalization and Preeti ↔ Unicode font transcoding.",
-          "tags": [
-            "master",
-            "aiml"
-          ],
-          "priority": 1
-        },
-        {
-          "text": "Built preprocessing filters in OpenCV for uneven illumination and historical print noise reduction.",
-          "tags": [
-            "master",
-            "aiml"
-          ],
-          "priority": 2
-        }
-      ]
-    },
-    {
-      "id": "utility_mcps",
-      "title": "Utility MCP Suite — LocalSend & Developer Bridges",
-      "subtitle": "Model Context Protocol Tooling",
-      "context": "Model Context Protocol Tooling",
-      "dates": "2025 – Present",
-      "tech_stack": [
-        "Python",
-        "Model Context Protocol (MCP)",
-        "FastAPI",
-        "Networking"
-      ],
-      "links": {
-        "portfolio": "https://aaradhyadt.github.io/projects.html#p-042"
+        "portfolio": "https://aaradhyadt.github.io",
+        "github": "https://github.com/AaradhyaDT/AaradhyaDT.github.io"
       },
       "tags": [
         "master",
         "fullstack"
       ],
-      "summary": "Custom Model Context Protocol servers connecting AI agents with local LAN devices and developer tools.",
+      "summary": "Zero-build-step PWA portfolio with 26-category automated verification, plus multi-profile Claude Desktop DSP isolation and Alpha Android app.",
       "bullets": [
         {
-          "text": "Developed custom MCP servers including a LocalSend bridge enabling AI agents to discover LAN peers and transfer build artifacts securely.",
+          "text": "Engineered **aaradhyadt.github.io** as a zero-build-step PWA featuring client-side **AES-256-GCM** content gating, 3D knowledge-graph navigation, single-source CV compilation, and a **26-category** pre-commit verification suite (verify.py).",
           "tags": [
             "master",
             "fullstack"
@@ -609,7 +708,7 @@
           "priority": 1
         },
         {
-          "text": "Built headless IPC connectors enabling agent-assisted operations with local design and engineering applications.",
+          "text": "Developed **Claude Desktop Multi-Profile DSP Fabric** (#p-023) for isolated desktop sessions and **Alpha** (#p-002), a modular Android super-app built with Kotlin, Jetpack Compose, and Room.",
           "tags": [
             "master",
             "fullstack"
@@ -634,13 +733,13 @@
         "compact"
       ],
       "bullets": [
-        "Coordinate branch planning, technical workshops, and cross-committee communication for Kathmandu Engineering College IEEE student body.",
-        "Facilitated technical awareness events and student engagement initiatives across engineering departments."
+        "Coordinate branch planning, technical workshops, and committee communications; organized **IEEE Day 2025**, **IEEE SPAx**, and mentored students in the **Electronics For All** workshop.",
+        "Represented the branch at the **IEEE Conference Leadership Workshop 2026** and hosted student technical orientations."
       ]
     },
     {
       "role": "Makerspace Ambassador",
-      "organization": "KEC Maker's Space, Kathmandu Engineering College",
+      "organization": "KEC Makerspace, Kathmandu Engineering College",
       "dates": "June 2026 – Present",
       "location": "Kathmandu, Nepal",
       "tags": [
@@ -649,8 +748,7 @@
         "fullstack"
       ],
       "bullets": [
-        "Maintain website content, interface fixes, and documentation for student prototyping equipment.",
-        "Support students with 3D printing, embedded electronics prototyping, and lab equipment access."
+        "Maintain the KEC Makerspace website (content updates, image repairs, interface fixes) and support campus 3D printing, laser fabrication, and embedded prototyping."
       ]
     },
     {
@@ -664,15 +762,14 @@
         "aiml"
       ],
       "bullets": [
-        "Manage event logistics, hardware inventory, and project exhibitions for the college electronics department.",
-        "Organized project showcases and hardware component distribution for student engineering competitions."
+        "Coordinate workshop logistics, hardware component inventory, and project showcases; mentored in the **Basic Electronics Workshop** and co-hosted the **EPC Handover Program 2025**."
       ]
     }
   ],
   "skills": {
     "categories": [
       {
-        "name": "Machine Learning & Evaluation",
+        "name": "Machine Learning, Evaluation & Vision/NLP",
         "skills": [
           "Python",
           "PyTorch",
@@ -680,11 +777,15 @@
           "Pandas",
           "NumPy",
           "XGBoost",
+          "LightGBM",
           "SHAP",
           "Fairlearn",
           "AIF360",
           "OpenCV",
-          "MediaPipe"
+          "MediaPipe",
+          "Qdrant",
+          "Pydantic",
+          "SimPy"
         ],
         "tags": [
           "master",
@@ -694,7 +795,7 @@
         ]
       },
       {
-        "name": "AI Systems, Backend & Tooling",
+        "name": "AI Systems, MLOps & Backend",
         "skills": [
           "FastAPI",
           "Docker",
@@ -702,7 +803,9 @@
           "SQL (PostgreSQL, SQLite)",
           "asyncio",
           "REST APIs",
-          "MLflow"
+          "MLflow",
+          "Airflow",
+          "Evidently"
         ],
         "tags": [
           "master",
@@ -712,15 +815,16 @@
         ]
       },
       {
-        "name": "Embedded Systems & Edge AI",
+        "name": "Embedded Systems, Edge AI & Native/Mobile",
         "skills": [
           "C/C++",
           "ESP32-S3",
           "TensorFlow Lite Micro",
           "FreeRTOS",
           "Arduino",
-          "Sensor Interfacing (IMU, UART/I2C/SPI)",
-          "Kotlin"
+          "IMU & Sensor Interfacing (UART/I2C/SPI/BLE)",
+          "Kotlin (Jetpack Compose, CameraX)",
+          "C# / .NET (Win32 & NTFS APIs)"
         ],
         "tags": [
           "master",
@@ -731,14 +835,15 @@
       {
         "name": "Engineering Practice & Tooling",
         "skills": [
-          "Git",
-          "GitHub",
+          "Git & GitHub",
           "Linux",
           "PowerShell",
           "Pytest",
+          "Automated Verification & CI",
           "Reproducible Configurations",
           "WordCraft",
-          "LaTeX"
+          "LaTeX",
+          "EasyEDA / Proteus"
         ],
         "tags": [
           "master",
@@ -753,32 +858,40 @@
   },
   "certifications_and_activities": [
     {
-      "name": "IEEE WIE Nepal LaTeX Workshop",
+      "name": "Anthropic — AI Fluency: Framework & Foundations & Introduction to Claude Cowork",
+      "date": "Jul 2026"
+    },
+    {
+      "name": "DataCamp — EU AI Act Literacy (Specialist), Security in the World of AI, AI-Assisted Coding & CPE Credits",
+      "date": "May – Jul 2026"
+    },
+    {
+      "name": "xTool / KEC Makerspace — Laser Safety Awareness & Printer Maintenance Certifications",
+      "date": "Aug 2026"
+    },
+    {
+      "name": "IEEE WIE Nepal LaTeX Training Program & IEEE SPAx Organizing Committee",
       "date": "May 2026"
     },
     {
-      "name": "IEEE SPAx (Student Professional Awareness Venture) Organizing Committee",
-      "date": "2025 – 2026"
+      "name": "NepaTronix Drone Operator Training Program",
+      "date": "May 2026"
+    },
+    {
+      "name": "IEEE Conference Leadership Workshop",
+      "date": "Jan 2026"
     },
     {
       "name": "IEEEXtreme 19.0 Programming Competition",
+      "date": "Oct 2025"
+    },
+    {
+      "name": "AWS Fundamentals Workshop (AWS Cloud Club Nepal) & PCB Design & Fabrication Workshop",
       "date": "2025"
     },
     {
-      "name": "PCB Design & Fabrication Workshop",
-      "date": "2025"
-    },
-    {
-      "name": "AWS Cloud Computing Workshop",
-      "date": "2024"
-    },
-    {
-      "name": "Prompt Engineering Fundamentals",
-      "date": "2024"
-    },
-    {
-      "name": "Microsoft Learn Student Ambassador",
-      "date": "2024 – 2025"
+      "name": "Prompt Engineering Fundamentals (TechAxis) & WiseBee Machine Learning Hackathon",
+      "date": "2023 – 2026"
     }
   ],
   "references": [

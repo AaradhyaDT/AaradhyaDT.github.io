@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.13",
+    version: "v58.14",
     date: "2026-11-13",
     sha: "f299fb3109846b49bc2437e55deadd8d043ffd4f",
     title: "add Merge IV (Capability & Topology Merge) to Systems Merging Cadence (#58) (#59)",

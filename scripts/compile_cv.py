@@ -45,8 +45,17 @@ HEX_INK = "17212B"
 HEX_LINK = "1E3A8A"
 
 
-def add_hyperlink(paragraph, url: str, text: str, color_hex: str = HEX_LINK, underline: bool = True):
-    """Add a native Word hyperlink XML element to a paragraph."""
+def add_hyperlink(
+    paragraph,
+    url: str,
+    text: str,
+    color_hex: str = HEX_LINK,
+    underline: bool = True,
+    font_name: str = "Calibri",
+    font_size_pt: float = 8.5,
+    bold: bool = False,
+):
+    """Add a native Word hyperlink XML element to a paragraph with explicit typography."""
     part = paragraph.part
     r_id = part.relate_to(url, RELATIONSHIP_TYPE.HYPERLINK, is_external=True)
     hyperlink = OxmlElement("w:hyperlink")
@@ -54,6 +63,22 @@ def add_hyperlink(paragraph, url: str, text: str, color_hex: str = HEX_LINK, und
 
     new_run = OxmlElement("w:r")
     rPr = OxmlElement("w:rPr")
+
+    rFonts = OxmlElement("w:rFonts")
+    rFonts.set(qn("w:ascii"), font_name)
+    rFonts.set(qn("w:hAnsi"), font_name)
+    rFonts.set(qn("w:cs"), font_name)
+    rPr.append(rFonts)
+
+    sz = OxmlElement("w:sz")
+    sz.set(qn("w:val"), str(int(round(font_size_pt * 2))))
+    rPr.append(sz)
+    szCs = OxmlElement("w:szCs")
+    szCs.set(qn("w:val"), str(int(round(font_size_pt * 2))))
+    rPr.append(szCs)
+
+    if bold:
+        rPr.append(OxmlElement("w:b"))
 
     if color_hex:
         c = OxmlElement("w:color")
@@ -284,7 +309,16 @@ def build_docx(data: dict, preset: str, output_path: Path):
         # Project title (hyperlinked if github/portfolio exists)
         link = proj.get("links", {}).get("portfolio") or proj.get("links", {}).get("github")
         if link:
-            add_hyperlink(p_proj, link, proj["title"], color_hex=HEX_INK, underline=False)
+            add_hyperlink(
+                p_proj,
+                link,
+                proj["title"],
+                color_hex=HEX_INK,
+                underline=False,
+                font_name="Calibri",
+                font_size_pt=9.3,
+                bold=True,
+            )
         else:
             r_pt = p_proj.add_run(proj["title"])
             r_pt.font.name = "Calibri"
