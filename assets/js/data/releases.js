@@ -8,9 +8,9 @@
 const SITE_RELEASES = [
   {
     version: "v58.14",
-    date: "2026-11-13",
-    sha: "f299fb3109846b49bc2437e55deadd8d043ffd4f",
-    title: "add Merge IV (Capability & Topology Merge) to Systems Merging Cadence (#58) (#59)",
+    date: "2026-11-19",
+    sha: "487ad704dabb1bb74c1cc68dc4b6b29c5525cfa9",
+    title: "overhaul general CV and reconcile all presets to 2026-11-19 (#61) (#62)",
     highlights: []
   },
   {
