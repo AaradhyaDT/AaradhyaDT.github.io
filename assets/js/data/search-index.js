@@ -426,6 +426,13 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
+    "title": "Headless LocalSend Substrate — Direct P2P Wireless & ADB Transport",
+    "meta": "Python 3.11, LocalSend v2.1, mTLS",
+    "href": "projects.html#p-048",
+    "text": "headless localsend substrate — direct p2p wireless & adb transport the problem cross-device transfers need silent background operations without gui interruption or external cloud dependency. what i built built a zero-gui headless localsend v2.1 daemon with in-memory self-signed tls certs, pinned sha-256 fingerprints, silent windows hkcu run startup, and hardware-accelerated adb fallback (45+ mb/s). engineering focus eliminate gui popups and manual confirmation overhead through background certificate pinning and automatic explorer context menu dispatch. current boundary hardware adb push requires usb debugging permissions; wireless fallback relies on local subnet wi-fi routing. python 3.11 localsend v2.1 mtls p2p networking adb push windows 11"
+  },
+  {
+    "type": "project",
     "title": "Codon Stream — 500-Gene CP Algorithmic Library",
     "meta": "C++20, Python 3.11, Algorithms",
     "href": "projects.html#p-047",
@@ -447,10 +454,10 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "NovaOptimizer — Windows Task Manager & System Optimizer",
+    "title": "Win-Governor — Windows OS Kernel Tuning & Task Governance Utility",
     "meta": "C# / .NET 10, WPF, Win32 NT Kernel",
     "href": "projects.html#p-030",
-    "text": "novaoptimizer — windows task manager & system optimizer the problem windows memory-management operations need a usable interface and clear control over when system changes run. what i built built a c# and wpf utility targeting .net 8 with memory-management operations and a background monitoring workflow. engineering focus expose working-set and standby-list operations through windows apis rather than relying on a model to interpret and execute shell instructions. current boundary some operations require elevated permissions or undocumented windows interfaces. their effect depends on workload and os behaviour; reclaimed memory is not a general performance benchmark. c# / .net 10 wpf win32 nt kernel memory management task manager turbo boost windows 11"
+    "text": "win-governor — windows os kernel tuning & task governance utility the problem windows memory-management operations need a usable interface and clear control over when system changes run. what i built built a c# and wpf utility (win-governor, formerly novaoptimizer) targeting .net 8 with memory-management operations and a background monitoring workflow. engineering focus expose working-set and standby-list operations through windows apis rather than relying on a model to interpret and execute shell instructions. current boundary some operations require elevated permissions or undocumented windows interfaces. their effect depends on workload and os behaviour; reclaimed memory is not a general performance benchmark. c# / .net 10 wpf win32 nt kernel memory management task manager turbo boost windows 11"
   },
   {
     "type": "project",

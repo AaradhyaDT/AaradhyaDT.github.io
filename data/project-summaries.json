@@ -44,5 +44,6 @@
   "p-043": "Coursework tracking and serving ML and agent applications.",
   "p-044": "Coursework checking assistant inputs and outputs with guardrails.",
   "p-026": "Coursework examining organizational responsibilities and hiring practices.",
-  "p-047": "Hardened 500-gene competitive programming algorithmic library and reference."
+  "p-047": "Hardened 500-gene competitive programming algorithmic library and reference.",
+  "p-048": "Zero-GUI LocalSend daemon and direct hardware-speed ADB push transfer substrate."
 }

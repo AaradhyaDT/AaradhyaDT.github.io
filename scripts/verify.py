@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v58.12)
+aaradhyadt.github.io (v58.15)
 
 26 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -1219,6 +1219,18 @@ def check_data_consistency():
     else:
         log_pass(cat, "ecosystem tree matches the project inventory and sourced relationships")
 
+    cv_compiler = ROOT / "scripts" / "compile_cv.py"
+    if cv_compiler.exists() and (ROOT / "data" / "master_cv.json").exists():
+        cv_res = subprocess.run(
+            [sys.executable, str(cv_compiler), "--check-ssot"],
+            capture_output=True, text=True, timeout=30, check=False,
+        )
+        if cv_res.returncode:
+            log_error(cat, "CV SSOT check failed: " + (cv_res.stdout.strip() + " " + cv_res.stderr.strip()).strip())
+            all_ok = False
+        else:
+            log_pass(cat, "master_cv.json SSOT parity verified across resume-data.js, project anchors, and compiled docs")
+
     # 1. RESUME_DATA in data/resume-data.js should say Vice Chair for current leadership
     if RESUME_DATA_JS.exists():
         resume_text = RESUME_DATA_JS.read_text(encoding="utf-8")
@@ -1411,7 +1423,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v58.12)"))
+    print(bold("  Portfolio Site Verification Suite (v58.15)"))
     print(bold("=" * 60))
     print()
 

@@ -7,10 +7,10 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.12",
-    date: "2026-11-07",
-    sha: "78e7e9cde6f36db25a9d2231cef00dc18531bc70",
-    title: "revoice master cv and presets to match authentic portfolio voice",
+    version: "v58.15",
+    date: "2026-11-19",
+    sha: "6c4d26172757905be98e8e50f7176dff87f6301a",
+    title: "enforce master_cv.json SSOT across resume-data.js, build_cv.py, and verify.py (#63) (#64)",
     highlights: []
   },
   {
