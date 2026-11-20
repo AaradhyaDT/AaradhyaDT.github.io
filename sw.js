@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Service Worker — Aaradhya Dev Tamrakar Portfolio (v58.15)
+   Service Worker — Aaradhya Dev Tamrakar Portfolio (v59)
    Provides offline capability & asset caching for fast return visits.
    ========================================================================== */
 
-const CACHE_NAME = 'aaradhya-portfolio-v58.15';
+const CACHE_NAME = 'aaradhya-portfolio-v59';
 
 const STATIC_ASSETS = [
   './',
@@ -30,6 +30,7 @@ const STATIC_ASSETS = [
   './assets/css/modules/tour.css',
   './assets/css/modules/graph-modal.css',
   './assets/css/modules/ecosystem.css',
+  './assets/css/modules/constellation.css',
   './assets/css/modules/print.css',
   './assets/js/script.js',
   './assets/js/bg-animations.js',
@@ -37,6 +38,7 @@ const STATIC_ASSETS = [
   './assets/js/data/search-index.js',
   './assets/js/data/resume-data.js',
   './assets/js/data/graph-data.js',
+  './assets/js/data/ecosystem-data.js',
   './assets/js/modules/constants.js',
   './assets/js/modules/core.js',
   './assets/js/modules/tour.js',
@@ -48,6 +50,7 @@ const STATIC_ASSETS = [
   './assets/js/modules/terminal.js',
   './assets/js/modules/graph-modal.js',
   './assets/js/modules/ecosystem.js',
+  './assets/js/modules/constellation.js',
   './assets/js/modules/haptics.js',
   './assets/js/modules/evidence.js',
   './assets/js/modules/home-widgets.js',

@@ -74,6 +74,42 @@ class EcosystemTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     engine.render_tree(self.page, config)
 
+    def test_all_projects_assigned_to_named_branches(self):
+        cards = engine.project_cards(self.page)
+        groups = engine.resolve_groups(cards, self.config)
+        group_ids = [g['id'] for g, _ in groups]
+        self.assertNotIn('more', group_ids)
+        assigned = {key for _, ids in groups for key in ids}
+        self.assertEqual(assigned, set(cards.keys()))
+        self.assertIn('p-047', assigned)
+        self.assertIn('p-048', assigned)
+
+    def test_constellation_tiers_clusters_and_generated_data_freshness(self):
+        payload = engine.build_constellation(self.page, self.config)
+        clusters = {c['id']: c for c in payload['clusters']}
+        self.assertEqual(set(clusters), {'google-oauth', 'fellowship', 'mcp-group', 'college'})
+        fellowship = clusters['fellowship']
+        self.assertTrue(fellowship['timeline'])
+        self.assertEqual(fellowship['capstone'], 'p-025')
+        self.assertEqual(len(fellowship['members']), 19)
+        self.assertEqual(fellowship['members'][-1], 'p-025')
+
+        for edge in payload['edges']:
+            if edge['tier'] == engine.WORKFLOW_TIER:
+                self.assertNotIn('source_commit', edge)
+            else:
+                self.assertIn(edge['tier'], engine.DOCUMENTED_TIERS)
+                self.assertRegex(edge['source_commit'], r'^[0-9a-f]{40}$')
+
+        bad_config = copy.deepcopy(self.config)
+        bad_config['constellation']['workflow_edges'][0]['source_commit'] = '0' * 40
+        with self.assertRaises(ValueError):
+            engine.build_constellation(self.page, bad_config)
+
+        expected_js = engine.render_data_js(self.page, self.config)
+        actual_js = (ROOT / 'assets/js/data/ecosystem-data.js').read_text(encoding='utf-8')
+        self.assertEqual(actual_js, expected_js, 'Run scripts/generate_ecosystem.py')
+
 
 if __name__ == '__main__':
     unittest.main()

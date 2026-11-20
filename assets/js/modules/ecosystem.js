@@ -1,4 +1,4 @@
-/* MODULE: ecosystem.js — aaradhyadt.github.io (v58.15)
+/* MODULE: ecosystem.js — aaradhyadt.github.io (v59)
    Progressively enhance the static, linked project tree. */
 (function initEcosystem() {
   'use strict';
@@ -8,7 +8,7 @@
   const tree = root.querySelector('#ecosystem-tree');
   const nodes = Array.from(tree.querySelectorAll('[data-project]'));
   const branches = Array.from(tree.querySelectorAll('.ecosystem-branch'));
-  const connections = JSON.parse(root.dataset.connections || '[]');
+  const connections = (window.ECOSYSTEM_DATA && window.ECOSYSTEM_DATA.connections) || [];
   const panel = root.querySelector('.ecosystem-detail');
   const search = root.querySelector('#ecosystem-search');
   const expand = root.querySelector('#ecosystem-expand');
