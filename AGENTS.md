@@ -40,7 +40,7 @@ To avoid merge conflicts on `assets/js/last-commit.json` (bot-managed) and preve
 
 ## 2. Knowledge Graph & Codebase Navigation (Graphify)
 
-- **Map First**: Read `graphify-out/GRAPH_REPORT.md` (or `graphify-out/wiki/index.md` if present) before deep-diving into raw files.
+- **Map First**: Read `docs/MAP.md` (Layer 1 surface/interaction/sync index) and `graphify-out/GRAPH_REPORT.md` (or `graphify-out/wiki/index.md` if present) before deep-diving into raw files.
 - **Relationship Queries**: Prefer `graphify query "<question>"`, `graphify path "<A>" "<B>"`, or `graphify explain "<concept>"` over blind grep searches.
 - **Graph Updates**: `.\sync.ps1` automatically executes `graphify update .`.
 

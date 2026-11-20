@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v59)
+aaradhyadt.github.io (v59.1)
 
 26 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -1300,6 +1300,9 @@ def check_tracker_hygiene():
     all_ok = True
 
     md_files = [TRACKER_MD, ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "GEMINI.md"]
+    docs_dir = ROOT / "docs"
+    if docs_dir.exists():
+        md_files.extend(sorted(docs_dir.glob("*.md")))
     for md in md_files:
         if not md.exists():
             continue
@@ -1423,7 +1426,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v59)"))
+    print(bold("  Portfolio Site Verification Suite (v59.1)"))
     print(bold("=" * 60))
     print()
 

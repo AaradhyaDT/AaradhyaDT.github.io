@@ -1,6 +1,6 @@
 /* ============================================================
 
-   HOME WIDGETS — index.html-only status widgets (v59)
+   HOME WIDGETS — index.html-only status widgets (v59.1)
 
    Kathmandu clock · live date labels · last-commit badge.
 
@@ -270,7 +270,7 @@
 
 
 
-    function openPanel(panelId, shouldScroll, focusTarget) {
+    function openPanel(panelId, shouldScroll, focusTarget, forceOpen) {
 
       var targetPanel = document.getElementById(panelId);
 
@@ -278,7 +278,7 @@
 
 
 
-      var wasOpen = !targetPanel.hasAttribute('hidden') && targetPanel.classList.contains('is-open');
+      var wasOpen = !forceOpen && !targetPanel.hasAttribute('hidden') && targetPanel.classList.contains('is-open');
 
 
 
@@ -498,7 +498,7 @@
 
       var target = map[panelOrSectionId] || panelOrSectionId;
 
-      openPanel(target, shouldScroll !== false);
+      openPanel(target, shouldScroll !== false, null, true);
 
     };
 
@@ -514,15 +514,15 @@
 
       if (['terminal-section', 'adtTerminal', 'panel-terminal'].indexOf(hash) !== -1) {
 
-        openPanel('panel-terminal', true);
+        openPanel('panel-terminal', true, null, true);
 
       } else if (['keymap', 'panel-keymap'].indexOf(hash) !== -1) {
 
-        openPanel('panel-keymap', true);
+        openPanel('panel-keymap', true, null, true);
 
       } else if (['about-sign-in', 'vip-exclusive', 'master-exclusive', 'panel-research'].indexOf(hash) !== -1) {
 
-        openPanel('panel-research', true);
+        openPanel('panel-research', true, null, true);
 
       }
 

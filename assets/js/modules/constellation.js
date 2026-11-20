@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: constellation.js — aaradhyadt.github.io (v59)
+   MODULE: constellation.js — aaradhyadt.github.io (v59.1)
    Interactive Project Constellation & Camera Engine
    - Pixel-coordinate layered DAG + serpentine timeline engine
    - Transform-based camera (fit, drag-pan, Ctrl/Cmd+wheel zoom)

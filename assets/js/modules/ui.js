@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v59)
+   MODULE: ui.js — aaradhyadt.github.io (v59.1)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -397,6 +397,7 @@ function initLightbox() {
 // 7 → contact.html
 // 0 or Alt+0 → toggle theme
 // ` → toggle hero date B.S. / A.D. (index.html only; no-op elsewhere)
+// Shift+2 → toggle Graph / Tree ecosystem view (projects.html only; no-op elsewhere)
 // Shift+4 → toggle Academic / Extracurricular track (achievements.html only; no-op elsewhere)
 // Alt+2 → expand/collapse all project cards (projects.html only; no-op elsewhere)
 // Alt+4 → expand/collapse all years (achievements.html only; no-op elsewhere)
@@ -503,6 +504,19 @@ function initKeyNav() {
 
     if (e.shiftKey && (e.key === 'G' || e.key === 'g')) {
       if (typeof openGraphModal === 'function') openGraphModal();
+      return;
+    }
+
+    if (!e.altKey && e.shiftKey && (e.key === '2' || e.key === '@' || e.code === 'Digit2')) {
+      const viewSwitch = document.getElementById('ecosystem-view-switch');
+      if (viewSwitch && !viewSwitch.hidden) {
+        const graphBtn = viewSwitch.querySelector('[data-ecosystem-view="graph"]');
+        const treeBtn = viewSwitch.querySelector('[data-ecosystem-view="tree"]');
+        if (graphBtn && treeBtn) {
+          e.preventDefault();
+          (graphBtn.classList.contains('active') ? treeBtn : graphBtn).click();
+        }
+      }
       return;
     }
 
@@ -1252,6 +1266,204 @@ function initResponsiveReading() {
   revealDestination();
   window.addEventListener('hashchange', revealDestination);
 }
+
+/* ── Projects page cards, filters, and coursework highlights ── */
+function initProjectsPage() {
+  if (!document.getElementById('projectsGrid')) return;
+
+  const CARD_ANIM_MS = 350;
+  const navH = () => parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 72;
+
+  function syncProjectToggleAllLabel() {
+    const btn = document.getElementById('projectToggleAllBtn');
+    const label = document.getElementById('projectToggleAllLabel');
+    const cards = document.querySelectorAll('#projectsGrid details.project-card');
+    if (!btn || !label || !cards.length) return;
+
+    const visibleCards = Array.from(cards).filter(card => card.style.display !== 'none');
+    const allOpen = visibleCards.length > 0 && visibleCards.every(card => card.hasAttribute('open'));
+    btn.classList.toggle('is-all-open', allOpen);
+    label.textContent = allOpen ? 'Collapse visible' : 'Expand visible';
+    btn.setAttribute('aria-label', allOpen ? 'Collapse visible project cards' : 'Expand visible project cards');
+  }
+
+  function scrollCardToTop(card) {
+    const y = card.getBoundingClientRect().top + window.scrollY - navH() - 16;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
+  function animateCardOpen(card) {
+    if (card.dataset.animating === '1' || card.hasAttribute('open')) return;
+    card.setAttribute('open', '');
+    card.dataset.animating = '1';
+    window.setTimeout(() => { card.dataset.animating = '0'; }, CARD_ANIM_MS);
+  }
+
+  function animateCardClose(card) {
+    if (card.dataset.animating === '1' || !card.hasAttribute('open')) return;
+    card.dataset.animating = '1';
+    card.classList.add('closing');
+
+    const restoreY = card.dataset.preOpenScrollY;
+    if (restoreY !== undefined) {
+      window.scrollTo({ top: parseFloat(restoreY), behavior: 'smooth' });
+      delete card.dataset.preOpenScrollY;
+    } else {
+      scrollCardToTop(card);
+    }
+
+    window.setTimeout(() => {
+      card.removeAttribute('open');
+      card.classList.remove('closing');
+      card.dataset.animating = '0';
+      syncProjectToggleAllLabel();
+    }, CARD_ANIM_MS);
+  }
+
+  function initProjectCardFluidity() {
+    const cards = document.querySelectorAll('#projectsGrid details.project-card');
+
+    cards.forEach(card => {
+      const summary = card.querySelector('.project-summary');
+      if (!summary) return;
+
+      card.dataset.animating = '0';
+
+      summary.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (card.dataset.animating === '1') return;
+
+        if (!card.hasAttribute('open')) {
+          card.dataset.preOpenScrollY = String(window.scrollY);
+          animateCardOpen(card);
+          requestAnimationFrame(() => scrollCardToTop(card));
+        } else {
+          animateCardClose(card);
+        }
+      });
+
+      card.addEventListener('toggle', syncProjectToggleAllLabel);
+    });
+  }
+
+  function initProjectToggleAll() {
+    const btn = document.getElementById('projectToggleAllBtn');
+    const cards = document.querySelectorAll('#projectsGrid details.project-card');
+    if (!btn || !cards.length) return;
+
+    btn.addEventListener('click', () => {
+      const visibleCards = Array.from(cards).filter(card => card.style.display !== 'none');
+      const allOpen = visibleCards.every(card => card.hasAttribute('open'));
+      visibleCards.forEach(card => allOpen ? animateCardClose(card) : animateCardOpen(card));
+      syncProjectToggleAllLabel();
+      if (allOpen) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    syncProjectToggleAllLabel();
+  }
+
+  function sectionProjectCards(heading) {
+    const cards = [];
+    let node = heading.nextElementSibling;
+    while (node && !node.classList.contains('projects-section-title')) {
+      if (node.matches('details.project-card')) cards.push(node);
+      else cards.push(...node.querySelectorAll('details.project-card'));
+      node = node.nextElementSibling;
+    }
+    return cards;
+  }
+
+  function initProjectFilters() {
+    const filterBar = document.getElementById('projectsFilterBar');
+    const cards = document.querySelectorAll('#projectsGrid details.project-card');
+    const sections = document.querySelectorAll('#projectsGrid .projects-section-title');
+    if (!filterBar || !cards.length) return;
+
+    // Inject empty-state message (shown when a filter yields zero results)
+    let emptyState = document.getElementById('projects-empty-state');
+    if (!emptyState) {
+      emptyState = document.createElement('p');
+      emptyState.id = 'projects-empty-state';
+      emptyState.setAttribute('aria-live', 'polite');
+      emptyState.style.cssText = 'display:none;text-align:center;color:var(--muted);font-family:var(--mono);font-size:0.9rem;padding:3rem 1rem;letter-spacing:0.04em;';
+      document.getElementById('projectsGrid').after(emptyState);
+    }
+
+    const btns = filterBar.querySelectorAll('.proj-filter-btn');
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        btns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const cats = (card.dataset.category || '').split(' ');
+          const match = filter === 'all' || cats.includes(filter);
+          card.style.display = match ? '' : 'none';
+          if (match) visibleCount++;
+        });
+
+        // Hide month containers whose weekly cards all fail the active filter.
+        document.querySelectorAll('.fuse-month-card, .fuse-months-grid').forEach(group => {
+          const hasVisible = Array.from(group.querySelectorAll('details.project-card'))
+            .some(card => card.style.display !== 'none');
+          group.style.display = hasVisible ? '' : 'none';
+        });
+
+        // Include nested weekly cards when deciding whether a section is visible.
+        sections.forEach(sec => {
+          const hasVisible = sectionProjectCards(sec).some(card => card.style.display !== 'none');
+          sec.style.display = hasVisible ? '' : 'none';
+        });
+
+        // Show/hide empty state
+        if (emptyState) {
+          const label = btn.querySelector('span:first-child')?.textContent || filter;
+          emptyState.style.display = visibleCount === 0 ? '' : 'none';
+          emptyState.textContent = visibleCount === 0
+            ? `No projects match the "${label}" filter. Try a different category.`
+            : '';
+        }
+
+        if (typeof playAudioCue === 'function') playAudioCue('click');
+        if (typeof triggerHapticFeedback === 'function') triggerHapticFeedback('light');
+        syncProjectToggleAllLabel();
+      });
+    });
+  }
+
+  function initCourseworkHighlights() {
+    const fuseSec = document.getElementById('section-fuseaif');
+    if (!fuseSec) return;
+    const cards = sectionProjectCards(fuseSec);
+    const latest = cards.reduce((best, card) => {
+      return Number(card.dataset.fuseWeek || 0) > Number(best?.dataset.fuseWeek || 0) ? card : best;
+    }, cards[0]);
+    cards.forEach(card => {
+      card.classList.toggle('project-card--major', card === latest);
+    });
+  }
+
+  initCourseworkHighlights();
+  initProjectFilters();
+  initProjectCardFluidity();
+  initProjectToggleAll();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initProjectsPage, { once: true });
+} else {
+  initProjectsPage();
+}
+
 // Evidence lays out proof and narrative nodes during module initialization.
 // Apply disclosure after that layout so it cannot move a story out of its wrapper.
 if (window.__modulesLoadedPromise) {

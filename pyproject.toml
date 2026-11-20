@@ -1,6 +1,6 @@
 [project]
 name = "aaradhyadt-portfolio"
-version = "59.0.0"
+version = "59.1.0"
 description = "Aaradhya Dev Tamrakar Portfolio Suite & Automation Tooling"
 readme = "README.md"
 requires-python = ">=3.10"
