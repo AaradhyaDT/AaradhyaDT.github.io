@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v59.1",
     date: "2026-11-20",
-    sha: "cbb44c1cd5741a3a612799cc36c3251de7d4a95e",
-    title: "4-layer monotonic DAG, modular runtime, and graphify hygiene (#54) (#65)",
+    sha: "42c45352b47a41d61d33f4a1b8daa61ea9db7871",
+    title: "bind Shift+2 view toggle, unhide keymap, and add 2-layer docs",
     highlights: []
   },
   {
