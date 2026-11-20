@@ -11,7 +11,7 @@
       "id": "knowledge",
       "label": "Knowledge & publishing",
       "description": "Collect, query, edit, and share knowledge across tools.",
-      "projects": ["p-031", "p-036", "p-037", "p-029", "p-035", "p-038", "p-039"]
+      "projects": ["p-031", "p-036", "p-037", "p-029", "p-035", "p-038", "p-039", "p-047"]
     },
     {
       "id": "research",
@@ -23,7 +23,7 @@
       "id": "applications",
       "label": "Applications & utilities",
       "description": "Build tools for everyday workflows, learning, and interaction.",
-      "projects": ["p-021", "p-020", "p-030", "p-002", "p-015"]
+      "projects": ["p-021", "p-020", "p-030", "p-002", "p-048", "p-015"]
     },
     {
       "id": "fellowship",
@@ -37,7 +37,9 @@
     "p-023": "Claude Desktop",
     "p-039": "IEEE-Xtreme Archive",
     "p-032": "STRANGLER-IPU",
-    "p-001": "Self-Balancing Robot"
+    "p-001": "Self-Balancing Robot",
+    "p-048": "Headless LocalSend",
+    "p-047": "Codon Stream"
   },
   "connections": [
     {
@@ -76,5 +78,72 @@
       "source_commit": "b74f077bdd18eb33d8bcb86dd56049bc9896724b",
       "evidence": "DOCUMENTED_WORKFLOW"
     }
-  ]
+  ],
+  "constellation": {
+    "agents": ["antigravity", "codex", "p-023"],
+    "default_selection": "antigravity",
+    "featured": [
+      "antigravity", "codex", "p-023",
+      "colab", "github-workflow", "p-040", "p-041", "p-031", "google-oauth",
+      "brainstorm", "fellowship", "college",
+      "mcp-group", "p-025", "p-018"
+    ],
+    "columns": [
+      {"id": "agents", "label": "Conversation agents", "members": ["antigravity", "codex", "p-023"]},
+      {"id": "tools", "label": "Core tools & infrastructure", "members": ["colab", "github-workflow", "p-040", "p-041", "p-031", "google-oauth", "p-034", "p-033", "p-010"]},
+      {"id": "gateways", "label": "Gateways & services", "members": ["brainstorm", "fellowship", "college", "p-012", "p-029", "p-035", "drive", "calendar", "classroom"]},
+      {"id": "work", "label": "Projects & clusters", "members": ["mcp-group", "p-025", "p-018", "p-001", "p-026"]},
+      {"id": "related", "label": "Related work", "members": ["p-007"]}
+    ],
+    "default_column": "work",
+    "nodes": {
+      "antigravity": {"label": "Antigravity", "kind": "service", "group": "orchestration", "description": "Primary daily conversation and agentic development environment — uses every tool across my stack, from Fleet and Colab to Super-NLM, Google services, Brainstorm, and the full local MCP server fleet."},
+      "codex": {"label": "Codex", "kind": "service", "group": "orchestration", "description": "Secondary coding and review agent (via Makerspace's ChatGPT Plus account) — uses the same full tool, compute, knowledge, and MCP stack as Antigravity."},
+      "colab": {"label": "Colab", "kind": "service", "group": "orchestration", "description": "Cloud compute for training, batch processing, and workloads beyond local capacity."},
+      "github-workflow": {"label": "GitHub workflow", "kind": "service", "group": "orchestration", "description": "Issue tracking, branches, verification, pull requests, and delivery across repositories."},
+      "google-oauth": {"label": "Google OAuth", "kind": "cluster", "group": "orchestration", "description": "Authorized access to Drive, Calendar, Classroom, and other Google services.", "members": ["drive", "calendar", "classroom"], "view_label": "Google services"},
+      "brainstorm": {"label": "Brainstorm", "kind": "service", "group": "knowledge", "description": "A thinking log and planning gateway for newer projects, skills, and ideas."},
+      "drive": {"label": "Google Drive", "kind": "service", "group": "knowledge", "description": "Documents, notebooks, and shared artifacts accessed through authorized Google tools."},
+      "calendar": {"label": "Google Calendar", "kind": "service", "group": "knowledge", "description": "Scheduling and event context through authorized Google tools."},
+      "classroom": {"label": "Google Classroom", "kind": "service", "group": "knowledge", "description": "Coursework and academic context through authorized Google tools."},
+      "fellowship": {"label": "Fusemachines fellowship", "kind": "cluster", "group": "fellowship", "description": "A collection of AI fellowship projects and coursework, grouped together for exploration.", "members_from_coursework": true, "members": ["p-025"], "timeline": true, "view_label": "Fellowship timeline", "capstone": "p-025"},
+      "mcp-group": {"label": "MCP tools", "kind": "cluster", "group": "knowledge", "description": "A group of Model Context Protocol tools, each available for individual exploration.", "members": ["p-029", "p-033", "p-035", "p-036", "p-037", "p-038"], "view_label": "MCP tools"},
+      "college": {"label": "College projects", "kind": "cluster", "group": "research", "description": "SPARK and GCSBR are college projects, grouped for exploration.", "members": ["p-018", "p-001"], "view_label": "College projects"}
+    },
+    "descriptions": {
+      "p-023": "Supporting conversation interface (free tier with limited capability), extended with my multi-profile launcher, MCP tool bridges, and Distributed Service Provisioning tooling.",
+      "p-041": "Synchronizes skills, agent instructions, and shared context across agentic editors from a locally maintained source of truth and Brainstorm.",
+      "p-012": "Archived after substantial research and a completed proposal; radio transmitter imports were unfeasible, and the idea was deferred in favor of SPARK."
+    },
+    "agent_workflows": [
+      ["p-040", "Delegate work", "Hands off tasks to Fleet Orchestrator when additional execution capacity is needed."],
+      ["colab", "Accelerate compute", "Uses Colab for workloads requiring cloud compute."],
+      ["github-workflow", "Repository workflow", "Uses the GitHub workflow for issues, branches, verification, and delivery."],
+      ["p-031", "Knowledge tools", "Uses Super-NLM for notebook knowledge and synthesis."],
+      ["p-041", "Shared agent context", "Runs Agent-Customization-Sync from an agentic editor to synchronize skills, agent instructions, and other context across editors."],
+      ["google-oauth", "Google services", "Accesses authorized Google services through OAuth."],
+      ["brainstorm", "Retain ideas", "Keeps skills and ideas in the Brainstorm repository."]
+    ],
+    "workflow_edges": [
+      {"from": "p-040", "to": "colab", "label": "Cloud execution", "description": "Fleet includes Colab tooling for cloud compute workflows."},
+      {"from": "p-040", "to": "github-workflow", "label": "Repository workflows", "description": "Fleet coordinates repository work and uses GitHub workflows for verification and delivery."},
+      {"from": "p-040", "to": "brainstorm", "label": "Research workloads", "description": "Fleet documents task workflows targeting Brainstorm research and simulations."},
+      {"from": "p-041", "to": "brainstorm", "label": "Shared source of truth", "description": "Maintains the shared source of truth locally and in Brainstorm while synchronizing agent context across editors."},
+      {"from": "brainstorm", "to": "p-025", "label": "Planning and thinking log", "description": "Brainstorm is a gateway for planning and working on BiasAperture."},
+      {"from": "brainstorm", "to": "p-018", "label": "Planning and thinking log", "description": "Brainstorm is a gateway for planning and working on SPARK."},
+      {"from": "brainstorm", "to": "mcp-group", "label": "Planning and thinking log", "description": "Brainstorm is a gateway for planning and working on MCP tools."},
+      {"from": "fellowship", "to": "p-025", "label": "Fellowship capstone", "description": "BiasAperture is linked to the Fusemachines AI fellowship."},
+      {"from": "college", "to": "p-018", "label": "College project", "description": "SPARK is a college project."},
+      {"from": "college", "to": "p-001", "label": "College project", "description": "GCSBR is a college project."},
+      {"from": "p-001", "to": "p-007", "label": "Related work", "description": "GCSBR and Edge AI Stability Detection are linked projects."},
+      {"from": "p-012", "to": "p-018", "label": "Deferred in favor of SPARK", "description": "PrakopNet was researched and reached proposal stage, but importing its radio transmitters was unfeasible; the idea was deferred in favor of SPARK."},
+      {"from": "google-oauth", "to": "drive", "label": "Authorized access", "description": "Google OAuth provides authorized access to this service."},
+      {"from": "google-oauth", "to": "calendar", "label": "Authorized access", "description": "Google OAuth provides authorized access to this service."},
+      {"from": "google-oauth", "to": "classroom", "label": "Authorized access", "description": "Google OAuth provides authorized access to this service."},
+      {"from": "antigravity", "to": "mcp-group", "label": "Full MCP toolset", "description": "Antigravity connects directly to every local MCP server in my stack (Super-NLM, Classroom, Typora, LocalSend, Windows Pilot, md2pdf, Nepali OCR)."},
+      {"from": "antigravity", "to": "p-029", "label": "Markdown publishing", "description": "Uses md2pdf directly alongside the rest of the MCP publishing stack."},
+      {"from": "codex", "to": "mcp-group", "label": "Full MCP toolset", "description": "Codex connects to the same full local MCP server fleet as Antigravity (Super-NLM, Classroom, Typora, LocalSend, Windows Pilot, md2pdf, Nepali OCR)."},
+      {"from": "codex", "to": "p-029", "label": "Markdown publishing", "description": "Uses md2pdf directly alongside the rest of the MCP publishing stack."}
+    ]
+  }
 }

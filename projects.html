@@ -136,7 +136,7 @@
 <link href="assets/css/modules/tokens.css" rel="stylesheet"/>
 <link href="assets/css/modules/base.css" rel="stylesheet"/>
 <link href="assets/css/modules/layout.css" rel="stylesheet"/>
-<link href="assets/css/constellation.css" rel="stylesheet"/>
+<link href="assets/css/modules/constellation.css" rel="stylesheet"/>
 <link href="assets/css/modules/components.css" rel="stylesheet"/>
 <!-- Non-critical interactive CSS modules — deferred via print/onload swap -->
 <link href="assets/css/modules/cmdk.css" media="print" onload="this.media='all'" rel="stylesheet"/>
@@ -147,6 +147,7 @@
 <link href="assets/css/modules/print.css" media="print" rel="stylesheet"/>
 <!-- Page-specific: projects grid -->
 <link href="assets/css/modules/ecosystem.css" rel="stylesheet"/>
+<script defer="" src="assets/js/data/ecosystem-data.js"></script>
 <script defer="" src="assets/js/modules/ecosystem.js"></script>
 <style>
     html,
@@ -1248,19 +1249,41 @@
   <button type="button" class="bg-hub-tab" data-ecosystem-view="tree" aria-pressed="false" aria-controls="ecosystem">Tree view</button>
 </div>
 <section class="constellation" id="constellation" aria-labelledby="constellation-title" hidden>
-  <div class="constellation-heading"><p class="constellation-eyebrow">MY WORKING ECOSYSTEM</p><h2 id="constellation-title">Conversations at the center. <em>Systems behind the work.</em></h2><p>I work through Antigravity, Claude Desktop, and Codex. From those conversations, I delegate to Fleet, use cloud compute and knowledge tools, and deliver work through GitHub. Skills and ideas live in Brainstorm.</p></div>
+  <div class="constellation-heading"><p class="constellation-eyebrow">MY WORKING ECOSYSTEM</p><h2 id="constellation-title">Conversations at the center. <em>Systems behind the work.</em></h2><p>Antigravity is my primary daily workspace, alongside Codex (via Makerspace's ChatGPT Plus) — both use every tool across the stack, supported by Claude Desktop (free tier). From those sessions, work flows through Fleet, cloud compute, knowledge tools, GitHub, and Brainstorm.</p></div>
   <div class="constellation-layout">
-    <div class="constellation-map"><div class="constellation-toolbar"><label for="constellation-search">Search projects</label><input id="constellation-search" type="search" placeholder="Search projects…"/><label for="constellation-filter">Category</label><select id="constellation-filter"><option value="all">All categories</option></select><button id="constellation-expand" type="button" aria-pressed="false">Show all projects</button><button id="constellation-reset" type="button">Reset view</button><div class="constellation-zoom" aria-label="Graph zoom"><button type="button" id="constellation-zoom-out" aria-label="Zoom out">−</button><output id="constellation-zoom-value">100%</output><button type="button" id="constellation-zoom-in" aria-label="Zoom in">+</button></div></div><div class="constellation-viewport" tabindex="0" aria-label="Scrollable project graph"><div id="constellation-canvas" class="constellation-canvas" aria-label="Project connection graph"></div></div><p class="constellation-note">Arrows show conversation flow or documented integrations. Unconnected projects are shown without implied links. Scroll to explore the map.</p></div>
+    <div class="constellation-map">
+      <nav id="constellation-breadcrumb" class="constellation-breadcrumb" aria-label="Constellation view path" hidden></nav>
+      <div class="constellation-toolbar">
+        <div class="constellation-field"><label for="constellation-search">Search projects</label><input id="constellation-search" type="search" placeholder="Search projects…" autocomplete="off"/></div>
+        <div class="constellation-field"><label for="constellation-filter">Category</label><select id="constellation-filter"><option value="all">All categories</option></select></div>
+        <button id="constellation-expand" type="button" aria-pressed="false">Show all projects</button>
+        <button id="constellation-reset" type="button">Reset view</button>
+        <div class="constellation-zoom" role="group" aria-label="Graph zoom"><button type="button" id="constellation-zoom-out" aria-label="Zoom out">−</button><button type="button" id="constellation-zoom-fit" aria-label="Fit graph to view">Fit</button><output id="constellation-zoom-value" aria-live="off">100%</output><button type="button" id="constellation-zoom-in" aria-label="Zoom in">+</button></div>
+      </div>
+      <div class="constellation-legend" aria-label="Map key">
+        <span class="constellation-legend-item"><span class="constellation-legend-line constellation-legend-line--documented" aria-hidden="true"></span>Commit-verified integration</span>
+        <span class="constellation-legend-item"><span class="constellation-legend-line constellation-legend-line--workflow" aria-hidden="true"></span>Workflow context</span>
+        <span class="constellation-legend-item"><span class="constellation-legend-dot constellation-legend-dot--active" aria-hidden="true"></span>Active project</span>
+        <span class="constellation-legend-item"><span class="constellation-legend-chevron" aria-hidden="true">›</span>Drill-down cluster</span>
+      </div>
+      <div class="constellation-viewport" tabindex="0" aria-label="Interactive project graph. Drag to pan, Ctrl or Command with scroll wheel to zoom, arrow keys to move between nodes.">
+        <div id="constellation-stage" class="constellation-stage">
+          <div id="constellation-canvas" class="constellation-canvas" role="group" aria-label="Project connection graph"></div>
+        </div>
+      </div>
+      <section id="constellation-shelf" class="constellation-shelf" aria-label="Unconnected projects" hidden></section>
+      <p class="constellation-note">Solid lines show commit-verified integrations; dashed lines show documented workflow paths. Unconnected projects appear in the shelf without implied links.</p>
+    </div>
     <aside id="constellation-detail" class="constellation-detail" aria-live="polite"><p>Select a project to explore its connections.</p></aside>
   </div>
 </section>
 <!-- ECOSYSTEM TREE START -->
-<section class="ecosystem" id="ecosystem" aria-labelledby="ecosystem-title" data-connections="[{&quot;from&quot;: &quot;p-040&quot;, &quot;to&quot;: &quot;p-023&quot;, &quot;label&quot;: &quot;Desktop reasoning bridge&quot;, &quot;description&quot;: &quot;Fleet documents a Claude Desktop CDP adapter for reasoning and review.&quot;, &quot;source&quot;: &quot;Aaradhya-Dev-Tamrakar/Fleet-Orchestrator/README.md: Architectural Highlights / Multi-Provider Adapter Mesh&quot;, &quot;source_commit&quot;: &quot;8e510f3219237beba4018cbb6cb8b0e1edb2b2ee&quot;, &quot;evidence&quot;: &quot;DOCUMENTED_INTEGRATION&quot;}, {&quot;from&quot;: &quot;p-023&quot;, &quot;to&quot;: &quot;p-031&quot;, &quot;label&quot;: &quot;NotebookLM MCP bridge&quot;, &quot;description&quot;: &quot;Claude Desktop includes a Super-NLM MCP launcher and shared tool configuration.&quot;, &quot;source&quot;: &quot;Aaradhya-Dev-Tamrakar/Claude-Desktop/README.md: Repository Structure / team-mcp.json and super-nlm-mcp&quot;, &quot;source_commit&quot;: &quot;49d340f558ec1144a949c9abcdb8a643077123c2&quot;, &quot;evidence&quot;: &quot;DOCUMENTED_INTEGRATION&quot;}, {&quot;from&quot;: &quot;p-023&quot;, &quot;to&quot;: &quot;p-029&quot;, &quot;label&quot;: &quot;Markdown publishing bridge&quot;, &quot;description&quot;: &quot;Claude Desktop includes the md2pdf MCP server and rendering engine.&quot;, &quot;source&quot;: &quot;Aaradhya-Dev-Tamrakar/Claude-Desktop/README.md: Repository Structure / md2pdf-mcp&quot;, &quot;source_commit&quot;: &quot;49d340f558ec1144a949c9abcdb8a643077123c2&quot;, &quot;evidence&quot;: &quot;DOCUMENTED_INTEGRATION&quot;}, {&quot;from&quot;: &quot;p-031&quot;, &quot;to&quot;: &quot;p-035&quot;, &quot;label&quot;: &quot;Artifact sharing workflow&quot;, &quot;description&quot;: &quot;Super-NLM documents LocalSend as the network sharing companion for Studio downloads.&quot;, &quot;source&quot;: &quot;Aaradhya-Dev-Tamrakar/super-nlm/README.md: Agent Skills / super-nlm-downloads&quot;, &quot;source_commit&quot;: &quot;b74f077bdd18eb33d8bcb86dd56049bc9896724b&quot;, &quot;evidence&quot;: &quot;DOCUMENTED_WORKFLOW&quot;}]">
+<section class="ecosystem" id="ecosystem" aria-labelledby="ecosystem-title">
 <header class="ecosystem-heading">
 <div><p class="ecosystem-eyebrow">Connected work</p>
 <h2 id="ecosystem-title">One ecosystem.<br/><em>Many ways in.</em></h2>
 <p>Explore the tools, research, and learning that connect my engineering practice.</p></div>
-<p class="ecosystem-totals">47 projects <span aria-hidden="true">/</span> 6 branches</p>
+<p class="ecosystem-totals">47 projects <span aria-hidden="true">/</span> 5 branches</p>
 </header>
 <div class="ecosystem-controls" hidden>
 <div class="ecosystem-search"><label for="ecosystem-search">Find a project</label>
@@ -1284,7 +1307,7 @@
 <li data-project="p-010" data-search="Nexus Nexus — Personal AI Operating System React Vite FastAPI SQLite FTS5 Groq Gemini Python"><a class="ecosystem-node" href="#p-010"><span>Nexus</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 </ul></details></li>
 <li class="ecosystem-branch" data-group="knowledge">
-<details><summary><span>Knowledge &amp; publishing</span><span class="ecosystem-count">7</span></summary>
+<details><summary><span>Knowledge &amp; publishing</span><span class="ecosystem-count">8</span></summary>
 <p class="ecosystem-branch-description">Collect, query, edit, and share knowledge across tools.</p>
 <ul class="ecosystem-projects" role="list">
 <li data-project="p-031" data-search="Super-NLM Super-NLM — Multi-Account NotebookLM Hub &amp; MCP Server Python MCP NotebookLM Multi-Account Rate-Limit Routing Agentic Round-Robin FastAPI"><a class="ecosystem-node" href="#p-031"><span>Super-NLM</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
@@ -1294,6 +1317,7 @@
 <li data-project="p-035" data-search="LocalSend MCP LocalSend MCP — Zero-Cloud LAN P2P File &amp; Clipboard Transfer Bridge Node.js ESM @modelcontextprotocol/sdk LocalSend v2.1 mTLS UDP Multicast P2P Transfer"><a class="ecosystem-node" href="#p-035"><span>LocalSend MCP</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 <li data-project="p-038" data-search="Nepali OCR AI Nepali OCR AI — Vision OCR, Varnavinyas Grammar &amp; Bi-Directional Transcoder Python 3.11 FastMCP Devanagari OCR Varnavinyas Engine Preeti Unicode python-docx"><a class="ecosystem-node" href="#p-038"><span>Nepali OCR AI</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 <li data-project="p-039" data-search="IEEE-Xtreme Archive IEEE-Xtreme Algorithmic Intelligence Archive — 662-Task Corpus &amp; Xtreme-Bench Python 3.14 Hugging Face LLM Benchmark Competitive Programming SQLite FTS5 NotebookLM RAG"><a class="ecosystem-node" href="#p-039"><span>IEEE-Xtreme Archive</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
+<li data-project="p-047" data-search="Codon Stream Codon Stream — 500-Gene CP Algorithmic Library C++20 Python 3.11 Algorithms IEEEXtreme Automated Testing"><a class="ecosystem-node" href="#p-047"><span>Codon Stream</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 </ul></details></li>
 <li class="ecosystem-branch" data-group="research">
 <details><summary><span>Research &amp; physical systems</span><span class="ecosystem-count">8</span></summary>
@@ -1309,13 +1333,14 @@
 <li data-project="p-014" data-search="Custom Processor FSM Design Custom Processor FSM Design VHDL Vivado FSM Datapath FPGA"><a class="ecosystem-node" href="#p-014"><span>Custom Processor FSM Design</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 </ul></details></li>
 <li class="ecosystem-branch" data-group="applications">
-<details><summary><span>Applications &amp; utilities</span><span class="ecosystem-count">5</span></summary>
+<details><summary><span>Applications &amp; utilities</span><span class="ecosystem-count">6</span></summary>
 <p class="ecosystem-branch-description">Build tools for everyday workflows, learning, and interaction.</p>
 <ul class="ecosystem-projects" role="list">
 <li data-project="p-021" data-search="Pulse Live Pulse Live — Real-Time Interactive Polling Platform React 19 TypeScript Vite Supabase WebSockets React Router v7 Lucide Icons QR Code"><a class="ecosystem-node" href="#p-021"><span>Pulse Live</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 <li data-project="p-020" data-search="Cryptarithmetic Solver &amp; API Cryptarithmetic Solver &amp; API Python FastAPI Backtracking Docker Algorithm Design"><a class="ecosystem-node" href="#p-020"><span>Cryptarithmetic Solver &amp; API</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 <li data-project="p-030" data-search="Win-Governor Win-Governor — Windows OS Kernel Tuning &amp; Task Governance Utility C# / .NET 10 WPF Win32 NT Kernel Memory Management Task Manager Turbo Boost Windows 11"><a class="ecosystem-node" href="#p-030"><span>Win-Governor</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 <li data-project="p-002" data-search="Alpha Android Super-App Alpha Android Super-App Kotlin Jetpack Compose Material3 CameraX MediaPipe Bluetooth SPP DataStore Apache POI"><a class="ecosystem-node" href="#p-002"><span>Alpha Android Super-App</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
+<li data-project="p-048" data-search="Headless LocalSend Headless LocalSend Substrate — Direct P2P Wireless &amp; ADB Transport Python 3.11 LocalSend v2.1 mTLS P2P Networking ADB Push Windows 11"><a class="ecosystem-node" href="#p-048"><span>Headless LocalSend</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 <li data-project="p-015" data-search="IEEE KEC React Workshop IEEE KEC React Workshop React Vite JavaScript Teaching Material"><a class="ecosystem-node" href="#p-015"><span>IEEE KEC React Workshop</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 </ul></details></li>
 <li class="ecosystem-branch" data-group="fellowship">
@@ -1341,13 +1366,6 @@
 <li data-project="p-043" data-search="Week 17 · Agentic AI &amp; Telco Churn MLOps Agentic AI &amp; Telco Churn MLOps Python MLOps MLflow Evidently AI Airflow LLM Evaluation FastAPI"><a class="ecosystem-node" href="#p-043"><span>Week 17 · Agentic AI &amp; Telco Churn MLOps</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 <li data-project="p-044" data-search="Week 18 · Trustworthy AI Guardrails Trustworthy AI Guardrails Python AI Safety Prompt Injection PII Pydantic LLM Guardrails"><a class="ecosystem-node" href="#p-044"><span>Week 18 · Trustworthy AI Guardrails</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 <li data-project="p-026" data-search="ONM Case Study ONM Case Study — Fusemachines Inc. LaTeX Organizational Analysis Case Study Coursework"><a class="ecosystem-node" href="#p-026"><span>ONM Case Study</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
-</ul></details></li>
-<li class="ecosystem-branch" data-group="more">
-<details><summary><span>More projects</span><span class="ecosystem-count">2</span></summary>
-<p class="ecosystem-branch-description">New additions to the portfolio.</p>
-<ul class="ecosystem-projects" role="list">
-<li data-project="p-048" data-search="Headless LocalSend Substrate Headless LocalSend Substrate — Direct P2P Wireless &amp; ADB Transport Python 3.11 LocalSend v2.1 mTLS P2P Networking ADB Push Windows 11"><a class="ecosystem-node" href="#p-048"><span>Headless LocalSend Substrate</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
-<li data-project="p-047" data-search="Codon Stream Codon Stream — 500-Gene CP Algorithmic Library C++20 Python 3.11 Algorithms IEEEXtreme Automated Testing"><a class="ecosystem-node" href="#p-047"><span>Codon Stream</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>
 </ul></details></li>
 </ul>
 <p class="ecosystem-empty" hidden>No projects found. Try another name or technology.</p>
@@ -2731,7 +2749,7 @@ Your browser doesn't support embedded video.
 <link as="script" href="assets/js/modules/core.js" rel="preload"/>
 <link as="script" href="assets/js/modules/ui.js" rel="preload"/>
 <script defer="" src="assets/js/script.js"></script>
-<script defer="" src="assets/js/constellation.js"></script>
+<script defer="" src="assets/js/modules/constellation.js"></script>
 <script>
     // Project cards dropdown expand/collapse — fluid animation + scroll sync
     function syncProjectToggleAllLabel() {

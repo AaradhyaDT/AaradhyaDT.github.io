@@ -2,4 +2,13 @@ chat_history/
 clean_codebase_payload.txt
 Claude_export*.md
 dev-logs/Claude_export*.md
+dev-logs/*_CONVERSATION.md
+dev-logs/*_CHAT.md
+dev-logs/lighthouse-results/
+dev-logs/og-image/
 .site-build/
+.venv/
+.ruff_cache/
+__pycache__/
+node_modules/
+tests/visual/

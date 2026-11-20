@@ -7,6 +7,16 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
+    version: 'v59',
+    date: '2026-11-20',
+    sha: 'f5feccac',
+    title: "Project Constellation 4-Layer Architecture",
+    highlights: [
+      "Core updates and architectural improvements for v59",
+      "PWA & Cache: Bumped Service Worker cache to aaradhya-portfolio-v59"
+    ]
+  },
+  {
     version: "v58.15",
     date: "2026-11-19",
     sha: "6c4d26172757905be98e8e50f7176dff87f6301a",

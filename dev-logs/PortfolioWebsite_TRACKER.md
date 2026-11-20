@@ -1,6 +1,17 @@
-﻿# Portfolio Website Tracker — v58.15
+# Portfolio Website Tracker — v59
 
-Last updated: _2026-11-19_
+Last updated: _2026-11-20_
+
+
+- **v59 (Major Release) — Project Constellation 4-Layer Architecture.** Shipped project constellation 4-layer architecture.
+  - Core updates and architectural improvements for v59
+  - PWA & Cache: Bumped Service Worker cache to aaradhya-portfolio-v59
+
+- **Project Constellation 4-Layer Architecture & DAG Upgrade (#54)**:
+  - **4-Layer Monotonic DAG (`data/ecosystem.json`, `scripts/generate_ecosystem.py`)**: Replaced legacy flat constellation data with a validated 4-column DAG (`agents`, `tools`, `gateways`, `work`, `related`), locking the agent hierarchy (`Antigravity >> Codex >> Claude Desktop` with `MAIN` badge on `antigravity` and shared superset `WORKFLOW_CONTEXT` edges to all tools without agent-to-agent controller edges) and assigning `p-047` & `p-048` branches.
+  - **Modular Constellation Runtime (`assets/js/modules/constellation.js`, `assets/css/modules/constellation.css`)**: Migrated legacy root constellation assets into modular JS/CSS bundles (`.min.css` built via `scripts/build_css.py`), updated `assets/js/modules/ecosystem.js`, `projects.html`, and `sw.js` precache entries, and verified keyboard navigation, reduced motion, and responsive desktop/mobile layouts.
+  - **Graphify Optimization (`.graphifyignore`)**: Excluded raw conversation transcripts (`dev-logs/*_CONVERSATION.md`, `*_CHAT.md`), build artifacts, and visual test baselines, reducing `Deg <= 1` leaf ratio from 66.3% (2516 nodes) to 47.9% (1289 nodes).
+  - **Verification Gate**: Passed `generate_ecosystem.py --check`, `test_ecosystem.py` (22/22), `test_constellation.test.mjs` (29/29), `verify_constellation_geometry.mjs` (0 errors, 0.000% visual diff across all 5 states), `test_visual_regression.py --pages projects`, `test_e2e.py` (42/42), and `verify.py` (25/26 PASS, 1 pre-existing size WARN on `projects.html`).
 
 - **Cycle 4 Ecosystem Synchronization & Headless LocalSend Onboarding (#56)**:
   - **Ecosystem 4th Merge & Milestone Logging**: Added milestone `j-039` to `journey.html` codifying the Cycle 4 breakthrough (4-tier capability hierarchy refactoring across all 28 modules, 1-to-1 branch topology lock, and cleanroom governance). Refreshed Kathmandu telemetry on `index.html`.
@@ -898,7 +909,7 @@ eq$ server-side authorization*. Resolved stale reference to non-existent audit d
 
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
 
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.15`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v59`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 
