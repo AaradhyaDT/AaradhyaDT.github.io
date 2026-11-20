@@ -1,6 +1,6 @@
 {
-  "sha": "f5feccac55978f51393d005e893181cf3893df31",
-  "shortSha": "f5fecca",
-  "date": "2026-11-19T22:59:00+05:45",
-  "message": "feat(projects): improve ecosystem graph relations (#54) (#55)"
+  "sha": "cbb44c1cd5741a3a612799cc36c3251de7d4a95e",
+  "shortSha": "cbb44c1",
+  "date": "2026-11-20T07:50:07+05:45",
+  "message": "feat(constellation): 4-layer monotonic DAG, modular runtime, and graphify hygiene (#54) (#65)"
 }

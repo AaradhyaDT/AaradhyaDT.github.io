@@ -7,14 +7,11 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: 'v59',
-    date: '2026-11-20',
-    sha: 'f5feccac',
-    title: "Project Constellation 4-Layer Architecture",
-    highlights: [
-      "Core updates and architectural improvements for v59",
-      "PWA & Cache: Bumped Service Worker cache to aaradhya-portfolio-v59"
-    ]
+    version: "v59",
+    date: "2026-11-20",
+    sha: "cbb44c1cd5741a3a612799cc36c3251de7d4a95e",
+    title: "4-layer monotonic DAG, modular runtime, and graphify hygiene (#54) (#65)",
+    highlights: []
   },
   {
     version: "v58.15",
